@@ -1,0 +1,27 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:vegetation_patch_feature": {
+    "description": {
+      "identifier": "honkit26113:scorching_depths_soul_soil_patch_feature"
+    },
+    "replaceable_blocks": [
+      "minecraft:soul_sand",
+      "minecraft:netherrack",
+      "minecraft:blackstone"
+    ],
+    "ground_block": "minecraft:soul_soil",
+    "vegetation_feature": "honkit26113:scorching_depths_soul_spike_snap_to_surface_feature",
+    "surface": "floor",
+    "depth": {
+      "range_min": 2,
+      "range_max": 4
+    },
+    "vertical_range": 5,
+    "vegetation_chance": 0.01,
+    "horizontal_radius": {
+      "range_min": 10,
+      "range_max": 25
+    },
+    "extra_edge_column_chance": 0.15
+  }
+}

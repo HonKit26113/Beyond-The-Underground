@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "honkit26113:diamond_helmet_to_luminite_helmet"
+    },
+
+
+    "tags": [ "smithing_table" ],
+    "priority": 2,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond_helmet"
+      },
+      {
+        "item": "honkit26113:luminite"
+      }
+    ],
+    "result": {
+      "item": "honkit26113:luminite_helmet",
+      "count": 1
+    }
+  }
+  
+}

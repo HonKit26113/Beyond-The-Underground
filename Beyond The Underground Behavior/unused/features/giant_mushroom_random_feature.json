@@ -1,0 +1,16 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:giant_mushroom_random_feature"
+    },
+    "features": [
+      [ "honkit26113:giant_luminous_mushroom_7tall_feature", 20 ],
+      [ "honkit26113:giant_luminous_mushroom_8tall_feature", 20 ],
+      [ "honkit26113:giant_luminous_mushroom_9tall_feature", 20 ],
+      [ "honkit26113:giant_lambent_mushroom_6tall_feature", 13 ],
+      [ "honkit26113:giant_lambent_mushroom_7tall_feature", 14 ],
+      [ "honkit26113:giant_lambent_mushroom_8tall_feature", 13 ]
+    ]
+  }
+}

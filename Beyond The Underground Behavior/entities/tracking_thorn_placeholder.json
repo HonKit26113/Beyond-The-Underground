@@ -1,0 +1,120 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:tracking_thorn_placeholder",
+      "is_spawnable": false,
+      "is_summonable": true, // change to false
+      "is_experimental": false
+    },
+    "component_groups": {
+      "honkit26113:countdown": {
+        "minecraft:timer": {
+          "looping": false,
+          "time": [
+            5,
+            5
+          ],
+          "time_down_event": {
+            "event": "honkit26113:despawn"
+          }
+        }
+      },
+      "honkit26113:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "placeholder" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:health": {
+        "value": 180,
+        "max": 180
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:navigation.walk": {
+      },
+      "minecraft:behavior.ranged_attack": {
+        "priority": 1,
+        "attack_interval": 1,
+        "target_in_sight_time": 1,
+        "attack_radius": 64,
+        "burst_shots": 3
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "must_see": false,
+        "within_radius": 64,
+        "target_search_height": 20,
+        "reselect_targets": true,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "any_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "monster"
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "mob"
+                    }
+                  ]
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": "player"
+                }
+              ]
+            },
+            "max_dist": 64
+          }
+        ]
+      },
+      "minecraft:shooter": {
+        "def": "honkit26113:tracking_thorn"
+      },
+      "minecraft:transient": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "honkit26113:countdown"
+          ]
+        }
+      },
+      "honkit26113:despawn": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "honkit26113:despawn"
+              ]
+            }
+          }
+        ] 
+      }
+    }
+  }
+}

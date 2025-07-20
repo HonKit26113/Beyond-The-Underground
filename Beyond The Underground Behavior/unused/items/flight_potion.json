@@ -1,0 +1,60 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+		"category": "equipment",
+    	"identifier": "honkit26113:flight_potion"
+    },
+    "components": {
+		  "minecraft:creative_category": {
+			 "parent": "itemGroup.name.equipment"
+		  },
+		  "minecraft:icon": {
+			 "texture": "flight_potion"
+		  },
+      "minecraft:display_name": {
+        "value": "Potion of Flying\n§7Flight (0:30)§r"
+      },
+      "minecraft:use_duration": 1.6,
+      "minecraft:max_stack_size": 1,
+      "minecraft:foil": true,
+      "minecraft:use_animation": "drink",
+      "minecraft:food": {
+      	"can_always_eat": true,
+        "nutrition": 0,
+        "saturation_modifier": "poor",
+        "using_converts_to": "glass_bottle",
+    	  "on_consume": {
+        	"event": "honkit26113:consumed",
+        	"target": "self"
+    	  }
+      }
+    },
+    "events": {
+    	"honkit26113:consumed": {
+        "sequence": [
+          {
+            "condition": "query.invulnerable_ticks > 0.0",
+            "run_command": {
+              "command": [
+                "title @s actionbar You cannot drink this potion in Creative mode."
+              ]
+            }
+          },
+          {
+            "condition": "!query.invulnerable_ticks > 0.0",
+    		    "run_command": {
+              "command": [
+                "gamerule sendcommandfeedback false",
+                "ability @s mayfly true",
+                "summon honkit26113:flight_countdown",
+                "gamerule sendcommandfeedback true"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

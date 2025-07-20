@@ -1,0 +1,124 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"texture_data": {
+
+		/*"ice_stalagmite_item": { "textures": [ "textures/blocks/ice_stalagmite_tip" ] },
+		"ice_stalactite_item": { "textures": [ "textures/blocks/ice_stalactite_tip" ] },
+		"ice_spikes_item": { "textures": [ "textures/blocks/ice_shards" ] },
+		"ice_shards": { "textures": [ "textures/items/ice_shards" ] },
+		"frozen_iron_ore": { "textures": [ "textures/items/frozen_iron_ore" ] },
+		"blue_iced_iron_ore": { "textures": [ "textures/items/blue_iced_iron_ore" ] },*/
+		"luminite_ore": { "textures": [ "textures/items/luminite_ore" ] },
+		"deepslate_luminite_ore": { "textures": [ "textures/items/deepslate_luminite_ore" ] },
+		"glow_mycelium": { "textures": [ "textures/items/glow_mycelium" ] },
+		"radiant_vines_item": { "textures": [ "textures/blocks/radiant_vines_body" ] },
+
+		"luminous_mushroom_item": { "textures": [ "textures/blocks/luminous_mushroom" ] },
+		"luminous_mushroom_block": { "textures": [ "textures/items/luminous_mushroom_block" ] },
+		"luminous_mushroom_stem": { "textures": [ "textures/items/luminous_mushroom_stem" ] },
+		"luminous_mushroom_stew": { "textures": [ "textures/items/luminous_mushroom_stew" ] },
+
+		"luminite": { "textures": [ "textures/items/luminite" ] },
+		"luminite_shard": { "textures": [ "textures/items/luminite_shard" ] },
+		"luminite_block": { "textures": [ "textures/items/luminite_block" ] },
+		"luminite_helmet": { "textures": [ "textures/items/luminite_helmet" ] },
+		"luminite_chestplate": { "textures": [ "textures/items/luminite_chestplate" ] },
+		"luminite_leggings": { "textures": [ "textures/items/luminite_leggings" ] },
+		"luminite_boots": { "textures": [ "textures/items/luminite_boots" ] },
+		"luminite_sword": { "textures": [ "textures/items/luminite_sword" ] },
+		"luminite_pickaxe": { "textures": [ "textures/items/luminite_pickaxe" ] },
+		"luminite_shovel": { "textures": [ "textures/items/luminite_shovel" ] },
+		"luminite_axe": { "textures": [ "textures/items/luminite_axe" ] },
+		"luminite_hoe": { "textures": [ "textures/items/luminite_hoe" ] },
+
+		"slime_soup": { "textures": [ "textures/items/slime_soup" ] },
+		"slimeball_part": { "textures": [ "textures/items/slimeball_part" ] },
+		"dripping_slime_item": { "textures": [ "textures/blocks/dripping_slime_head" ] },
+		"slimy_sprouts_item": { "textures": [ "textures/blocks/slimy_sprouts" ] },
+		"slimy_blossom_item": { "textures": [ "textures/items/slimy_blossom_item" ] },
+		"slimy_stone": { "textures": [ "textures/items/slimy_stone" ] },
+		"slime_layer": { "textures": [ "textures/items/slime_layer" ] },
+		"hardened_slimeball": { "textures": [ "textures/items/hardened_slimeball" ] },
+
+
+		"sand_layer": { "textures": [ "textures/items/sand_layer" ] },
+		"quicksand": { "textures": [ "textures/items/quicksand" ] },
+		"limestone": { "textures": [ "textures/items/limestone" ] },
+		"cobbled_limestone": { "textures": [ "textures/items/cobbled_limestone" ] },
+		"polished_limestone": { "textures": [ "textures/items/polished_limestone" ] },
+		"limestone_bricks": { "textures": [ "textures/items/limestone_bricks" ] },
+		"limestone_bricks_slab": { "textures": [ "textures/items/limestone_bricks_slab" ] },
+		"limestone_bricks_chiseled": { "textures": [ "textures/items/limestone_bricks_chiseled" ] },
+		"limestone_bricks_cracked": { "textures": [ "textures/items/limestone_bricks_cracked" ] },
+		"limestone_bricks_mossy": { "textures": [ "textures/items/limestone_bricks_mossy" ] },
+		"sandy_roots_item": { "textures": [ "textures/blocks/sandy_roots_head" ] },
+		"raw_scorpion": { "textures": [ "textures/items/raw_scorpion" ] },
+		"cooked_scorpion": { "textures": [ "textures/items/cooked_scorpion" ] },
+		"fatal_poison_potion": { "textures": [ "textures/items/fatal_poison_potion" ] },
+		"sandy_skelly_skull_item": { "textures": [ "textures/items/sandy_skelly_skull_item" ] },
+
+		"frosted_stone": { "textures": [ "textures/items/frosted_stone" ] },
+		"frosted_pebbles_item": { "textures": [ "textures/items/frosted_pebbles" ] },
+		"pebbles_item": { "textures": [ "textures/items/pebbles" ] },
+		"cobblestone_pebbles_item": { "textures": [ "textures/items/cobblestone_pebbles" ] },
+		"ice_crystal_item": { "textures": [ "textures/blocks/ice_crystal" ] },
+		"ice_shard": { "textures": [ "textures/items/ice_shard" ] },
+		"dripping_icicle_item": { "textures": [ "textures/items/dripping_icicle_item" ] },
+		"crystallized_ice": { "textures": [ "textures/items/crystallized_ice" ] },
+		"deepslate_glow_mycelium": { "textures": [ "textures/items/deepslate_glow_mycelium" ] },
+		"slimy_deepslate": { "textures": [ "textures/items/slimy_deepslate" ] },
+		"luminous_mooshroom_spawn_egg": { "textures": [ "textures/items/luminous_mooshroom_spawn_egg" ] },
+		"frozen_potion": { "textures": [ "textures/items/frozen_potion" ] },
+		"packed_ice_bricks": { "textures": [ "textures/items/packed_ice_bricks" ] },
+		"packed_ice_bricks_slab": { "textures": [ "textures/items/packed_ice_bricks_slab" ] },
+		"packed_ice_bricks_cracked": { "textures": [ "textures/items/packed_ice_bricks_cracked" ] },
+		"packed_ice_chiseled": { "textures": [ "textures/items/packed_ice_chiseled" ] },
+		"suitcase": { "textures": [ "textures/items/suitcase" ] },
+
+		"frosted_deepslate": { "textures": [ "textures/items/frosted_deepslate" ] },
+		"deepslate_pebbles_item": { "textures": [ "textures/items/deepslate_pebbles" ] },
+		"cobbled_deepslate_pebbles_item": { "textures": [ "textures/items/cobbled_deepslate_pebbles" ] },
+		"frosted_deepslate_pebbles_item": { "textures": [ "textures/items/frosted_deepslate_pebbles" ] },
+
+		"limestone_pebbles_item": { "textures": [ "textures/items/limestone_pebbles" ] },
+		"cobbled_limestone_pebbles_item": { "textures": [ "textures/items/cobbled_limestone_pebbles" ] },
+
+		"soul_spike_item": { "textures": [ "textures/blocks/soul_spike_tip" ] },
+		"gloomy_mushroom_item": { "textures": [ "textures/blocks/gloomy_mushroom" ] },
+		"mysterious_fungus_item": { "textures": [ "textures/blocks/mysterious_fungus" ] },
+		"mysterious_stew": { "textures": [ "textures/items/mysterious_stew" ] },
+		"sand_lump": { "textures": [ "textures/items/sand_lump" ] },
+		"sticky_spikes_item": { "textures": [ "textures/blocks/sticky_spikes" ] },
+		"slime_dagger": { "textures": [ "textures/items/slime_dagger" ] },
+
+		"crooked_fungus_item": { "textures": [ "textures/blocks/crooked/crooked_fungus" ] },
+		"crooked_roots_item": { "textures": [ "textures/blocks/crooked/crooked_roots" ] },
+		"soul_healer": { "textures": [ "textures/items/soul_healer" ] },
+		"soul_fragment": { "textures": [ "textures/items/soul_fragment" ] },
+		"crooked_fungus_stew": { "textures": [ "textures/items/crooked_fungus_stew" ] },
+		"soul_geyser_item": { "textures": [ "textures/items/soul_geyser" ] },
+
+		"crooked_door_item": { "textures": [ "textures/items/crooked_door" ] },
+		"slimy_pebbles_item": { "textures": [ "textures/items/slimy_pebbles" ] },
+		"slimy_deepslate_pebbles_item": { "textures": [ "textures/items/slimy_deepslate_pebbles" ] },
+		"chromatic_petals_item": { "textures": [ "textures/items/chromatic_petals" ] },
+		"star_jasmine_item": { "textures": [ "textures/blocks/star_jasmine" ] },
+		"twilight_spores_item": { "textures": [ "textures/items/twilight_spores" ] },
+		"bane_of_frost": { "textures": [ "textures/items/bane_of_frost" ] },
+		"corrupted_bouquet": { "textures": [ "textures/items/corrupted_bouquet" ] },
+		"slingshot": {
+			"textures": [
+				"textures/items/slingshot_standby",
+			 	"textures/items/slingshot_pulling_0",
+			 	"textures/items/slingshot_pulling_1",
+			 	"textures/items/slingshot_pulling_2"
+		 	]
+		},
+		"sandstone_stick": { "textures": [ "textures/items/sandstone_stick" ] },
+		"wand_of_the_sands": { "textures": [ "textures/items/wand_of_the_sands" ] },
+		"frost_essence": { "textures": [ "textures/items/frost_essence" ] },
+		"frozen_core": { "textures": [ "textures/items/frozen_core" ] }
+
+		}
+	}
+}

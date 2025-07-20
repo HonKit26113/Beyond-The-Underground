@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "honkit26113:diamond_axe_to_luminite_axe"
+    },
+
+
+    "tags": [ "smithing_table" ],
+    "priority": 3,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond_axe"
+      },
+      {
+        "item": "honkit26113:luminite"
+      }
+    ],
+    "result": {
+      "item": "honkit26113:luminite_axe",
+      "count": 1
+    }
+  }
+  
+}

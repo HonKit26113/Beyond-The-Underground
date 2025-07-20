@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:crystal_caves/gypsum_crystal_random_feature"
+    },
+    "features": [
+      [ "honkit26113:crystal_caves/gypsum_crystal_big_1_feature", 65 ],
+      [ "honkit26113:crystal_caves/gypsum_crystal_small_1_feature", 35 ]
+    ]
+  }
+}

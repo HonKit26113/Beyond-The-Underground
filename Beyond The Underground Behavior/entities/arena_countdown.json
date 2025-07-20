@@ -1,0 +1,49 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:arena_countdown",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "arena_dummy" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:health": {
+        "value": 180,
+        "max": 180
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:boss": {
+        "should_darken_sky": false,
+        "name": "",
+        "hud_range": 100
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      }//,
+      //"minecraft:physics": {}
+    },
+
+    "component_groups": {
+      "honkit26113:arena_end": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+
+    "events": {
+    }
+  }
+}

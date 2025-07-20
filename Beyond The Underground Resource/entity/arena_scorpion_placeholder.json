@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:arena_scorpion_placeholder",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_arena_mob_spawn"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_arena_mob_spawn"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

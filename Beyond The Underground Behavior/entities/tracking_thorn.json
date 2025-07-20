@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:tracking_thorn",
+      "runtime_identifier": "minecraft:shulker_bullet",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:projectile": {
+        "anchor": 1,
+        "offset": [ 0, 1, 0 ],
+        "on_hit": {
+          "impact_damage": {
+            "damage": 0,
+            "knockback": false,
+            "should_bounce": false
+          },
+          /*"mob_effect": {
+            "effect": "levitation",
+            "durationeasy": 200,
+            "durationnormal": 200,
+            "durationhard": 200,
+            "amplifier": 1
+          },*/
+          "remove_on_hit": {}
+        },
+        "hit_sound": "mob.evocation_fangs.attack",
+        "destroyOnHurt": true,
+        "crit_particle_on_hurt": true,
+        "power": 10,
+        "gravity": 0.05,
+        "uncertainty_base": 0,
+        "anchor": 1,
+        "inertia": 1,
+        "offset": [ 0, 1, 0 ],
+        "homing": true
+      },
+      "minecraft:physics": {
+        "has_collision": false
+      }
+    }
+  }
+}

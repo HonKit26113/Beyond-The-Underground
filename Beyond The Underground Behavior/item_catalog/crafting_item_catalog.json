@@ -1,0 +1,298 @@
+{
+   "format_version": "1.21.60",
+   "minecraft:crafting_items_catalog": {
+      "categories": [
+         {
+            "category_name": "construction",
+            "groups": [
+               {
+                  // Slimy Stone Bricks
+                  "group_identifier": {
+                     "icon": "honkit26113:slimy_stone_bricks",
+                     "name": "honkit26113:itemGroup.slimy_stone_bricks"
+                  },
+                  "items": [
+                     "honkit26113:slimy_stone_bricks",
+                     "honkit26113:slimy_stone_bricks_cracked",
+                     "honkit26113:slimy_stone_bricks_slab",
+                     "honkit26113:slimy_deepslate_bricks",
+                     "honkit26113:slimy_deepslate_bricks_cracked",
+                     "honkit26113:slimy_deepslate_bricks_slab",
+                     "honkit26113:slimy_deepslate_tiles",
+                     "honkit26113:slimy_deepslate_tiles_cracked",
+                     "honkit26113:slimy_deepslate_tiles_slab"
+                  ]
+               },
+               {
+                  // Limestone Bricks
+                  "group_identifier": {
+                     "icon": "honkit26113:limestone_bricks",
+                     "name": "honkit26113:itemGroup.limestone_bricks"
+                  },
+                  "items": [
+                     "honkit26113:limestone_bricks",
+                     "honkit26113:limestone_bricks_mossy",
+                     "honkit26113:limestone_bricks_cracked",
+                     "honkit26113:limestone_bricks_chiseled",
+                     "honkit26113:limestone_bricks_slab",
+                     "honkit26113:limestone_slab",
+                     "honkit26113:limestone_pillar"
+                  ]
+               },
+               {
+                  "items": [
+                     "honkit26113:luminite_block",
+                     
+                     "honkit26113:packed_ice_bricks",
+                     "honkit26113:packed_ice_bricks_cracked",
+                     "honkit26113:packed_ice_chiseled",
+                     "honkit26113:packed_ice_bricks_slab",
+
+                     "honkit26113:soul_bricks",
+                     "honkit26113:soul_bricks_cracked",
+                     "honkit26113:soul_bricks_chiseled",
+                     "honkit26113:soul_bricks_slab"
+                  ]
+               }
+            ]
+         },
+         {
+            "category_name": "equipment",
+            "groups": [
+               {
+                  "items": [
+                     "honkit26113:hardened_slimeball",
+                     "honkit26113:sand_lump",
+                     "honkit26113:slingshot",
+                     "honkit26113:slime_dagger",
+                     "honkit26113:wand_of_the_sands",
+                     "honkit26113:bane_of_frost",
+                     "honkit26113:corrupted_bouquet",
+                     "honkit26113:soul_healer",
+                     
+                     "honkit26113:fatal_poison_potion",
+                     "honkit26113:fatal_poison_potion_plus",
+                     "honkit26113:fatal_poison_potion_potency_2",
+                     "honkit26113:frozen_potion",
+                     "honkit26113:frozen_potion_plus"
+                  ]
+               }
+            ]
+         },
+         {
+            "category_name": "items",
+            "groups": [
+               {
+                  "group_identifier": {
+                     "icon": "honkit26113:lava_tank_gold_full",
+                     "name": "honkit26113:itemGroup.lava_tank"
+                  },
+                  "items": [
+                     "honkit26113:lava_tank_gold",
+                     "honkit26113:lava_tank_gold_full",
+                     "honkit26113:lava_tank_gold_locked",
+                     "honkit26113:lava_tank_diamond",
+                     "honkit26113:lava_tank_diamond_full",
+                     "honkit26113:lava_tank_diamond_locked",
+                     "honkit26113:lava_tank_broken"
+                  ]
+               },
+               {
+                  "items": [
+                     "honkit26113:luminite_shard",
+                     "honkit26113:luminite",
+                     "honkit26113:slimeball_part",
+                     "honkit26113:slime_lantern",
+                     "honkit26113:sandstone_stick",
+                     "honkit26113:sandy_skelly_skull",
+                     "honkit26113:suitcase",
+                     "honkit26113:ice_shard",
+                     "honkit26113:frost_essence",
+                     "honkit26113:frozen_core",
+                     "honkit26113:soul_fragment"
+                  ]
+               }
+            ]
+         },
+         {
+            // Valid values are construction, equipment, nature, and items
+            "category_name": "nature",
+            "groups": [
+               {
+                  "group_identifier": {
+                     "icon": "honkit26113:pebbles",
+                     "name": "honkit26113:itemGroup.pebbles"
+                  },
+                  "items": [
+                     "honkit26113:pebbles",
+                     "honkit26113:cobblestone_pebbles",
+                     "honkit26113:frosted_pebbles",
+                     "honkit26113:deepslate_pebbles",
+                     "honkit26113:cobbled_deepslate_pebbles",
+                     "honkit26113:frosted_deepslate_pebbles",
+                     "honkit26113:slimy_pebbles",
+                     "honkit26113:slimy_deepslate_pebbles",
+                     "honkit26113:limestone_pebbles",
+                     "honkit26113:cobbled_limestone_pebbles"
+                  ]
+               },
+               {
+                  // Luminous Caverns
+                  "group_identifier": {
+                     "icon": "honkit26113:luminous_mushroom",
+                     "name": "honkit26113:itemGroup.luminous_caverns"
+                  },
+                  "items": [
+                     "honkit26113:glow_mycelium",
+                     "honkit26113:deepslate_glow_mycelium",
+                     "honkit26113:luminous_mushroom_stem",
+                     "honkit26113:luminous_mushroom",
+                     "honkit26113:luminous_mushroom_block",
+                     "honkit26113:gloomy_mushroom",
+                     "honkit26113:gloomy_mushroom_block",
+                     "honkit26113:mysterious_fungus",
+                     "honkit26113:radiant_vines_item"
+                  ]
+               },
+               {
+                  // Slimy Sewers
+                  "group_identifier": {
+                     "icon": "honkit26113:slimy_sprouts",
+                     "name": "honkit26113:itemGroup.slimy_sewers"
+                  },
+                  "items": [
+                     "honkit26113:slimy_stone",
+                     "honkit26113:slimy_deepslate",
+                     "honkit26113:slimy_sprouts",
+                     "honkit26113:slimy_blossom",
+                     "honkit26113:sticky_spikes",
+                     "honkit26113:dripping_slime_item",
+                     "honkit26113:slime_layer"
+                  ]
+               },
+               {
+                  // Limestone Caves
+                  "group_identifier": {
+                     "icon": "honkit26113:sandy_roots_item",
+                     "name": "honkit26113:itemGroup.limestone_caves"
+                  },
+                  "items": [
+                     "honkit26113:limestone",
+                     "honkit26113:polished_limestone",
+                     "honkit26113:cobbled_limestone",
+                     "honkit26113:sandy_roots_item",
+                     "honkit26113:sand_layer"
+                  ]
+               },
+               {
+                  // Ice Caves
+                  "group_identifier": {
+                     "icon": "honkit26113:ice_crystal",
+                     "name": "honkit26113:itemGroup.ice_caves"
+                  },
+                  "items": [
+                     "honkit26113:frosted_stone",
+                     "honkit26113:frosted_deepslate",
+                     "honkit26113:crystallized_ice",
+                     "honkit26113:ice_crystal",
+                     "honkit26113:dripping_icicle_item"
+                  ]
+               },
+               {
+                  // Crooked Caverns
+                  "group_identifier": {
+                     "icon": "honkit26113:crooked_fungus",
+                     "name": "honkit26113:itemGroup.crooked_caverns"
+                  },
+                  "items": [
+                     "honkit26113:crooked_nylium",
+                     "honkit26113:soul_stone",
+                     "honkit26113:soul_magma",
+                     "honkit26113:glowing_obsidian",
+                     "honkit26113:crooked_stem",
+                     "honkit26113:crooked_stem_stripped",
+                     "honkit26113:crooked_hyphae",
+                     "honkit26113:crooked_hyphae_stripped",
+                     "honkit26113:crooked_wart_block",
+                     "honkit26113:soul_shroomlight",
+                     "honkit26113:crooked_fungus",
+                     "honkit26113:crooked_roots",
+                     "honkit26113:soul_geyser",
+                  ]
+               },
+               {
+                  // Undergrowth
+                  "group_identifier": {
+                     "icon": "honkit26113:star_jasmine",
+                     "name": "honkit26113:itemGroup.undergrowth"
+                  },
+                  "items": [
+                     "honkit26113:cave_turf",
+                     "honkit26113:deepslate_cave_turf",
+                     "honkit26113:stem_block",
+                     "honkit26113:rainbow_gum_log",
+                     "honkit26113:rainbow_gum_log_stripped",
+                     "honkit26113:rainbow_gum_wood",
+                     "honkit26113:rainbow_gum_wood_stripped",
+                     "honkit26113:rainbow_gum_leaves",
+                     "honkit26113:petal_block_white",
+                     "honkit26113:petal_block_blue",
+                     "honkit26113:petal_block_yellow",
+                     "honkit26113:petal_block_red",
+                     "honkit26113:petal_block_orange",
+                     "honkit26113:petal_block_magenta",
+                     "honkit26113:petal_block_black",
+                     "honkit26113:chromatic_petals",
+                     "honkit26113:star_jasmine",
+                     "honkit26113:twilight_spores"
+                  ]
+               },
+               {
+                  // Ores
+                  "group_identifier": {
+                     "name": "minecraft:itemGroup.name.ore"
+                  },
+                  "items": [
+                     "honkit26113:luminite_ore",
+                     "honkit26113:deepslate_luminite_ore",
+                     "honkit26113:limestone_iron_ore",
+                     "honkit26113:limestone_gold_ore",
+                     "honkit26113:limestone_diamond_ore",
+                     "honkit26113:limestone_lapis_ore",
+                     "honkit26113:limestone_redstone_ore",
+                     "honkit26113:limestone_coal_ore",
+                     "honkit26113:limestone_copper_ore",
+                     "honkit26113:limestone_emerald_ore"
+                  ]
+               },
+               {
+                  // Spawn Eggs
+                  "group_identifier": {
+                     "name": "minecraft:itemGroup.name.mobEgg"
+                  },
+                  "items": [
+                     "honkit26113:shroom_elf_spawn_egg",
+                     "honkit26113:luminous_mooshroom_spawn_egg",
+                     "honkit26113:slimy_zombie_spawn_egg",
+                     "honkit26113:scorpion_spawn_egg",
+                     "honkit26113:sandy_skelly_spawn_egg",
+                     "honkit26113:penguin_spawn_egg",
+                     "honkit26113:lost_explorer_spawn_egg",
+                     "honkit26113:frost_spirit_spawn_egg",
+                     "honkit26113:wisp_spawn_egg",
+                     "honkit26113:thornspitter_spawn_egg"
+                  ]
+               },
+               {
+                  "items": [
+                     "honkit26113:glow_lichen_block",
+                     "honkit26113:quicksand",
+                     "honkit26113:gypsum_block",
+                     "honkit26113:gypsum_cluster"
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

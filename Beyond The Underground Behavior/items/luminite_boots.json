@@ -1,0 +1,58 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_boots",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.boots"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [ 
+					"minecraft:is_armor",
+					"honkit26113:luminite_tier"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": "luminite_boots",
+			"minecraft:wearable": {
+				"protection": 3,
+				"slot": "slot.armor.feet"
+			},
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "armor_feet"
+			},
+			"minecraft:durability": {
+				"max_durability": 450,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				}
+			},/*
+			"minecraft:knockback_resistance": {
+    			"protection": 0.2249999940395355
+			},*/
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 113
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_boots"
+            			],
+            			"repair_amount": 450
+        			}
+    			]
+			}//,
+			//"minecraft:render_offsets": "boots"
+		}
+	}
+}

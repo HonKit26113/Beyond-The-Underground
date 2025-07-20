@@ -1,0 +1,329 @@
+## This file was edited by HonKit26113 (@HonKit1103). Do not distribute without permission!
+
+## Luminous Caverns
+tile.honkit26113:glow_mycelium.name=Glow Mycelium
+tile.honkit26113:deepslate_glow_mycelium.name=Deepslate Glow Mycelium
+tile.honkit26113:luminous_mushroom.name=Luminous Mushroom
+tile.honkit26113:gloomy_mushroom.name=Gloomy Mushroom
+tile.honkit26113:mysterious_fungus.name=Mysterious Mushroom
+tile.honkit26113:luminous_mushroom_block.name=Luminous Mushroom Block
+tile.honkit26113:gloomy_mushroom_block.name=Gloomy Mushroom Block
+tile.honkit26113:luminous_mushroom_stem.name=Luminous Mushroom Stem
+tile.honkit26113:radiant_vines_head.name=Radiant Vines Head
+tile.honkit26113:radiant_vines_body.name=Radiant Vines Body
+tile.honkit26113:luminite_ore.name=Luminite Ore
+tile.honkit26113:deepslate_luminite_ore.name=Deepslate Luminite Ore
+tile.honkit26113:luminite_block.name=Block of Luminite
+
+item.honkit26113:luminous_mushroom_stew=Luminous Mushroom Stew
+item.honkit26113:mysterious_stew=Mysterious Stew
+item.honkit26113:radiant_vines_item=Radiant Vines
+item.honkit26113:luminite=Luminite
+item.honkit26113:luminite_shard=Luminite Shard
+item.honkit26113:luminite_helmet=Luminite Helmet
+item.honkit26113:luminite_chestplate=Luminite Chestplate
+item.honkit26113:luminite_leggings=Luminite Leggings
+item.honkit26113:luminite_boots=Luminite Boots
+item.honkit26113:luminite_sword=Luminite Sword
+item.honkit26113:luminite_pickaxe=Luminite Pickaxe
+item.honkit26113:luminite_shovel=Luminite Shovel
+item.honkit26113:luminite_axe=Luminite Axe
+item.honkit26113:luminite_hoe=Luminite Hoe
+
+item.spawn_egg.entity.honkit26113:shroom_elf.name=Shroom Elf Spawn Egg
+entity.honkit26113:shroom_elf.name=Shroom Elf
+item.spawn_egg.entity.honkit26113:luminous_mooshroom.name=Luminous Mooshroom Spawn Egg
+entity.honkit26113:luminous_mooshroom.name=Luminous Mooshroom
+
+
+
+## Slimy Sewers
+tile.honkit26113:slimy_stone.name=Slimy Stone
+tile.honkit26113:slimy_deepslate.name=Slimy Deepslate
+tile.honkit26113:slimy_stone_bricks.name=Slimy Stone Bricks
+tile.honkit26113:slimy_stone_bricks_slab.name=Slimy Stone Brick Slab
+tile.honkit26113:slimy_stone_bricks_cracked.name=Cracked Slimy Stone Bricks
+tile.honkit26113:slimy_deepslate_bricks.name=Slimy Deepslate Bricks
+tile.honkit26113:slimy_deepslate_bricks_slab.name=Slimy Deepslate Brick Slab
+tile.honkit26113:slimy_deepslate_bricks_cracked.name=Cracked Slimy Deepslate Bricks
+tile.honkit26113:slimy_deepslate_tiles.name=Slimy Deepslate Tiles
+tile.honkit26113:slimy_deepslate_tiles_slab.name=Slimy Deepslate Tile Slab
+tile.honkit26113:slimy_deepslate_tiles_cracked.name=Cracked Slimy Deepslate Tiles
+tile.honkit26113:slime_layer.name=Slime Layer
+tile.honkit26113:dripping_slime_head.name=Dripping Slime Head
+tile.honkit26113:dripping_slime_body.name=Dripping Slime Body
+tile.honkit26113:slimy_blossom.name=Slimy Blossom
+tile.honkit26113:slimy_sprouts.name=Slimy Sprouts
+tile.honkit26113:sticky_spikes.name=Sticky Spikes
+tile.honkit26113:slime_lantern.name=Slime Lantern
+tile.honkit26113:glow_lichen_block.name=Glow Lichen Block
+tile.honkit26113:slimy_pebbles.name=Slimy Pebbles
+tile.honkit26113:slimy_deepslate_pebbles.name=Slimy Deepslate Pebbles
+
+item.honkit26113:slime_soup=Slime Soup
+item.honkit26113:dripping_slime_item=Dripping Slime
+item.honkit26113:slimeball_part=Slimeball Part
+item.honkit26113:hardened_slimeball=Hardened Slimeball
+item.honkit26113:slime_dagger= §aSlime Dagger\n§3Special Ability: Intoxication\n§cPoison II (0:05)\n§cJump Boost (0:03)
+item.honkit26113:slingshot=Slingshot\n§3Press and hold to shoot\nAmmo: §6Hardened Slimeball§r
+
+item.spawn_egg.entity.honkit26113:slimy_zombie.name=Slimy Zombie Spawn Egg
+entity.honkit26113:slimy_zombie.name=Slimy Zombie
+entity.honkit26113:thrown_slimeball.name=Hardened Slimeball
+
+
+
+## Limestone Caves
+tile.honkit26113:limestone.name=Limestone
+tile.honkit26113:limestone_slab.name=Limestone Slab
+tile.honkit26113:limestone_pebbles.name=Limestone Pebbles
+tile.honkit26113:cobbled_limestone.name=Cobbled Limestone
+tile.honkit26113:cobbled_limestone_pebbles.name=Cobbled Limestone Pebbles
+tile.honkit26113:polished_limestone.name=Polished Limestone
+tile.honkit26113:limestone_bricks.name=Limestone Bricks
+tile.honkit26113:limestone_bricks_slab.name=Limestone Brick Slab
+tile.honkit26113:limestone_bricks_chiseled.name=Chiseled Limestone Bricks
+tile.honkit26113:limestone_bricks_cracked.name=Cracked Limestone Bricks
+tile.honkit26113:limestone_bricks_mossy.name=Mossy Limestone Bricks
+tile.honkit26113:limestone_pillar.name=Limestone Pillar
+tile.honkit26113:sand_layer.name=Sand Layer
+tile.honkit26113:quicksand.name=Quicksand
+tile.honkit26113:sandy_roots_head.name=Sandy Roots Head
+tile.honkit26113:sandy_roots_body.name=Sandy Roots Body
+tile.honkit26113:sandy_skelly_skull.name=Sandy Skelly Skull
+
+tile.honkit26113:arena_trigger.name=Arena Trigger
+tile.honkit26113:arena_limestone_pillar.name=Arena Pillar
+
+item.honkit26113:raw_scorpion=Raw Scorpion
+item.honkit26113:cooked_scorpion=Cooked Scorpion
+item.honkit26113:sandy_roots_item=Sandy Roots
+item.honkit26113:sand_lump=Sand Lump
+item.honkit26113:sandstone_stick=Sandstone Stick\n§3Use to craft §6Wand of the Sands§r
+item.honkit26113:sandy_skelly_skull=Sandy Skelly Skull\n§3Use to craft §6Wand of the Sands§r
+item.honkit26113:wand_of_the_sands= §6Wand of the Sands\n§3Special Ability: Sandstorm\n§cBlindness (0:05)\nWeakness II (0:05)§r
+
+item.spawn_egg.entity.honkit26113:scorpion.name=Scorpion Spawn Egg
+entity.honkit26113:scorpion.name=Scorpion
+item.spawn_egg.entity.honkit26113:sandy_skelly.name=Sandy Skelly Spawn Egg
+entity.honkit26113:sandy_skelly.name=Sandy Skelly
+entity.honkit26113:thrown_sand.name=Sand Lump
+
+
+
+## Ice Caves
+tile.honkit26113:frosted_stone.name=Frosted Stone
+tile.honkit26113:frosted_stone_slab.name=Frosted Stone Slab
+tile.honkit26113:frosted_deepslate.name=Frosted Deepslate
+tile.honkit26113:pebbles.name=Pebbles
+tile.honkit26113:cobblestone_pebbles.name=Cobblestone Pebbles
+tile.honkit26113:frosted_pebbles.name=Frosted Pebbles
+tile.honkit26113:deepslate_pebbles.name=Deepslate Pebbles
+tile.honkit26113:cobbled_deepslate_pebbles.name=Cobbled Deepslate Pebbles
+tile.honkit26113:frosted_deepslate_pebbles.name=Frosted Deepslate Pebbles
+tile.honkit26113:crystallized_ice.name=Crystallized Ice
+tile.honkit26113:ice_crystal.name=Ice Crystal
+tile.honkit26113:dripping_icicle_small.name=Small Dripping Icicle
+tile.honkit26113:dripping_icicle_medium.name=Medium Dripping Icicle
+tile.honkit26113:packed_ice_bricks.name=Packed Ice Bricks
+tile.honkit26113:packed_ice_bricks_slab.name=Packed Ice Brick Slab
+tile.honkit26113:packed_ice_bricks_cracked.name=Cracked Packed Ice Bricks
+tile.honkit26113:packed_ice_chiseled.name=Chiseled Packed Ice
+tile.honkit26113:suitcase.name=Suitcase
+tile.honkit26113:suitcase_used.name=Suitcase
+
+item.honkit26113:ice_shard=Ice Shard
+item.honkit26113:dripping_icicle_item=Dripping Icicle
+item.honkit26113:frost_essence=Frost Essence\n§3Use to craft §6Bane of Frost§r
+item.honkit26113:frozen_core=Frozen Core\n§3Use to craft §6Bane of Frost§r
+item.honkit26113:bane_of_frost= §bBane of Frost\n§3Special Ability: Frostbite\n§cSlowness IV (0:03)§r\n§cMining Fatigue III (0:03)§r
+
+item.spawn_egg.entity.honkit26113:penguin.name=Penguin Spawn Egg
+entity.honkit26113:penguin.name=Penguin
+item.spawn_egg.entity.honkit26113:lost_explorer.name=Lost Explorer Spawn Egg
+entity.honkit26113:lost_explorer.name=Lost Explorer
+item.spawn_egg.entity.honkit26113:frost_spirit.name=Frost Spirit Spawn Egg
+entity.honkit26113:frost_spirit.name=Frost Spirit
+
+
+
+## Soul Caverns
+tile.honkit26113:crooked_nylium.name=Crooked Nylium
+tile.honkit26113:crooked_fungus.name=Crooked Fungus
+tile.honkit26113:crooked_roots.name=Crooked Roots
+tile.honkit26113:crooked_wart_block.name=Crooked Wart Block
+tile.honkit26113:crooked_stem.name=Crooked Stem
+tile.honkit26113:crooked_stem_stripped.name=Stripped Crooked Stem
+tile.honkit26113:crooked_hyphae.name=Crooked Hyphae
+tile.honkit26113:crooked_hyphae_stripped.name=Stripped Crooked Hyphae
+tile.honkit26113:crooked_planks.name=Crooked Planks
+tile.honkit26113:crooked_slab.name=Crooked Slab
+tile.honkit26113:crooked_fence.name=Crooked Fence
+tile.honkit26113:crooked_fence_gate.name=Crooked Fence Gate
+tile.honkit26113:crooked_door.name=Crooked Door
+tile.honkit26113:crooked_trapdoor.name=Crooked Trapdoor
+tile.honkit26113:soul_stone.name=Soul Stone
+tile.honkit26113:soul_bricks.name=Soul Bricks
+tile.honkit26113:soul_bricks_slab.name=Soul Brick Slab
+tile.honkit26113:soul_bricks_fence.name=Soul Brick Fence
+tile.honkit26113:soul_bricks_chiseled.name=Chiseled Soul Bricks
+tile.honkit26113:soul_bricks_cracked.name=Cracked Soul Bricks
+tile.honkit26113:soul_shroomlight.name=Soul Shroomlight
+tile.honkit26113:soul_magma.name=Soul Magma Block
+tile.honkit26113:soul_geyser.name=Soul Geyser
+tile.honkit26113:glowing_obsidian.name=Glowing Obsidian
+tile.honkit26113:lava_tank_broken.name=Broken Lava Tank
+tile.honkit26113:lava_tank_gold.name=Gold Lava Tank | §6Area: 7x6x7§r
+tile.honkit26113:lava_tank_gold_full.name=Full Gold Lava Tank
+tile.honkit26113:lava_tank_gold_locked.name=Locked Gold Lava Tank
+tile.honkit26113:lava_tank_gold_cooldown.name=Cooling Down Gold Lava Tank
+tile.honkit26113:lava_tank_diamond.name=Diamond Lava Tank | §6Area: 11x6x11§r
+tile.honkit26113:lava_tank_diamond_full.name=Full Diamond Lava Tank
+tile.honkit26113:lava_tank_diamond_locked.name=Locked Diamond Lava Tank
+tile.honkit26113:lava_tank_diamond_cooldown.name=Cooling Down Diamond Lava Tank
+
+item.honkit26113:soul_healer=§bSoul Healer§r
+item.honkit26113:soul_fragment=Soul Fragment
+item.honkit26113:crooked_fungus_stew=Crooked Fungus Stew
+
+item.spawn_egg.entity.honkit26113:wisp.name=Wisp Spawn Egg
+entity.honkit26113:wisp.name=Wisp
+entity.honkit26113:thrown_soul.name=Soul from Wisp
+
+
+
+## Undergrowth
+tile.honkit26113:cave_turf.name=Cave Turf
+tile.honkit26113:deepslate_cave_turf.name=Deepslate Cave Turf
+tile.honkit26113:stem_block.name=Stem Block
+tile.honkit26113:rainbow_gum_log.name=Rainbow Gum Log
+tile.honkit26113:rainbow_gum_log_stripped.name=Stripped Rainbow Gum Log
+tile.honkit26113:rainbow_gum_wood.name=Rainbow Gum Wood
+tile.honkit26113:rainbow_gum_wood_stripped.name=Stripped Rainbow Gum Wood
+tile.honkit26113:rainbow_gum_planks.name=Rainbow Gum Planks
+tile.honkit26113:rainbow_gum_slab.name=Rainbow Gum Slab
+tile.honkit26113:rainbow_gum_trapdoor.name=Rainbow Gum Trapdoor
+tile.honkit26113:rainbow_gum_door.name=Rainbow Gum Door
+tile.honkit26113:rainbow_gum_fence.name=Rainbow Gum Fence
+tile.honkit26113:rainbow_gum_fence_gate.name=Rainbow Gum Fence Gate
+tile.honkit26113:rainbow_gum_leaves.name=Rainbow Gum Leaves
+
+tile.honkit26113:petal_block_white.name=White Petal Block
+tile.honkit26113:petal_block_blue.name=Blue Petal Block
+tile.honkit26113:petal_block_yellow.name=Yellow Petal Block
+tile.honkit26113:petal_block_red.name=Red Petal Block
+tile.honkit26113:petal_block_orange.name=Orange Petal Block
+tile.honkit26113:petal_block_magenta.name=Magenta Petal Block
+tile.honkit26113:petal_block_black.name=Black Petal Block
+tile.honkit26113:chromatic_petals.name=Chromatic Petals
+tile.honkit26113:twilight_spores.name=Twilight Spores
+tile.honkit26113:star_jasmine.name=Star Jasmine
+
+item.honkit26113:corrupted_bouquet= §aCorrupted Bouquet\n§3Special Ability: Flower Power\n§rSpawns tracking thorns towards\nthe nearest entity.\nCannot damage players.
+
+item.spawn_egg.entity.honkit26113:thornspitter.name=Thornspitter Spawn Egg
+entity.honkit26113:thornspitter.name=Thornspitter
+entity.honkit26113:thrown_thorn.name=Thorn
+entity.honkit26113:tracking_thorn.name=Tracking Thorn from §6Corrupted Bouquet§r
+
+
+
+## Arena
+entity.honkit26113:arena_entity_counter.name=Mobs Left
+entity.honkit26113:arena_countdown.name=Time Left
+
+
+
+## Loading Messages
+honkit26113.beyond_underground.tips.1=Luminous Caverns only generate under Mushroom Islands!
+honkit26113.beyond_underground.tips.2=Slimy Sewers only generate under Swamps!
+honkit26113.beyond_underground.tips.3=Limestone Caves only generate under Deserts!
+honkit26113.beyond_underground.tips.4=Ice Caves only generate under frozen biomes!
+honkit26113.beyond_underground.tips.5=Make Fatal Poison potions using Raw Scorpions!
+honkit26113.beyond_underground.tips.6=Make Luminous Mushroom Stew using Luminous Mushrooms!
+honkit26113.beyond_underground.tips.7=You can make Slime Soup using Slimeballs... but I don't recommend drinking it.
+honkit26113.beyond_underground.tips.8=Shroom Elfs are very shy creatures, but you can feed them Luminous Mushrooms to gain their trust!
+honkit26113.beyond_underground.tips.9=Luminite can be found in Luminous Caverns!
+honkit26113.beyond_underground.tips.10=Luminite gear has more durability than Netherite gear!
+honkit26113.beyond_underground.tips.11=You can craft Hardened Slimeballs and throw them at your opponents!
+honkit26113.beyond_underground.tips.12=Limestone can be used to make Limestone Bricks!
+honkit26113.beyond_underground.tips.13=Each major Beyond The Underground update brings a new panorama! 
+honkit26113.beyond_underground.tips.14=Pebbles have 12 different variations when placed!
+honkit26113.beyond_underground.tips.15=Combine 6 Luminite Shards with 1 Diamond to make 1 Luminite!
+honkit26113.beyond_underground.tips.16=Watch out for Quicksand when exploring Swamps and Limestone Caves!
+honkit26113.beyond_underground.tips.17=Ice Crystals are the only thing that give off light in the dark, freezing Ice Caves.
+honkit26113.beyond_underground.tips.18=Packed Ice can be used to make Packed Ice Bricks!
+honkit26113.beyond_underground.tips.19=Interact with a Suitcase while holding an Emerald to summon a Lost Explorer!
+honkit26113.beyond_underground.tips.20=Limestone Caves are the only cave type that don't generate at Deepslate level!
+honkit26113.beyond_underground.tips.21=Feed a Luminous Mooshroom Mysterious Fungus, and get Mysterious Stew!
+honkit26113.beyond_underground.tips.22=Mysterious Stew has a 33% chance to give you 2 effects.
+honkit26113.beyond_underground.tips.23=Watch your step when exploring the Slimy Sewers- don't step into Sticky Spikes!
+honkit26113.beyond_underground.tips.24=You can craft all types of pebbles using a Stonecutter!
+honkit26113.beyond_underground.tips.25=Use Slimy Stone and Slimy Deepslate to make bricks!
+honkit26113.beyond_underground.tips.26=Make sure you are equipped with armor before taking on Limestone and Slime Dungeons!
+honkit26113.beyond_underground.tips.27=Ruins can sometimes be found in Limestone Caves. I wonder what their backstories are?
+honkit26113.beyond_underground.tips.28=You can craft Slime Lanterns using 1 Glowstone and 4 Hardened Slimeballs.
+honkit26113.beyond_underground.tips.29=Slime Daggers can only be obtained from Slime Dungeons!
+honkit26113.beyond_underground.tips.30=Soul Caverns only generate in the Nether Wastes!
+honkit26113.beyond_underground.tips.31=Craft a Soul Healer using 7 Soul Fragments and 2 Glowing Obsidian!
+honkit26113.beyond_underground.tips.32=Activate the Soul Healer when you're low on health- it can save your life!
+honkit26113.beyond_underground.tips.33=Craft Soul Bricks using Soul Stone!
+honkit26113.beyond_underground.tips.34=You can throw Sand Lumps at your opponents!
+honkit26113.beyond_underground.tips.35=Crooked Fungus Stew gives you the Fire Resistance effect!
+honkit26113.beyond_underground.tips.36=Watch out for Soul Geysers in the Soul Caverns. They shoot you high up into the air!
+honkit26113.beyond_underground.tips.37=Don't step on Soul Magma Blocks- they hurt!
+honkit26113.beyond_underground.tips.38=See some exposed Stone / Packed Ice Bricks while caving? This is a sign of a dungeon!
+
+
+
+## Item Groups
+honkit26113:itemGroup.slimy_stone_bricks=Slimy Stone Bricks §6[Beyond The Underground]§r
+honkit26113:itemGroup.limestone_bricks=Limestone Bricks §6[Beyond The Underground]§r
+honkit26113:itemGroup.lava_tank=Lava Tanks §6[Beyond The Underground]§r
+honkit26113:itemGroup.pebbles=Pebbles §6[Beyond The Underground]§r
+honkit26113:itemGroup.luminous_caverns=Luminous Caverns §6[Beyond The Underground]§r
+honkit26113:itemGroup.slimy_sewers=Slimy Sewers §6[Beyond The Underground]§r
+honkit26113:itemGroup.limestone_caves=Limestone Caves §6[Beyond The Underground]§r
+honkit26113:itemGroup.ice_caves=Ice Caves §6[Beyond The Underground]§r
+honkit26113:itemGroup.crooked_caverns=Crooked Caverns §6[Beyond The Underground]§r
+honkit26113:itemGroup.undergrowth=Undergrowth §6[Beyond The Underground]§r
+
+
+
+## Output Messages
+suitcase.message.interact_with_emerald=Interact with an Emerald to summon the Lost Explorer!
+suitcase.message.summoned= Lost Explorer successfully summoned!
+suitcase.message.used= This Suitcase has already been used to summon a Lost Explorer!
+
+lava_tank.message.broken= Oops! This Lava Tank is broken. Repair it in a Crafting Table first!
+lava_tank.message.locked= Locked Lava Tanks cannot be emptied!
+lava_tank.message.error_not_above_lava= The tank must be placed above lava to proceed.
+lava_tank.message.confirmation=Are you sure? Interact with the tank again to proceed.
+lava_tank.message.success= Success.
+lava_tank.message.cancel= Canceled operation.
+lava_tank.message.cooldown5= You need to wait before using the Lava Tank again. [0:05]
+lava_tank.message.cooldown4= You need to wait before using the Lava Tank again. [0:04]
+lava_tank.message.cooldown3= You need to wait before using the Lava Tank again. [0:03]
+lava_tank.message.cooldown2= You need to wait before using the Lava Tank again. [0:02]
+lava_tank.message.cooldown1= You need to wait before using the Lava Tank again. [0:01]
+lava_tank.message.cooldown0= You need to wait before using the Lava Tank again. [0:00]
+lava_tank.message.cooldown= You need to wait before using the Lava Tank again.
+lava_tank.message.cooldown_end= You can now pick up the Lava Tank for use.
+lava_tank.message.interact_with_water=Interact with a Water Bucket to cool down the tank!
+lava_tank.message.cooling_down= The Lava Tank is now cooling down!
+lava_tank.message.interact_with_pickaxe=Interact with a Diamond Pickaxe or better to empty the tank!
+lava_tank.message.emptied= The Lava Tank has been emptied!
+
+soul_healer.message.activated= §bSoul Healer§r Activated!
+
+arena.message.wait= There is another arena battle ongoing, or a battle has just ended.
+arena.message.confirmation=Start battle? Interact with the pillar again to proceed.
+arena.message.cancel= Canceled operation.
+arena.message.starting_in= Get ready! Arena battle is starting in
+arena.message.battle_start=Good luck!
+arena.message.check_difficulty= Make sure your difficulty is at least set to Easy. If you are in Peaceful, you will not receive any rewards!
+arena.message.difficulty_error= Arena battle could not start in Peaceful difficulty.
+arena.message.exit_world_canceled=§6[Arena]§r  Since you left the world before the battle has ended, you will not receive any rewards.
+arena.message.pillar_used= This pillar has already been triggered.
+arena.message.victory=
+arena.message.defeat=

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:catalyst_feature": {
+    "description": {
+      "identifier": "honkit26113:glow_lichen_block_feature"
+    },
+    "can_place_sculk_catalyst_on": [
+      "minecraft:stone",
+      "minecraft:deepslate",
+      "minecraft:grass",
+      "minecraft:dirt"
+    ],
+    "central_block": "honkit26113:glow_lichen_block",
+    "patch_feature": "honkit26113:glow_lichen_patch_feature",
+    "central_patch_feature": "honkit26113:glow_lichen_central_patch_feature",
+    "vertical_range": 13,
+    "pathes_count_min": 3,
+    "pathes_count_max": 7,
+    "max_patch_distance": 16
+  }
+}

@@ -1,0 +1,29 @@
+/*{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "honkit26113:scorching_depths_lava_at_y5_feature",
+      "places_feature": "honkit26113:scorching_depths_lava_feature"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag", "operator": "==", "value": "soulsand_valley"
+        }
+      ]
+    },    
+    "distribution": {
+      "iterations": 1000,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": 5,
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    }
+  }
+}

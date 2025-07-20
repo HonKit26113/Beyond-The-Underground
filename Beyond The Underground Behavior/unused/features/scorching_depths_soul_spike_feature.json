@@ -1,0 +1,21 @@
+/*{ // obsolete. see soul_spike features
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "honkit26113:scorching_depths_soul_spike_feature"
+    },
+    "height_distribution":  [
+      [{"range_min": 1, "range_max": 6}, 3],
+      [{"range_min": 1, "range_max": 3}, 3],
+      [{"range_min": 1, "range_max": 4}, 4]
+    ],
+    "growth_direction": "UP",
+    "age": {"range_min": 1, "range_max": 6},
+    "body_blocks": [
+      ["honkit26113:soul_spike", 4]
+    ],
+    "head_blocks": [
+      ["honkit26113:soul_spike", 1]
+    ]
+  }
+}

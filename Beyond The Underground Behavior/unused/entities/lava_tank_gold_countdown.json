@@ -1,0 +1,932 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "honkit26113:lava_tank_gold_countdown",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [ "flight_countdown", "placeholder", "inanimate" ]
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 0.5
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:persistent": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+      		"minecraft:damage_sensor": {
+        		"triggers": {
+          			"cause": "all",
+          			"deals_damage": false
+        		}
+      		}
+		},
+		"component_groups": {
+			"honkit26113:from_30_to_29": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_29_to_28"
+					}
+				}
+			},
+			"honkit26113:from_29_to_28": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_28_to_27"
+					}
+				}
+			},
+			"honkit26113:from_28_to_27": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_27_to_26"
+					}
+				}
+			},
+			"honkit26113:from_27_to_26": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_26_to_25"
+					}
+				}
+			},
+			"honkit26113:from_26_to_25": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_25_to_24"
+					}
+				}
+			},
+			"honkit26113:from_25_to_24": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_24_to_23"
+					}
+				}
+			},
+			"honkit26113:from_24_to_23": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_23_to_22"
+					}
+				}
+			},
+			"honkit26113:from_23_to_22": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_22_to_21"
+					}
+				}
+			},
+			"honkit26113:from_22_to_21": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_21_to_20"
+					}
+				}
+			},
+			"honkit26113:from_21_to_20": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_20_to_19"
+					}
+				}
+			},
+			"honkit26113:from_20_to_19": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_19_to_18"
+					}
+				}
+			},
+			"honkit26113:from_19_to_18": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_18_to_17"
+					}
+				}
+			},
+			"honkit26113:from_18_to_17": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_17_to_16"
+					}
+				}
+			},
+			"honkit26113:from_17_to_16": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_16_to_15"
+					}
+				}
+			},
+			"honkit26113:from_16_to_15": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_15_to_14"
+					}
+				}
+			},
+			"honkit26113:from_15_to_14": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_14_to_13"
+					}
+				}
+			},
+			"honkit26113:from_14_to_13": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_13_to_12"
+					}
+				}
+			},
+			"honkit26113:from_13_to_12": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_12_to_11"
+					}
+				}
+			},
+			"honkit26113:from_12_to_11": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_11_to_10"
+					}
+				}
+			},
+			"honkit26113:from_11_to_10": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_10_to_9"
+					}
+				}
+			},
+			"honkit26113:from_10_to_9": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_9_to_8"
+					}
+				}
+			},
+			"honkit26113:from_9_to_8": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_8_to_7"
+					}
+				}
+			},
+			"honkit26113:from_8_to_7": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_7_to_6"
+					}
+				}
+			},
+			"honkit26113:from_7_to_6": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_6_to_5"
+					}
+				}
+			},
+			"honkit26113:from_6_to_5": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_5_to_4"
+					}
+				}
+			},
+			"honkit26113:from_5_to_4": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_4_to_3"
+					}
+				}
+			},
+			"honkit26113:from_4_to_3": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_3_to_2"
+					}
+				}
+			},
+			"honkit26113:from_3_to_2": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_2_to_1"
+					}
+				}
+			},
+			"honkit26113:from_2_to_1": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_1_to_0"
+					}
+				}
+			},
+			"honkit26113:from_1_to_0": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:from_0_to_end"
+					}
+				}
+			},
+			"honkit26113:from_0_to_end": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1.0,
+						1.0
+					],
+					"time_down_event": {
+						"event": "honkit26113:end"
+					}
+				}
+			},
+			"honkit26113:end": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_30_to_29"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+              					"structure save lava_tank1 ~-3 ~-3 ~-3 ~3 ~ ~3 false memory true",
+              					"fill ~-3 ~-3 ~-3 ~3 ~ ~3 air 0 replace lava",
+              					"execute @p ~ ~ ~ title @s actionbar Lava refills in [0:30]"
+              				]
+						}
+					}
+				]
+			},
+			"honkit26113:from_29_to_28": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_29_to_28"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:29]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_28_to_27": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_28_to_27"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:28]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_27_to_26": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_27_to_26"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:27]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_26_to_25": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_26_to_25"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:26]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_25_to_24": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_25_to_24"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:25]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_24_to_23": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_24_to_23"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:24]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_23_to_22": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_23_to_22"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:23]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_22_to_21": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_22_to_21"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:22]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_21_to_20": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_21_to_20"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:21]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_20_to_19": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_20_to_19"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:20]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_19_to_18": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_19_to_18"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:19]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_18_to_17": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_18_to_17"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:18]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_17_to_16": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_17_to_16"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:17]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_16_to_15": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_16_to_15"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:16]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_15_to_14": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_15_to_14"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:15]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_14_to_13": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_14_to_13"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:14]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_13_to_12": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_13_to_12"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:13]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_12_to_11": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_12_to_11"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:12]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_11_to_10": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_11_to_10"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:11]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_10_to_9": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_10_to_9"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:10]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_9_to_8": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_9_to_8"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:09]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_8_to_7": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_8_to_7"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:08]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_7_to_6": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_7_to_6"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:07]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_6_to_5": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_6_to_5"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar §cLava refills in [0:06]§r"
+						}
+					}
+				]
+			},
+			"honkit26113:from_5_to_4": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_5_to_4"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:05]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_4_to_3": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_4_to_3"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar §cLava refills in [0:04]§r"
+						}
+					}
+				]
+			},
+			"honkit26113:from_3_to_2": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_3_to_2"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:03]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_2_to_1": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_2_to_1"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar §cLava refills in [0:02]§r"
+						}
+					}
+				]
+			},
+			"honkit26113:from_1_to_0": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_1_to_0"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar Lava refills in [0:01]"
+						}
+					}
+				]
+			},
+			"honkit26113:from_0_to_end": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:from_0_to_end"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": "execute @p ~ ~ ~ title @s actionbar §cLava refills in [0:00]§r"
+						}
+					}
+				]
+			},
+			"honkit26113:end": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:end"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"structure load mystructure:lava_tank1 ~-3 ~-3 ~-3 0_degrees none layer_by_layer 2",
+								"structure delete mystructure:lava_tank1"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

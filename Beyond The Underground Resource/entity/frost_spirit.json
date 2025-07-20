@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:frost_spirit",
+      "materials": {
+        "default": "drowned"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_frost_spirit"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_frost_spirit"
+      },/*
+      "scripts": {
+        "pre_animation": [
+          "variable.moving = query.ground_speed > 0 || query.vertical_speed > 0;",
+          "variable.xTargetRot = math.clamp(query.target_x_rotation, -30, 30);",
+          "variable.xHeadRot = query.dash_cooldown_progress > 0 ? math.clamp(variable.xTargetRot + (45 * (1 - query.dash_cooldown_progress)), -25, 70) : variable.xTargetRot;",
+          "variable.yHeadRot = math.clamp(query.target_y_rotation, -30, 30);"
+        ]
+      },*/
+      "animations": {
+        "walk": "animation.honkit26113_frost_spirit.move",
+        "attack": "animation.honkit26113_frost_spirit.attack",
+        //"sit_down": "animation.honkit26113_frost_spirit.sit_down",
+        //"sit": "animation.honkit26113_frost_spirit.sit",
+        //"stand_up": "animation.honkit26113_frost_spirit.stand_up",
+        "look_at_target": "animation.penguin.look_at_target"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.scorpion.move" }
+      ],
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#7CA5F4",
+        "overlay_color": "#335BA5"
+      }
+    }
+  }
+}

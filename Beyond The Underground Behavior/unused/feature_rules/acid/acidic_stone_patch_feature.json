@@ -1,0 +1,48 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "honkit26113:acidic_stone_patch_feature",
+      "places_feature": "honkit26113:acid/acidic_stone_patch_snap_to_surface_feature"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "taiga"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "cold"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "lush_caves"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 100,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ 0, 60 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    }
+  }
+}

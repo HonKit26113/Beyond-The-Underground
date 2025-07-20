@@ -1,0 +1,22 @@
+I suggest using this seed: (found by @StardustLabsMC)
+
+597512063
+
+Here are the coordinates:
+Luminous Caverns: 1120 -7 30
+
+Slimy Sewers: 3780 23 -2520 / 3870 1 -2590
+Slime Dungeon (stone variant): 3860 18 -2640
+Slime Dungeon (deepslate variant): 3810 -15 -2620
+
+Limestone Dungeon: -311 47-1615
+Limestone Caves, with Limestone Ruins: -160 23 -4800
+
+Ice Caves, with mineshaft: -470 32 1430
+
+Nether Cave: 263470688762950743, -300 18 -60
+
+structure save lava_tank1 ~-3 ~-3 ~-3 ~3 ~ ~3 false memory true
+fill ~-3 ~-3 ~-3 ~3 ~ ~3 air 0 replace lava
+structure load mystructure:lava_tank1 ~-3 ~-3 ~-3 0_degrees none layer_by_layer 2
+structure delete mystructure:lava_tank1

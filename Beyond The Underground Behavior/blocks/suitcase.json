@@ -1,0 +1,89 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.21.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:suitcase",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"]
+                }
+            },
+            "states": {
+                "honkit26113:direction": [0, 1],
+                "honkit26113:trader_spawned": [0, 1]
+            }
+        },
+        "components": {
+            "minecraft:custom_components": [
+                "honkit26113:spawn_explorer"
+            ],
+            "minecraft:geometry": { 
+                "identifier": "geometry.suitcase"
+            }, 
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "suitcase",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [ "up" ]
+                    }
+                ]
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:redstone_conductivity": {
+                "allows_wire_to_step_down": false,
+                "redstone_conductor": false
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:flammable": {
+                "flame_odds": 0,
+                "burn_odds": 20
+            },
+            "minecraft:selection_box": {
+                "origin": [-6, 0, -4],
+                "size": [12, 6, 8]
+            },
+            "minecraft:collision_box": {
+                "origin": [-6, 0, -4],
+                "size": [12, 6, 8]
+            }
+        },
+        "permutations": [
+        	{
+                "condition": "q.block_state('honkit26113:direction') == 0 || q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                }
+            },
+        	{
+                "condition": "q.block_state('honkit26113:direction') == 1 || q.block_state('minecraft:cardinal_direction') == 'east' || q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation" : [0, 270, 0]
+                    }
+                }
+            }
+        ]
+    }
+}

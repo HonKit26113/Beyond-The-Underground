@@ -1,0 +1,75 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.thornspitter.attack_particles": {
+		  "loop": true,
+		  "animation_length": 0.3,
+		  "particle_effects": {
+		    "0.0": {
+          		"effect": "attack_particles",
+		      	"pre_effect_script": "variable.ground_particle_amount = 1; variable.ground_particle_initial_speed = math.random( 2, 3 ); variable.ground_particle_texture_coordinate = query.surface_particle_texture_coordinate; variable.ground_particle_texture_size = query.surface_particle_texture_size;"
+		    }
+		  }
+		},
+		"animation.thornspitter.spin": {
+			"loop": true,
+			"animation_length": 1.44,
+			"bones": {
+				"bone3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.36": [0, -90, 0],
+						"0.72": [0, -180, 0],
+						"1.08": [0, -270, 0],
+						"1.44": [0, -360, 0]
+					}
+				}
+			}
+		},
+		"animation.thornspitter.look_at_target": {
+			"loop": true,
+			"bones": {
+				"bone2": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation - this", 0]
+				},
+				"bone3": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.thornspitter.attack": {
+			"animation_length": 0.96,
+			"bones": {
+				"bone": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.48": [0, 1, 0],
+						"0.96": [0, 0, 0]
+					},
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.24": [0, -90, 0],
+						"0.48": [0, -180, 0],
+						"0.72": [0, -270, 0],
+						"0.96": [0, -360, 0]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.24": [0, -90, 0],
+						"0.48": [0, -180, 0],
+						"0.72": [0, -270, 0],
+						"0.96": [0, -360, 0]
+					}
+				}
+			}
+		}
+	}
+}

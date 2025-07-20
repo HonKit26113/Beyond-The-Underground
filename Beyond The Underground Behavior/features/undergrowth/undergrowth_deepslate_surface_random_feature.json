@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:undergrowth/undergrowth_deepslate_surface_random_feature"
+    },
+    "features": [
+      [ "honkit26113:undergrowth/deepslate_cave_turf_patch_feature", 12 ],
+      [ "honkit26113:mud_patch_feature", 1 ]
+    ]
+  }
+}

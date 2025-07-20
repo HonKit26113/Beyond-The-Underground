@@ -1,0 +1,86 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:soul_spike_tip"
+    },
+    "components": {
+        "tag:soul_spike": {},
+        "minecraft:creative_category": {
+            "group": "itemGroup.name.commands",
+            "category": "commands"
+        },
+    	"minecraft:destroy_time": 0.1,
+        "minecraft:block_light_emission": 0.3,
+        "minecraft:block_light_absorption": 0,
+        "minecraft:breakonpush": true,
+        "minecraft:geometry": "geometry.cross",
+        "minecraft:loot": "loot_tables/blocks/soul_spike.json",
+        "minecraft:placement_filter": {
+            "conditions": [
+                {
+                    "allowed_faces": [ "up" ]
+                }
+            ]
+        },
+        "minecraft:pick_collision": {
+            "origin":  [-3, 0, -3],
+            "size":    [6, 9, 6]
+        },
+        "minecraft:entity_collision": {
+            "origin":  [-3, 0, -3],
+            "size":    [6, 9, 6]
+        },
+        "minecraft:on_interact":{
+            "condition": "query.get_equipped_item_name('main_hand') == 'soul_spike_item'",
+            "event": "honkit26113:make_up_frustum"
+        },
+        "minecraft:on_fall_on": {
+        	"event": "honkit26113:on_fall_on"
+        },
+        "minecraft:on_player_destroyed": {
+        	"event": "honkit26113:on_player_destroyed"
+        },
+      	"minecraft:material_instances" : {
+        	"*": {
+          		"texture": "soul_spike_tip",
+          		"render_method": "alpha_test"
+        	}
+      	}
+    },
+    "events": {
+    	"honkit26113:on_fall_on": {
+    		"damage": {
+    			"type": "magic",
+    			"amount": 2,
+    			"target": "self"
+    		}
+    	},
+    	"honkit26113:on_player_destroyed": {
+    		"run_command": {
+    			"command": [
+    				"fill ~ ~-1 ~ ~ ~-1 ~ honkit26113:soul_spike_tip 0 replace honkit26113:soul_spike_frustum",
+    				"fill ~ ~-2 ~ ~ ~-2 ~ honkit26113:soul_spike_frustum 0 replace honkit26113:soul_spike_base"
+    			]
+    		}
+    	},
+      "honkit26113:make_up_frustum": {
+      	"sequence": [
+      		{
+      			"run_command": {
+      				"command": [
+      					"fill ~ ~1 ~ ~ ~1 ~ honkit26113:soul_spike_tip 0 replace air",
+      					"fill ~ ~ ~ ~ ~ ~ honkit26113:soul_spike_frustum 0 replace honkit26113:soul_spike_tip",
+      					"fill ~ ~-1 ~ ~ ~-1 ~ honkit26113:soul_spike_base 0 replace honkit26113:soul_spike_frustum"
+      				]
+      			}
+      		},
+      		{
+      			"decrement_stack": {}
+      		}
+      	]
+      }
+    }
+  }
+}

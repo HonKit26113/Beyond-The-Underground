@@ -1,0 +1,32 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:daylight_detector_from_rainbow_gum_slab"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AAA",
+            "BBB",
+            "CCC"
+        ],
+        "key": {
+            "A": {
+                "item": "glass"
+            },
+            "B": {
+                "item": "quartz"
+            },
+            "C": {
+                "item": "honkit26113:rainbow_gum_slab"
+            }
+        },
+        "result": {
+            "item": "daylight_detector",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "category": "construction",
+      "identifier": "honkit26113_item:packed_ice_bricks"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.construction"
+      },
+      "minecraft:block_placer": {
+      	"block": "honkit26113:packed_ice_bricks",
+      	"use_block_description": true
+      },
+      "minecraft:display_name": {
+        "value": "tile.honkit26113:packed_ice_bricks.name"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "packed_ice_bricks"
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+            "third_person": {
+                "position": [
+                    0.26,
+                    1,
+                    -0.55
+                ],
+                "scale": [
+                    0.022,
+                    0.022,
+                    0.022
+                ]
+            },
+            "first_person": {
+                "position": [
+                    3.54,
+                    -0.8,
+                    -6.4
+                ],
+                "scale": [
+                    0.07,
+                    0.07,
+                    0.07
+                ]
+            }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:acid/acid_vegetation_random_feature"
+    },
+    "features": [
+      [ "honkit26113:undergrowth/chromatic_petals_random_feature", 3 ]
+    ]
+  }
+}

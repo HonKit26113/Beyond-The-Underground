@@ -1,0 +1,49 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "honkit26113:roofed_forest_cave_carver_feature",
+      "places_feature": "honkit26113:undergrowth/roofed_forest_cave_carver_feature"
+    },
+    "conditions": {
+      "placement_pass": "pregeneration_pass",
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "roofed"
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "jungle"
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "flower_forest"
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "meadow"
+        }
+      ]
+    },    
+    "distribution": {
+      "iterations": 24,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 15 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -54, 124 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 15 ]
+      }
+    }
+  }
+}

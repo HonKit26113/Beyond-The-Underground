@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "honkit26113:soul_healer.player",
+			"item": {
+				"bridge:luminite_boots": "query.owner_identifier == 'minecraft:player'"
+			},
+			"materials": {
+				"default": "armor"
+			},
+			"textures": {
+				"default": "textures/entity/soul_healer_attachable"
+			},
+			"geometry": {
+				"default": "geometry.soul_healer_attachable"
+			},
+			"render_controllers": [
+				"controller.render.armor"
+			]
+		}
+	}
+}

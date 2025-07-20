@@ -1,0 +1,100 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_sword",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.sword"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [ 
+					"minecraft:is_sword",
+					"honkit26113:luminite_tier" 
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "sword"
+			},
+			"minecraft:icon": "luminite_sword",
+			"minecraft:damage": 8,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 1795
+			},
+			//"minecraft:mining_speed": 1.5,
+			/*"minecraft:weapon": {
+        		"on_hurt_entity": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+        		}
+      		},*/
+			"minecraft:digger": {
+    			"use_efficiency": false,
+    			"destroy_speeds": [
+        			{
+            			"block": "minecraft:web",
+            			"speed": 15
+        				/*"on_dig": {
+          					"event": "honkit26113:use_double_durability",
+          					"target": "self"
+        				}*/
+        			},
+        			{
+            			"block": "minecraft:bamboo",
+            			"speed": 10
+        				/*"on_dig": {
+          					"event": "honkit26113:use_double_durability",
+          					"target": "self"
+        				}*/
+        			}
+    			]
+			},
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 449
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_sword"
+            			],
+            			"repair_amount": 1795
+        			}
+    			]
+			}
+		}/*,
+    	"events": {
+      		"honkit26113:on_tool_used": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		},
+      		"on_tool_used": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		},
+      		"honkit26113:use_double_durability": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 2
+        		}
+      		}
+    	}*/
+	}
+}

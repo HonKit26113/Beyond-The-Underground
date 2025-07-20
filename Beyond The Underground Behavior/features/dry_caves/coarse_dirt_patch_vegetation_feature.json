@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:dry_caves/coarse_dirt_patch_vegetation_feature"
+    },
+    "features": [
+      [ "honkit26113:dry_caves/short_dry_grass_feature", 33 ],
+      [ "honkit26113:dry_caves/tall_dry_grass_feature", 33 ],
+      [ "honkit26113:dead_bush_feature", 17 ],
+      [ "honkit26113:dry_caves/grass_feature", 17 ]
+    ]
+  }
+}

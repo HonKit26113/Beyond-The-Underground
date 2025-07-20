@@ -1,0 +1,19 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "honkit26113:soul_healer_attachable",
+      "materials": {
+        "default": "armor"
+      },
+      "textures": {
+        "default": "textures/entity/soul_healer_attachable"
+      },
+      "geometry": {
+        "default": "geometry.soul_healer_attachable"
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

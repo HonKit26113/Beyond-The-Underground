@@ -1,0 +1,221 @@
+{
+	"boss_health_panel": {
+		"type": "panel",
+		"size": [
+			182,
+			20
+		],
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"$progress_bar_collection": "boss_bars",
+		"controls": [
+			{
+				"boss_name@boss_name_panel": {}
+			},
+			{
+				"progress_bar_for_collections@common.progress_bar_for_collections": {
+					"offset": [
+						0,
+						10
+					]
+				}
+			},
+			//Binding BossName
+			{
+				"countdown_health@countdown_health": {
+					"offset": [
+						0,
+						-50
+					],
+					"layer": 2,
+					"bindings": [
+						{
+							"binding_name": "#bossName",
+							"binding_type": "collection",
+							"binding_collection_name": "boss_bars"
+						},
+						{
+							// Time Left
+							"binding_type": "view",
+							"source_property_name": "(#bossName = '')",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"mobs_left_health@mobs_left_health": {
+					"offset": [
+						0,
+						-50
+					],
+					"layer": 2,
+					"bindings": [
+						{
+							"binding_name": "#bossName",
+							"binding_type": "collection",
+							"binding_collection_name": "boss_bars"
+						},
+						{
+							// Mobs Left
+							"binding_type": "view",
+							"source_property_name": "(#bossName = '')",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				"binding_name": "#bar_visible",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars",
+				"binding_name_override": "#visible"
+			},
+			{
+				"binding_name": "#bossName",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars"
+			}
+		]
+	},
+	// Countdown
+	"countdown_health": {
+		"type": "panel",
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"size": [
+			256,
+			128
+		],
+		"bindings": [
+			{
+				"binding_name": "(#bossName = '')",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars",
+				"binding_name_override": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"empty_countdown_health@empty_countdown_health": {
+					"layer": 1,
+					"keep_ratio": false
+				}
+			},
+			{
+				"filled_countdown_bossbar@filled_countdown_bossbar": {
+					"layer": 2,
+					"keep_ratio": false
+				}
+			},
+			{
+				"overlay_countdown_bossbar@overlay_countdown_bossbar": {
+					"layer": 3,
+					"keep_ratio": false
+				}
+			}
+		]
+	},
+	// Mobs Left
+	"mobs_left_health": {
+		"type": "panel",
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"size": [
+			256,
+			128
+		],
+		"bindings": [
+			{
+				"binding_name": "(#bossName = '')",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars",
+				"binding_name_override": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"empty_mobs_left_health@empty_mobs_left_health": {
+					"layer": 1,
+					"keep_ratio": false
+				}
+			},
+			{
+				"filled_mobs_left_bossbar@filled_mobs_left_bossbar": {
+					"layer": 2,
+					"keep_ratio": false
+				}
+			},
+			{
+				"overlay_mobs_left_bossbar@overlay_mobs_left_bossbar": {
+					"layer": 3,
+					"keep_ratio": false
+				}
+			}
+		]
+	},
+	//Health Bar
+	"filled_countdown_bossbar@filled_countdown_health": {
+		"clip_pixelperfect": true,
+		"bindings": [
+			{
+				"binding_name": "#progress_percentage",
+				"binding_name_override": "#clip_ratio",
+				"binding_type": "collection",
+				"binding_collection_name": "$progress_bar_collection"
+			}
+		]
+	},//Health Bar
+	"filled_mobs_left_bossbar@filled_mobs_left_health": {
+		"clip_pixelperfect": true,
+		"bindings": [
+			{
+				"binding_name": "#progress_percentage",
+				"binding_name_override": "#clip_ratio",
+				"binding_type": "collection",
+				"binding_collection_name": "$progress_bar_collection"
+			}
+		]
+	},
+	// BossBar Images
+	"filled_countdown_health": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/countdown_full_bar",
+		"clip_direction": "left",
+		"bindings": [
+			{
+				"binding_name": "#progress_percentage",
+				"binding_name_override": "#clip_ratio"
+			}
+		]
+	},
+	"empty_countdown_health": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/countdown_empty_bar"
+	},
+	"overlay_countdown_bossbar": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/countdown_overlay_bar"
+	},
+	"filled_mobs_left_health": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/mobs_left_full_bar",
+		"clip_direction": "left",
+		"bindings": [
+			{
+				"binding_name": "#progress_percentage",
+				"binding_name_override": "#clip_ratio"
+			}
+		]
+	},
+	"empty_mobs_left_health": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/countdown_empty_bar"
+	},
+	"overlay_mobs_left_bossbar": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/mobs_left_overlay_bar"
+	}
+}

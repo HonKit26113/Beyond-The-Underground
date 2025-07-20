@@ -1,0 +1,13 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "honkit26113:furnace_polished_limestone_item"
+    },
+    "tags": ["furnace", "blast_furnace"],
+    "input": "honkit26113_item:limestone",
+    "output": "honkit26113_item:polished_limestone"
+  }
+  
+}

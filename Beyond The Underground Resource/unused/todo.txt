@@ -1,0 +1,9 @@
+change mcpedl description to:
+add section to teach ppl to use /locate biome command (if you're on mc 1.19.10 or above)
+and tell them which cave will generate in which biome
+
+soul magma: sneaking will only help a little bit, must keep moving
+
+addon:
+fix slimy blossom model
+add honkit26113 to names of entity textures and models

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "honkit26113:diamond_boots_to_luminite_boots"
+    },
+
+
+    "tags": [ "smithing_table" ],
+    "priority": 2,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond_boots"
+      },
+      {
+        "item": "honkit26113:luminite"
+      }
+    ],
+    "result": {
+      "item": "honkit26113:luminite_boots",
+      "count": 1
+    }
+  }
+  
+}

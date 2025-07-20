@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.honkit26113_frost_spirit.general": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "sit": "query.is_sitting" },
+            { "attack" : "variable.attack_time > 0.0" }
+          ],
+          "blend_transition": 0.0
+        },
+        "attack" : {
+          "animations" : [ "attack" ],
+          "transitions" : [
+            { "default" : "variable.attack_time <= 0.0" }
+          ],
+          "blend_transition": 0.0
+        },
+        "move": {
+          "animations": [
+            { "move": "query.modified_move_speed" }
+          ],
+          "transitions": [
+            { "sit_down": "query.is_sitting" },
+            { "attack" : "variable.attack_time > 0.0" }
+          ],
+          "blend_transition": 0.2
+        },
+        "sit": {
+          "animations": [ "sit" ],
+          "transitions": [
+            { "stand_up": "!query.is_sitting" },
+            { "attack" : "variable.attack_time > 0.0" }
+          ],
+          "blend_transition": 0.5
+        },
+        "sit_down": {
+          "animations": [ "sit_down" ],
+          "transitions": [
+            { "stand_up": "!query.is_sitting" },
+            { "attack" : "variable.attack_time > 0.0" }
+          ],
+          "blend_transition": 0.5
+        },
+        "stand_up": {
+          "animations": [ "stand_up" ],
+          "transitions": [
+            { "sit_down": "query.is_sitting" },
+            { "move": "variable.moving" },
+            { "attack" : "variable.attack_time > 0.0" }
+          ],
+          "blend_transition": 0.5
+        }
+      }
+    }
+  }
+}

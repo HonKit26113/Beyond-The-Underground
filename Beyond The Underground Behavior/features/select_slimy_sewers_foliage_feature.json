@@ -1,0 +1,16 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:select_slimy_sewers_foliage_feature"
+    },
+    "features": [
+      [ "honkit26113:slime_layer_feature", 82 ],
+      [ "honkit26113:slimy_blossom_feature", 4 ],
+      [ "honkit26113:slimy_sprouts_feature", 5 ],
+      [ "honkit26113:sticky_spikes_feature", 1 ],
+      [ "honkit26113:slimy_pebbles_feature", 4 ],
+      [ "honkit26113:slimy_deepslate_pebbles_feature", 4 ]
+    ]
+  }
+}

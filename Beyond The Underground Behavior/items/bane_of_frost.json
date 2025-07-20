@@ -1,0 +1,130 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:bane_of_frost"
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_sword",
+					"honkit26113:is_bane_of_frost"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": "bane_of_frost",
+			/*"minecraft:display_name": {
+				"value": " §bBane of Frost\n§3Special Ability: Frostbite\n§cSlowness IV (0:03)§r\n§cMining Fatigue III (0:03)§r"
+			},*/
+			"minecraft:damage": 6,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 432
+			},
+			"minecraft:digger": {
+        		/*"on_dig": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+        		},*/
+    			"use_efficiency": false,
+    			"destroy_speeds": [
+        			{
+            			"block": "minecraft:ice",
+            			"speed": 15
+        			},
+        			{
+            			"block": "minecraft:packed_ice",
+            			"speed": 15
+        			},
+        			{
+            			"block": "minecraft:blue_ice",
+            			"speed": 15
+        			},
+        			{
+            			"block": "honkit26113:crystallized_ice",
+            			"speed": 15
+        			},
+        			{
+            			"block": "honkit26113:packed_ice_bricks",
+            			"speed": 15
+        			},
+        			{
+            			"block": "honkit26113:packed_ice_bricks_cracked",
+            			"speed": 15
+        			},
+        			{
+            			"block": "honkit26113:packed_ice_bricks_chiseled",
+            			"speed": 15
+        			},
+        			{
+            			"block": "honkit26113:packed_ice_bricks_slab",
+            			"speed": 15
+        			},
+        			{
+            			"block": "minecraft:web",
+            			"speed": 15
+        			},
+        			{
+            			"block": "minecraft:bamboo",
+            			"speed": 10
+        			}
+    			]
+			},
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:bane_of_frost"
+            			],
+            			"repair_amount": 432
+        			}
+    			]
+			}
+		}/*,
+    	"events": {
+      		"honkit26113:on_tool_used": {
+      			"sequence": [
+      				{
+        				"swing": {},
+        				"damage": {
+          					"type": "contact",
+          					"amount": 1
+        				}
+        			},
+        			{
+        				"add_mob_effect": {
+        					"effect": "slowness",
+        					"duration": 3,
+        					"amplifier": 3,
+        					"target": "other"
+        				}
+        			},
+        			{
+        				"add_mob_effect": {
+        					"effect": "mining_fatigue",
+        					"duration": 3,
+        					"amplifier": 2,
+        					"target": "other"
+        				}
+        			}
+      			]
+      		},
+      		"honkit26113:use_double_durability": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 2
+        		}
+      		},
+      		"honkit26113:use_durability": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		}
+    	}*/
+	}
+}

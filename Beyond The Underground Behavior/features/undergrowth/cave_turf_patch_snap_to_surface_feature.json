@@ -1,0 +1,11 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:snap_to_surface_feature": {
+    "description": {
+      "identifier": "honkit26113:undergrowth/cave_turf_patch_snap_to_surface_feature"
+    },
+    "feature_to_snap": "honkit26113:undergrowth/cave_turf_patch_feature",
+    "vertical_search_range": 25,
+    "surface": "floor"
+  }
+}

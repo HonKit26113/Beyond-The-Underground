@@ -1,0 +1,44 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.honkit26113_sandy_skelly.brandish_spear": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": ["this * -0.5 - 157.5 - 22.5 * variable.charge_amount", "-this", 0],
+					"position": [0, -18, 2]
+				}
+			}
+		},
+		"animation.honkit26113_sandy_skelly.holding": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": ["variable.is_holding_left ? (-this * 0.5 - 18.0) : 0.0", -5, 0]
+				},
+				"rightarm": {
+					"rotation": ["variable.is_holding_right ? (-this * 0.5 - 18.0) : 0.0", -5, 0]
+				}
+			}
+		},
+		"animation.honkit26113_sandy_skelly.move": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["-variable.tcos0 * 0.5 - 18.0", -5, 0],
+					"position": [-1, -1, 2]
+				},
+				"leftLeg": {
+					"rotation": ["variable.tcos0 * -0.4", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-(-variable.tcos0 * 0.5 - 17.0)", -5, 0],
+					"position": [0, -1, 2]
+				},
+				"rightLeg": {
+					"rotation": ["variable.tcos0 * 0.4", 0, 0]
+				}
+			}
+		}
+	}
+}

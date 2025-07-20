@@ -1,0 +1,88 @@
+Version 1.2 (August 29, 2021)
+Made by HonKit26113. Do not distribute.
+
+Previous Changelogs & Full Documentation available here:
+docs.google.com/document/d/16EMzZxrzGBT20xwMS1VMx5-A5x4xur6lDnq8F9aiHqY/
+
+This pack is licensed under CC BY-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nd/4.0/
+This add-on is only available on MCPEDL.
+
+The Changelog below may not be 100% identical to the one on MCPEDL. In that case, the MCPEDL version shall prevail.
+
+====================
+New Cave Type: Ice Caves!
+ - These caves generate exclusively under frozen biomes
+ - Ice can be found everywhere, including dripping icicles and ice crystals
+ - Lost Explorers have settled down in these caves because they couldn't find a way out
+
+New Mobs:
+ - Penguin
+ - Lost Explorer
+
+New Blocks:
+ - Pebbles (Normal, Cobblestone, Frosted)
+ - Frosted Stone
+ - Crystallized Ice
+ - Ice Crystal
+ - Dripping Icicle
+ - Packed Ice Bricks (Normal, Cracked, Slab)
+ - Chiseled Packed Ice
+ - Deepslate Glow Mycelium
+ - Slimy Deepslate
+ - Suitcase
+
+New Items:
+ - Ice Shard
+ - Potion of Freezing (Slowness VII, Mining Fatigue III, 0:20)
+ - Potion of Freezing (Slowness VII, Mining Fatigue III, 0:40)
+
+Other Changes:
+ - Added new custom loading messages!
+ - Deepslate Glow Mycelium and Slimy Deepslate will now generate instead of their Stone counterparts when they are replacing Deepslate.
+ - Patches of Calcite will now generate in Limestone Caves.
+ - Limestone Bricks, Polished Limestone and Ice Bricks can now be crafted using a Stonecutter.
+ - It's now harder to get out of Quicksand.
+ - Some blocks will now have their textures rotated randomly.
+ - You now have to interact with the top/bottom (depending on the block) of Radiant Vines, Dripping Slime, Sandy Roots and Dripping Icicles to place another one, to match Vanilla dripstone behavior.
+ - The subpack system has been changed, once again. You now have to choose what Minecraft version you're on so the add-on can function properly.
+ - Custom blocks in this add-on will now be in the creative menu in Minecraft 1.17.20 and later versions!
+ - Removed temporary items to place custom blocks if the 1.17.20 or 1.17.30 subpack is selected.
+ - New pack icon!
+ - New background panorama!
+ - This add-on now requires Minecraft 1.17.10 or above to function.
+
+Fixed Bugs:
+ - Luminite armor now renders correctly. (thanks SoriPop!)
+ - Vanilla armor and armor from other add-ons now render correctly. (thanks SoriPop!)
+ - Items added to the creative inventory for placing blocks no longer appear massive when held. (thanks Laiffoo!)
+ - Blocks now have the correct amount of blast resistance.
+ - Scorpions and Slimy Zombies can now despawn, reducing lag.
+ - The Shroom Elf's legs will no longer detach from its body when looking in certain angles.
+ - Scorpions will no longer "lift up" when looking in certain angles.
+ - Scorpions will no longer use the wrong model on some devices.
+ - The time needed to break certain blocks has been changed.
+ - The Quicksand icon is no longer slightly smaller than other blocks.
+ - The correct item now drops when breaking Dripping Slime and Sandy Roots.
+ - 1 Sand Layer will now be used when stacking them on top of another one.
+ - The texture of triple-stacked Sand Layers now appear normal.
+ - The hitbox of Slime Layers is now 1-px tall to match their appearance.
+ - Luminous Mushroom Stems can once again be rotated.
+ - Durability will now be used when breaking blocks using Luminite tools.
+ - Luminite Shovels can now break certain blocks quicker.
+ - Fixed a typo in the code of Luminite Leggings.
+ - Custom items added in this add-on are now put into the correct categories and item groups.
+ - "Invalid lang file format" warnings will no longer appear.
+
+
+====================
+A big thank you to everyone who contributed to the pack! Names are listed in alphabetical order.
+ - Beez - Ice Crystal & Crystallized Ice textures
+ - Captain CoBlocks - Limestone texture
+ - ii.Sabeo - Hardened Slimeball suggestion and texture
+ - itspete3k - Original Penguin texture design
+ - Laiffoo - Code for fixing temporary items being massive
+ - SorYPMod - Help with fixing bugged custom armor
+ - SpiderGamer1843 - Revamped Lost Explorer texture
+ - Star Origins - Beyond the Underground name suggestion
+ - StickmanDrip69 - Scorpion texture
+ - TaxingHawk - Texture feedback, help with code, Slimy Zombie suggestion, Radiant Vines texture, cross-shape geometry of plants

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:undergrowth/undergrowth_vegetation_random_feature"
+    },
+    "features": [
+      [ "honkit26113:undergrowth/chromatic_petals_random_feature", 19 ],
+      [ "honkit26113:undergrowth/twilight_spores_random_feature", 5 ],
+      [ "honkit26113:placeholder_test_feature", 26 ]
+    ]
+  }
+}

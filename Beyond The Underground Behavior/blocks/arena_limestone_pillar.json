@@ -1,0 +1,97 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.21.10",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:arena_limestone_pillar",
+      "menu_category": {
+        "group": "none",
+        "category": "none",
+        "is_hidden_in_commands": false // change to true
+      },
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": [
+            "minecraft:block_face"
+          ]
+        }
+      },
+      "states": {
+        "honkit26113:activated": [ false, true ]
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 999999
+      },
+      "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 99999
+      },
+      "minecraft:light_emission": 6,
+      "minecraft:material_instances" : {
+        "*": {
+          "texture": "arena_limestone_pillar_side_off",
+          "render_method" : "opaque"
+        },
+        "up": {
+          "texture": "limestone_pillar_top",
+          "render_method" : "opaque"
+        },
+        "down": {
+          "texture": "limestone_pillar_top",
+          "render_method" : "opaque"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'", // north & south
+        "components": {
+          "minecraft:transformation": {
+            "rotation" : [90, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'east' || q.block_state('minecraft:block_face') == 'west'", // east & west
+        "components": {
+          "minecraft:transformation": {
+            "rotation" : [0, 90, -90]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('honkit26113:activated') == true",
+        "components": {
+          "minecraft:custom_components": [
+            "honkit26113:check_arena_status"
+          ],
+          "minecraft:tick": {
+            "interval_range": [ 20, 20 ]
+          },
+          "minecraft:material_instances" : {
+            "*": {
+              "texture": "arena_limestone_pillar_side_on",
+              "render_method" : "opaque",
+              "ambient_occlusion": false,
+              "face_dimming": false
+            },
+            "up": {
+              "texture": "limestone_pillar_top",
+              "render_method" : "opaque",
+              "ambient_occlusion": false,
+              "face_dimming": false
+            },
+            "down": {
+              "texture": "limestone_pillar_top",
+              "render_method" : "opaque",
+              "ambient_occlusion": false,
+              "face_dimming": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}

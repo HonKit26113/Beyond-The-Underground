@@ -1,0 +1,31 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "honkit26113:slingshot"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ABA",
+			" A ",
+			" A "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:stick"
+			},
+			"B": {
+				"item": "minecraft:string"
+			}
+		},
+		"result": [
+			{
+				"item": "honkit26113:slingshot",
+				"count": 1
+			}
+		]
+	}
+}

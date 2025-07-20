@@ -1,0 +1,43 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "honkit26113:slingshot",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "slingshot_standby": "textures/items/slingshot_standby",
+        "slingshot_pulling_0": "textures/items/slingshot_pulling_0",
+        "slingshot_pulling_1": "textures/items/slingshot_pulling_1",
+        "slingshot_pulling_2": "textures/items/slingshot_pulling_2",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "slingshot_standby": "geometry.slingshot_standby",
+        "slingshot_pulling_0": "geometry.slingshot_pulling_0",
+        "slingshot_pulling_1": "geometry.slingshot_pulling_1",
+        "slingshot_pulling_2": "geometry.slingshot_pulling_2"
+      },
+      "animations": {
+        "wield": "animation.slingshot.wield",
+        "wield_first_person_pull": "animation.slingshot.wield_first_person_pull"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.charge_amount = q.main_hand_item_use_duration > 0.0f ? (math.clamp((q.main_hand_item_max_duration - q.main_hand_item_use_duration) / 5, 1, 3)) : 0;"
+        ],
+        "animate": [
+          "wield",
+          {
+            "wield_first_person_pull": "q.main_hand_item_use_duration > 0.0f && c.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.slingshot"
+      ]
+    }
+  }
+}

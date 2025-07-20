@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "honkit26113:mysterious_fungus"
+    },
+    "components": {
+      "minecraft:block_placer": {
+      	"block": "honkit26113:mysterious_fungus",
+        "replace_block_item": true
+      },
+      "minecraft:display_name": {
+        "value": "tile.honkit26113:mysterious_fungus.name"
+      },
+		  "minecraft:icon": "mysterious_fungus_item"
+    }
+  }
+}

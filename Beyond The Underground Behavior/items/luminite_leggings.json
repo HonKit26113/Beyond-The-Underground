@@ -1,0 +1,58 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_leggings",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.leggings"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [ 
+					"minecraft:is_armor",
+					"honkit26113:luminite_tier" 
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": "luminite_leggings",
+			"minecraft:wearable": {
+				"protection": 6,
+				"slot": "slot.armor.legs"
+			},
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "armor_legs"
+			},
+			"minecraft:durability": {
+				"max_durability": 520,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				}
+			},/*
+			"minecraft:knockback_resistance": {
+    			"protection": 0.2249999940395355
+			},*/
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 130
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_leggings"
+            			],
+            			"repair_amount": 520
+        			}
+    			]
+			}//,
+			//"minecraft:render_offsets": "leggings"
+		}
+	}
+}

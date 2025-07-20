@@ -1,0 +1,71 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_shovel",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.shovel"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_shovel",
+					"minecraft:is_digger",
+					"honkit26113:luminite_tier"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "shovel"
+			},
+			"minecraft:icon": "luminite_shovel",
+			"minecraft:damage": 5,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 1795
+			},
+			//"minecraft:mining_speed": 9.0,
+			/*"minecraft:weapon": {
+        		"on_hurt_entity": {
+          		"event": "on_tool_used",
+          		"target": "self"
+        		}
+      		},*/
+			"minecraft:digger": {/*
+        		"on_dig": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+        		},*/
+    			"use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": {
+              "tags": "q.any_tag('dirt', 'sand', 'gravel', 'grass', 'snow','minecraft:is_shovel_item_destructible')"
+            },
+            "speed": 9
+          }
+        ]
+			},
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 449
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_shovel"
+            			],
+            			"repair_amount": 1795
+        			}
+    			]
+			}
+		}
+	}
+}

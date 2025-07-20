@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:mud_patch_vegetation_feature"
+    },
+    "features": [
+      [ "minecraft:grass_double_plant_feature", 20 ],
+      [ "minecraft:fern_double_plant_feature", 20 ],
+      [ "honkit26113:grass_feature", 30 ],
+      [ "honkit26113:fern_feature", 30 ]
+    ]
+  }
+}

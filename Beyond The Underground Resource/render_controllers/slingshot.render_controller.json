@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.10",
+  "render_controllers": {
+    "controller.render.slingshot": {
+      "arrays": {
+        "textures": {
+          "array.slingshot_texture_frames": [
+            "texture.slingshot_standby",
+            "texture.slingshot_pulling_0",
+            "texture.slingshot_pulling_1",
+            "texture.slingshot_pulling_2"
+          ]
+        },
+        "geometries": {
+          "array.slingshot_geo_frames": [
+            "geometry.slingshot_standby",
+            "geometry.slingshot_pulling_0",
+            "geometry.slingshot_pulling_1",
+            "geometry.slingshot_pulling_2"
+          ]
+        }
+      },
+      "geometry": "array.slingshot_geo_frames[v.charge_amount]",
+      "materials": [ { "*": "v.is_enchanted ? material.enchanted : material.default" } ],
+      "textures": [ "array.slingshot_texture_frames[v.charge_amount]", "texture.enchanted" ]
+    }
+  }
+}

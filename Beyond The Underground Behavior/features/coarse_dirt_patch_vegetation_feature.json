@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:coarse_dirt_patch_vegetation_feature"
+    },
+    "features": [
+      [ "minecraft:grass_double_plant_feature", 15 ],
+      [ "honkit26113:grass_feature", 25 ],
+      [ "honkit26113:dead_bush_feature", 60 ]
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:thrown_soul",
+      "runtime_identifier": "minecraft:snowball",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "honkit26113:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 1,
+            "knockback": false
+          },
+          "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "target": "self",
+              "event": "hit_ground"
+            }
+          },
+          "mob_effect": {
+            "effect": "wither",
+            "durationeasy": 40,
+            "durationnormal": 40,
+            "durationhard": 60,
+            "amplifier": 2
+          }
+        },
+        "power": 1.5,
+        "gravity": 0.03,
+        "angle_offset": 0.0
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "hit_ground": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": "particle honkit26113:wisp_soul_particle ~ ~ ~"
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "honkit26113:despawn"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+## This file was edited by HonKit26113 (@HonKit1103). Do not distribute without permission!
+
+## Luminous Caverns
+tile.honkit26113:glow_mycelium.name=發光菌絲土
+tile.honkit26113:deepslate_glow_mycelium.name=深板岩發光菌絲土
+tile.honkit26113:luminous_mushroom.name=發光蘑菇
+tile.honkit26113:gloomy_mushroom.name=幽暗蘑菇
+tile.honkit26113:mysterious_fungus.name=奇異蘑菇
+tile.honkit26113:luminous_mushroom_block.name=發光蘑菇方塊
+tile.honkit26113:gloomy_mushroom_block.name=幽暗蘑菇方塊
+tile.honkit26113:luminous_mushroom_stem.name=發光蘑菇莖
+tile.honkit26113:radiant_vines_head.name=亮澤藤蔓頂部
+tile.honkit26113:radiant_vines_body.name=亮澤藤蔓本部
+tile.honkit26113:luminite_ore.name=閃耀石礦石
+tile.honkit26113:deepslate_luminite_ore.name=深板岩閃耀石礦石
+tile.honkit26113:luminite_block.name=閃耀石方塊
+
+item.honkit26113:luminous_mushroom_stew=燉發光蘑菇
+item.honkit26113:mysterious_stew=奇異的燉湯
+item.honkit26113:radiant_vines_item=亮澤藤蔓
+item.honkit26113:luminite=閃耀石
+item.honkit26113:luminite_shard=閃耀石碎片
+item.honkit26113:luminite_helmet=閃耀石頭盔
+item.honkit26113:luminite_chestplate=閃耀石護甲
+item.honkit26113:luminite_leggings=閃耀石護腿
+item.honkit26113:luminite_boots=閃耀石靴
+item.honkit26113:luminite_sword=閃耀石劍
+item.honkit26113:luminite_pickaxe=閃耀石鎬
+item.honkit26113:luminite_shovel=閃耀石鏟
+item.honkit26113:luminite_axe=閃耀石斧
+item.honkit26113:luminite_hoe=閃耀石鋤
+
+item.spawn_egg.entity.honkit26113:shroom_elf.name=生成蘑菇精靈
+entity.honkit26113:shroom_elf.name=蘑菇精靈
+item.spawn_egg.entity.honkit26113:luminous_mooshroom.name=生成發光哞菇
+entity.honkit26113:luminous_mooshroom.name=發光哞菇
+
+
+
+## Slimy Sewers
+tile.honkit26113:slimy_stone.name=史萊姆石頭
+tile.honkit26113:slimy_deepslate.name=史萊姆深板岩
+tile.honkit26113:slimy_stone_bricks.name=史萊姆石磚
+tile.honkit26113:slimy_stone_bricks_slab.name=史萊姆石磚板
+tile.honkit26113:slimy_stone_bricks_cracked.name=裂開的史萊姆石磚
+tile.honkit26113:slimy_deepslate_bricks.name=史萊姆深板岩磚
+tile.honkit26113:slimy_deepslate_bricks_slab.name=史萊姆深板岩磚板
+tile.honkit26113:slimy_deepslate_bricks_cracked.name=裂開的史萊姆深板岩磚
+tile.honkit26113:slimy_deepslate_tiles.name=史萊姆深板岩瓷磚
+tile.honkit26113:slimy_deepslate_tiles_slab.name=史萊姆深板岩瓷磚板
+tile.honkit26113:slimy_deepslate_tiles_cracked.name=裂開的史萊姆深板岩瓷磚
+tile.honkit26113:slime_layer.name=史萊姆層
+tile.honkit26113:dripping_slime_head.name=滴落的史萊姆頂部
+tile.honkit26113:dripping_slime_body.name=滴落的史萊姆本部
+tile.honkit26113:slimy_blossom.name=史萊姆花
+tile.honkit26113:slimy_sprouts.name=史萊姆芽
+tile.honkit26113:sticky_spikes.name=史萊姆尖刺
+tile.honkit26113:slime_lantern.name=史萊姆燈籠
+tile.honkit26113:glow_lichen_block.name=發光地衣方塊
+tile.honkit26113:slimy_pebbles.name=史萊姆碎石
+tile.honkit26113:slimy_deepslate_pebbles.name=史萊姆深板岩碎石
+
+item.honkit26113:slime_soup=史萊姆湯
+item.honkit26113:dripping_slime_item=滴落的史萊姆
+item.honkit26113:slimeball_part=破爛史萊姆球
+item.honkit26113:hardened_slimeball=硬化史萊姆球
+item.honkit26113:slime_dagger= §a史萊姆匕首\n§3特別技能：神志不清\n§c劇毒 II (0:05)\n§c跳躍提升 (0:03)
+item.honkit26113:slingshot=彈弓\n§3按住不放來發射\n彈藥： §6硬化史萊姆球§r
+
+item.spawn_egg.entity.honkit26113:slimy_zombie.name=生成史萊姆僵屍
+entity.honkit26113:slimy_zombie.name=史萊姆僵屍
+entity.honkit26113:thrown_slimeball.name=硬化史萊姆球
+
+
+
+## Limestone Caves
+tile.honkit26113:limestone.name=石灰岩
+tile.honkit26113:limestone_slab.name=石灰岩板
+tile.honkit26113:limestone_pebbles.name=石灰岩碎石
+tile.honkit26113:cobbled_limestone.name=鵝卵石石灰岩
+tile.honkit26113:cobbled_limestone_pebbles.name=鵝卵石石灰岩碎石
+tile.honkit26113:polished_limestone.name=抛光石灰岩
+tile.honkit26113:limestone_bricks.name=石灰岩磚
+tile.honkit26113:limestone_bricks_slab.name=石灰岩磚板
+tile.honkit26113:limestone_bricks_chiseled.name=刻紋石灰岩磚
+tile.honkit26113:limestone_bricks_cracked.name=裂開的石灰岩磚
+tile.honkit26113:limestone_bricks_mossy.name=青苔石灰岩磚
+tile.honkit26113:limestone_pillar.name=石灰岩柱
+tile.honkit26113:sand_layer.name=沙層
+tile.honkit26113:quicksand.name=流沙
+tile.honkit26113:sandy_roots_head.name=有沙的垂根頂部
+tile.honkit26113:sandy_roots_body.name=有沙的垂根本部
+tile.honkit26113:sandy_skelly_skull.name=沙漠骷髏頭顱
+
+tile.honkit26113:arena_trigger.name=競技場啓動器
+tile.honkit26113:arena_limestone_pillar.name=競技場柱
+
+item.honkit26113:raw_scorpion=生蠍子
+item.honkit26113:cooked_scorpion=熟蠍子
+item.honkit26113:sandy_roots_item=有沙的垂根
+item.honkit26113:sand_lump=沙堆
+item.honkit26113:sandstone_stick=砂岩棒\n§3用來合成 §6沙之魔杖§r
+item.honkit26113:sandy_skelly_skull=沙漠骷髏頭顱\n§3用來合成 §6沙之魔杖§r
+item.honkit26113:wand_of_the_sands= §6沙之魔杖\n§3特別技能：沙塵暴\n§c失明 (0:05)\n虛弱 II (0:05)§r
+
+item.spawn_egg.entity.honkit26113:scorpion.name=生成蠍子
+entity.honkit26113:scorpion.name=蠍子
+item.spawn_egg.entity.honkit26113:sandy_skelly.name=生成沙漠骷髏
+entity.honkit26113:sandy_skelly.name=沙漠骷髏
+entity.honkit26113:thrown_sand.name=沙堆
+
+
+
+## Ice Caves
+tile.honkit26113:frosted_stone.name=霜凍石頭
+tile.honkit26113:frosted_stone_slab.name=霜凍石頭板
+tile.honkit26113:frosted_deepslate.name=霜凍深板岩
+tile.honkit26113:pebbles.name=碎石
+tile.honkit26113:cobblestone_pebbles.name=鵝卵石碎石
+tile.honkit26113:frosted_pebbles.name=霜凍碎石
+tile.honkit26113:deepslate_pebbles.name=深板岩碎石
+tile.honkit26113:cobbled_deepslate_pebbles.name=鵝卵石深板岩碎石
+tile.honkit26113:frosted_deepslate_pebbles.name=霜凍深板岩碎石
+tile.honkit26113:crystallized_ice.name=冰結晶
+tile.honkit26113:ice_crystal.name=冰晶
+tile.honkit26113:dripping_icicle_small.name=小型滴水冰柱
+tile.honkit26113:dripping_icicle_medium.name=中型滴水冰柱
+tile.honkit26113:packed_ice_bricks.name=冰磚磚
+tile.honkit26113:packed_ice_bricks_slab.name=冰磚磚板
+tile.honkit26113:packed_ice_bricks_cracked.name=裂開的冰磚磚
+tile.honkit26113:packed_ice_chiseled.name=刻紋冰磚
+tile.honkit26113:suitcase.name=行李箱
+tile.honkit26113:suitcase_used.name=行李箱
+
+item.honkit26113:ice_shard=冰碎片
+item.honkit26113:dripping_icicle_item=滴水冰柱
+item.honkit26113:frost_essence=冰霜精華\n§3用來合成 §6冰霜煞星§r
+item.honkit26113:frozen_core=霜凍核心\n§3用來合成 §6冰霜煞星§r
+item.honkit26113:bane_of_frost= §b冰霜煞星\n§3特別技能：霜害\n§c緩速 IV (0:03)§r\n§c挖掘疲勞 III (0:03)§r
+
+item.spawn_egg.entity.honkit26113:penguin.name=生成企鵝
+entity.honkit26113:penguin.name=企鵝
+item.spawn_egg.entity.honkit26113:lost_explorer.name=生成迷失探險家
+entity.honkit26113:lost_explorer.name=迷失探險家
+item.spawn_egg.entity.honkit26113:frost_spirit.name=生成冰雪精靈
+entity.honkit26113:frost_spirit.name=冰雪精靈
+
+
+
+## Soul Caverns
+tile.honkit26113:crooked_nylium.name=彎曲菌絲石
+tile.honkit26113:crooked_fungus.name=彎曲蕈菇
+tile.honkit26113:crooked_roots.name=彎曲芽
+tile.honkit26113:crooked_wart_block.name=彎曲疙瘩方塊
+tile.honkit26113:crooked_stem.name=彎曲蕈柄
+tile.honkit26113:crooked_stem_stripped.name=剝皮彎曲蕈柄
+tile.honkit26113:crooked_hyphae.name=彎曲菌絲體
+tile.honkit26113:crooked_hyphae_stripped.name=剝皮彎曲菌絲體
+tile.honkit26113:crooked_planks.name=彎曲木材
+tile.honkit26113:crooked_slab.name=彎曲木板
+tile.honkit26113:crooked_fence.name=彎曲柵欄
+tile.honkit26113:crooked_fence_gate.name=彎曲柵欄門
+tile.honkit26113:crooked_door.name=彎曲門
+tile.honkit26113:crooked_trapdoor.name=彎曲地板門
+tile.honkit26113:soul_stone.name=靈魂岩
+tile.honkit26113:soul_bricks.name=靈魂磚
+tile.honkit26113:soul_bricks_slab.name=靈魂磚板
+tile.honkit26113:soul_bricks_fence.name=靈魂磚柵欄
+tile.honkit26113:soul_bricks_chiseled.name=刻紋靈魂磚
+tile.honkit26113:soul_bricks_cracked.name=裂開的靈魂磚
+tile.honkit26113:soul_shroomlight.name=靈魂菌光體
+tile.honkit26113:soul_magma.name=靈魂熔岩方塊
+tile.honkit26113:soul_geyser.name=靈魂噴泉
+tile.honkit26113:glowing_obsidian.name=發光黑曜石
+tile.honkit26113:lava_tank_broken.name=破爛熔岩箱
+tile.honkit26113:lava_tank_gold.name=黃金熔岩箱 | §6範圍： 7x6x7§r
+tile.honkit26113:lava_tank_gold_full.name=滿的黃金熔岩箱
+tile.honkit26113:lava_tank_gold_locked.name=鎖上的黃金熔岩箱
+tile.honkit26113:lava_tank_gold_cooldown.name=冷卻中的黃金熔岩箱
+tile.honkit26113:lava_tank_diamond.name=鑽石熔岩箱 | §6範圍： 11x6x11§r
+tile.honkit26113:lava_tank_diamond_full.name=滿的鑽石熔岩箱
+tile.honkit26113:lava_tank_diamond_locked.name=鎖上的鑽石熔岩箱
+tile.honkit26113:lava_tank_diamond_cooldown.name=冷卻中的鑽石熔岩箱
+
+item.honkit26113:soul_healer=§b靈魂治療器§r
+item.honkit26113:soul_fragment=靈魂碎片
+item.honkit26113:crooked_fungus_stew=燉彎曲蕈菇
+
+item.spawn_egg.entity.honkit26113:wisp.name=生成鬼魂
+entity.honkit26113:wisp.name=鬼魂
+entity.honkit26113:thrown_soul.name=鬼魂的靈魂
+
+
+
+## Undergrowth
+tile.honkit26113:cave_turf.name=洞穴草皮
+tile.honkit26113:deepslate_cave_turf.name=深板岩洞穴草皮
+tile.honkit26113:stem_block.name=莖方塊
+tile.honkit26113:rainbow_gum_log.name=彩虹桉木原木
+tile.honkit26113:rainbow_gum_log_stripped.name=剝皮彩虹桉木原木
+tile.honkit26113:rainbow_gum_wood.name=彩虹桉木塊
+tile.honkit26113:rainbow_gum_wood_stripped.name=剝皮彩虹桉木塊
+tile.honkit26113:rainbow_gum_planks.name=彩虹桉木材
+tile.honkit26113:rainbow_gum_slab.name=彩虹桉木半磚
+tile.honkit26113:rainbow_gum_trapdoor.name=彩虹桉木地板門
+tile.honkit26113:rainbow_gum_door.name=彩虹桉木門
+tile.honkit26113:rainbow_gum_fence.name=彩虹桉木柵欄
+tile.honkit26113:rainbow_gum_fence_gate.name=彩虹桉木柵欄門
+tile.honkit26113:rainbow_gum_leaves.name=彩虹桉木樹葉
+
+tile.honkit26113:petal_block_white.name=白色花瓣方塊
+tile.honkit26113:petal_block_blue.name=藍色花瓣方塊
+tile.honkit26113:petal_block_yellow.name=黃色花瓣方塊
+tile.honkit26113:petal_block_red.name=紅色花瓣方塊
+tile.honkit26113:petal_block_orange.name=橙色花瓣方塊
+tile.honkit26113:petal_block_magenta.name=洋紅色花瓣方塊
+tile.honkit26113:petal_block_black.name=黑色花瓣方塊
+tile.honkit26113:chromatic_petals.name=彩色花瓣
+tile.honkit26113:twilight_spores.name=暮光孢子
+tile.honkit26113:star_jasmine.name=白花藤
+
+item.honkit26113:corrupted_bouquet= §a腐爛花束\n§3特別技能：花之力量\n§r向最近的實體生成追蹤的棘刺。\n不能傷害玩家。
+
+item.spawn_egg.entity.honkit26113:thornspitter.name=棘刺投射者 生成蛋
+entity.honkit26113:thornspitter.name=棘刺投射者
+entity.honkit26113:thrown_thorn.name=棘刺
+entity.honkit26113:tracking_thorn.name=§6棘刺投射者§r的棘刺
+
+
+
+## Arena
+entity.honkit26113:arena_entity_counter.name=剩餘怪物
+entity.honkit26113:arena_countdown.name=剩餘時間
+
+
+
+## Loading Messages
+honkit26113.beyond_underground.tips.1=發光蘑菇洞穴只會在蘑菇島下生成！
+honkit26113.beyond_underground.tips.2=史萊姆洞穴只會在沼澤下生成！
+honkit26113.beyond_underground.tips.3=石灰岩洞只會在沙漠下生成！
+honkit26113.beyond_underground.tips.4=冰洞只會在冰凍生態下生成！
+honkit26113.beyond_underground.tips.5=使用生蠍子釀造致命劇毒藥水！
+honkit26113.beyond_underground.tips.6=使用發光蘑菇製造燉發光蘑菇！
+honkit26113.beyond_underground.tips.7=你可以用史萊姆球製造史萊姆湯... 但是不太建議飲用。
+honkit26113.beyond_underground.tips.8=蘑菇精靈非常膽小，但是你可以給他們發光蘑菇來獲取他們的信任。
+honkit26113.beyond_underground.tips.9=閃耀石可以在發光蘑菇洞穴裏找到！
+honkit26113.beyond_underground.tips.10=閃耀石工具和盔甲比獄髓的更耐用！
+honkit26113.beyond_underground.tips.11=你可以製造硬化史萊姆球並把它扔到你的敵人身上！
+honkit26113.beyond_underground.tips.12=石灰岩可以用來製作石灰岩磚！
+honkit26113.beyond_underground.tips.13=每個大型的 Beyond The Underground 更新都會帶來一個新背景！ 
+honkit26113.beyond_underground.tips.14=碎石在被放下時會有 12 種變化的可能性！
+honkit26113.beyond_underground.tips.15=把 6 塊閃耀石碎片和 1 顆鑽石合成在一起，來獲得 1 塊閃耀石！
+honkit26113.beyond_underground.tips.16=在沼澤和石灰岩洞探險時，要當心流沙！
+honkit26113.beyond_underground.tips.17=冰晶是在冰洞裏唯一一個可以發光的物體。
+honkit26113.beyond_underground.tips.18=冰磚可以用來製作冰磚磚！
+honkit26113.beyond_underground.tips.19=把一顆綠寶石用在行李箱上來生成一位迷失探險家！
+honkit26113.beyond_underground.tips.20=石灰岩洞是唯一一個不會於深板岩層生成的洞穴！
+honkit26113.beyond_underground.tips.21=把奇異蘑菇喂給發光哞菇，來獲得奇異的燉湯！
+honkit26113.beyond_underground.tips.22=奇異的燉湯有百分之 33.3 機會給你兩種藥水效果！
+honkit26113.beyond_underground.tips.23=在史萊姆洞穴探險時，要當心史萊姆尖刺！
+honkit26113.beyond_underground.tips.24=你可以利用切石機合成各種碎石！
+honkit26113.beyond_underground.tips.25=你可以用史萊姆石頭和史萊姆深板岩製造史萊姆磚！
+honkit26113.beyond_underground.tips.26=進入石灰岩和史萊姆地下城前，記得要戴上盔甲！
+honkit26113.beyond_underground.tips.27=石灰岩洞裏可以找到遺跡。不知它們背後的故事是怎樣的？
+honkit26113.beyond_underground.tips.28=你可以用 1 塊閃石和 4 個硬化史萊姆球來合成史萊姆燈籠。
+honkit26113.beyond_underground.tips.29=史萊姆匕首只可以從史萊姆地下城獲得！
+honkit26113.beyond_underground.tips.30=靈魂洞穴只會在地獄荒原下生成！
+honkit26113.beyond_underground.tips.31=用 7 塊發光黑曜石和 2 塊靈魂碎片來合成靈魂治療器！
+honkit26113.beyond_underground.tips.32=當你快要死去時，靈魂治療器能救你一命！
+honkit26113.beyond_underground.tips.33=靈魂岩可以用來製作靈魂磚！
+honkit26113.beyond_underground.tips.34=你可以把沙堆扔到你的敵人身上！
+honkit26113.beyond_underground.tips.35=燉彎曲蕈菇會給你抗火的藥水效果！
+honkit26113.beyond_underground.tips.36=千萬要當心靈魂噴泉！它會把你發射到高空！
+honkit26113.beyond_underground.tips.37=不要走到靈魂熔岩方塊上，這很危險的！
+honkit26113.beyond_underground.tips.38=在洞穴探險時看到一些裸露的石頭 / 冰磚磚？這代表你發現地牢了！
+
+
+
+## Item Groups
+honkit26113:itemGroup.slimy_stone_bricks=史萊姆石磚 §6[Beyond The Underground]§r
+honkit26113:itemGroup.limestone_bricks=石灰岩磚 §6[Beyond The Underground]§r
+honkit26113:itemGroup.lava_tank=熔岩箱 §6[Beyond The Underground]§r
+honkit26113:itemGroup.pebbles=碎石 §6[Beyond The Underground]§r
+honkit26113:itemGroup.luminous_caverns=夜光洞穴 §6[Beyond The Underground]§r
+honkit26113:itemGroup.slimy_sewers=史萊姆洞窟 §6[Beyond The Underground]§r
+honkit26113:itemGroup.limestone_caves=石灰岩洞 §6[Beyond The Underground]§r
+honkit26113:itemGroup.ice_caves=冰雪洞穴 §6[Beyond The Underground]§r
+honkit26113:itemGroup.crooked_caverns=扭曲洞穴 §6[Beyond The Underground]§r
+honkit26113:itemGroup.undergrowth=林蔭洞穴 §6[Beyond The Underground]§r
+
+
+
+## Output Messages
+suitcase.message.interact_with_emerald=把一顆綠寶石放在手中，再按下行李箱，來呼喚迷失探險家！
+suitcase.message.summoned= 成功呼喚迷失探險家！
+suitcase.message.used= 這個行李箱已經呼喚過迷失探險家了！
+
+lava_tank.message.broken= 哎呀！這熔岩箱損壞了。先把它放在工作台裏修復！
+lava_tank.message.locked= 鎖上的熔岩箱不能被清空！
+lava_tank.message.error_not_above_lava= 熔岩箱必須放在熔岩上，才能繼續操作。
+lava_tank.message.confirmation=你確定嗎？再按下熔岩箱來繼續。
+lava_tank.message.success= 成功！
+lava_tank.message.cancel= 已取消。
+lava_tank.message.cooldown5= 你需要等待熔岩箱冷卻，才能再次使用。 [0:05]
+lava_tank.message.cooldown4= 你需要等待熔岩箱冷卻，才能再次使用。 [0:04]
+lava_tank.message.cooldown3= 你需要等待熔岩箱冷卻，才能再次使用。 [0:03]
+lava_tank.message.cooldown2= 你需要等待熔岩箱冷卻，才能再次使用。 [0:02]
+lava_tank.message.cooldown1= 你需要等待熔岩箱冷卻，才能再次使用。 [0:01]
+lava_tank.message.cooldown0= 你需要等待熔岩箱冷卻，才能再次使用。 [0:00]
+lava_tank.message.cooldown= 你需要等待熔岩箱冷卻，才能再次使用。
+lava_tank.message.cooldown_end= 熔岩箱已經冷卻，可以再次使用。
+lava_tank.message.interact_with_water=把水桶放在手中，再按下熔岩箱，讓它冷卻！
+lava_tank.message.cooling_down= 熔岩箱正在冷卻！
+lava_tank.message.interact_with_pickaxe=把一把鑽石稿或更好的放在手中，再按下熔岩箱，把它清空！
+lava_tank.message.emptied= 熔岩箱已經清空！
+
+soul_healer.message.activated= §b靈魂治療器§r 已啓動！
+
+arena.message.wait= 有另一場競技場戰鬥正在進行，或者一場戰鬥剛結束。
+arena.message.confirmation=開始競技場戰鬥？再按一次來繼續。
+arena.message.cancel= 已取消。
+arena.message.starting_in= 準備！戰鬥即將開始
+arena.message.battle_start=祝你好運！
+arena.message.check_difficulty= 請確定你的難度至少設定為 簡單。如果您的難度是和平，你將不會獲得任何獎勵！
+arena.message.difficulty_error= 戰鬥無法在和平模式中開始。
+arena.message.exit_world_canceled=§6[Arena]§r  由於你在戰鬥結束前離開世界，因此你將不會獲得任何獎勵。
+arena.message.pillar_used= 這個競技場啓動器已被使用。
+arena.message.victory=勝利
+arena.message.defeat=失敗

@@ -1,0 +1,299 @@
+{
+  "format_version": "1.18.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:hoglin_bank",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "zombification_sensor": {
+        "minecraft:environment_sensor": {
+          "triggers": {
+            "filters": {
+              "test": "in_nether",
+              "subject": "self",
+              "operator": "==",
+              "value": false
+            },
+            "event": "start_zombification_event"
+          }
+        }
+      },
+
+      "start_zombification": {
+        "minecraft:is_shaking": {},
+        "minecraft:environment_sensor": {
+          "triggers": {
+            "filters": {
+              "test": "in_nether",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "event": "stop_zombification_event"
+          }
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 15,
+          "time_down_event": {
+            "event": "become_zombie_event"
+          }
+        }
+      },
+
+      "become_zombie": {
+        "minecraft:transformation": {
+          "into": "minecraft:zoglin",
+          "transformation_sound": "converted_to_zombified",
+          "keep_level": true
+        }
+      },
+
+      "angry_hoglin": {
+        "minecraft:angry": {
+          "duration": 10,
+          "broadcast_anger": true,
+          "broadcast_range": 16,
+          "calm_event": {
+            "event": "become_calm_event",
+            "target": "self"
+          },
+          "angry_sound": "angry",
+          "sound_interval": {
+            "range_min": 2.0,
+            "range_max": 5.0
+          }
+        }
+      },
+      "attack_cooldown": {
+        "minecraft:attack_cooldown": {
+          "attack_cooldown_time": [ 10.0, 15.0 ],
+          "attack_cooldown_complete_event": {
+            "event": "attack_cooldown_complete_event",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:hoglin_adult": {
+        "minecraft:collision_box": {
+          "width": 0.9,
+          "height": 0.9
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:custom_hit_test": {
+          "hitboxes": [
+            {
+              "width": 2.0,
+              "height": 1.75,
+              "pivot": [ 0, 1, 0 ]
+            }
+          ]
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2
+        },
+        "minecraft:on_target_acquired": {
+          "event": "become_angry_event",
+          "target": "self"
+        },        
+        "minecraft:loot": {
+          "table": "loot_tables/entities/hoglin_bank.json"
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "speed_multiplier": 1,
+          "track_target": true,
+          "reach_multiplier": 2.5,
+          "cooldown_time": 2
+        },
+        "minecraft:attack": {
+          "damage": [ 5, 9 ]
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:boss": {
+        "name": "entity.honkit26113:hoglin_bank.name",
+        "should_darken_sky": false,
+        "hud_range": 55
+      },
+      "minecraft:health": {
+        "value": 50,
+        "max": 50
+      },
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 5 : 0"
+      },
+      "minecraft:knockback_resistance": {
+        "value": 0.6
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 4,
+        "within_radius": 16.0,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "minecraft:attack_cooldown"
+                }
+              ]
+            },
+            "max_dist": 16
+          }
+        ],
+        "must_see": true
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:behavior.avoid_block": {
+        "priority": 1,
+        "tick_interval": 5,
+        "search_range": 8,
+        "search_height": 4,
+        "walk_speed_modifier": 1,
+        "sprint_speed_modifier": 1,
+        "avoid_block_sound": "retreat",
+        "sound_interval": {
+          "range_min": 2.0,
+          "range_max": 5.0
+        },
+        "target_selection_method": "nearest",
+        "target_blocks": [
+          "minecraft:respawn_anchor"
+        ],
+        "on_escape": [
+          {
+            "event": "escaped_event",
+            "target": "self"
+          }
+        ]
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 0.4
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "minecraft:hoglin_adult",
+            "zombification_sensor"
+          ]
+        }
+      },
+      "stop_zombification_event": {
+        "add": {
+          "component_groups": [
+            "zombification_sensor"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "start_zombification"
+          ]
+        }
+      },
+      "become_zombie_event": {
+        "add": {
+          "component_groups": [
+            "become_zombie"
+          ]
+        }
+      },
+      "start_zombification_event": {
+        "add": {
+          "component_groups": [
+            "start_zombification"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "zombification_sensor"
+          ]
+        }
+      },
+
+      "become_angry_event": {
+        "add": {
+          "component_groups": [
+            "angry_hoglin"
+          ]
+        }
+      },
+      "become_calm_event": {
+        "remove": {
+          "component_groups": [
+            "angry_hoglin"
+          ]
+        }
+      },
+      "escaped_event": {
+        "add": {
+          "component_groups": [
+            "attack_cooldown"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "angry_hoglin"
+          ]
+        }
+      },
+      "attack_cooldown_complete_event": {
+        "remove": {
+          "component_groups": [
+            "attack_cooldown"
+          ]
+        }
+      }
+    }  
+  }
+}

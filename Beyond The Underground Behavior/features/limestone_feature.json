@@ -1,0 +1,66 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "honkit26113:limestone_feature"
+    },
+    "count": 149,
+    "replace_rules": [
+      {
+        "places_block": "honkit26113:limestone",
+        "may_replace": [
+        	"minecraft:stone"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_coal_ore",
+        "may_replace": [
+          "minecraft:coal_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_copper_ore",
+        "may_replace": [
+          "minecraft:copper_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_iron_ore",
+        "may_replace": [
+          "minecraft:iron_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_gold_ore",
+        "may_replace": [
+          "minecraft:gold_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_redstone_ore",
+        "may_replace": [
+          "minecraft:redstone_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_lapis_ore",
+        "may_replace": [
+          "minecraft:lapis_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_diamond_ore",
+        "may_replace": [
+          "minecraft:diamond_ore"
+        ]
+      },
+      {
+        "places_block": "honkit26113:limestone_emerald_ore",
+        "may_replace": [
+          "minecraft:emerald_ore"
+        ]
+      }
+    ]
+  }
+}

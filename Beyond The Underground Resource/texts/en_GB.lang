@@ -1,0 +1,45 @@
+## This file was edited by HonKit26113 (@HonKit1103). Do not distribute without permission!
+
+## Luminous Caverns
+
+
+
+## Slimy Sewers
+
+
+
+## Limestone Caves
+tile.honkit26113:limestone_bricks_chiseled.name=Chiselled Limestone Bricks
+
+
+
+## Ice Caves
+tile.honkit26113:crystallized_ice.name=Crystallised Ice
+tile.honkit26113:packed_ice_chiseled.name=Chiselled Packed Ice
+
+
+
+## Soul Caverns
+tile.honkit26113:soul_bricks_chiseled.name=Chiselled Soul Bricks
+
+
+
+## Undergrowth
+
+
+
+## Arena
+
+
+
+## Loading Messages
+
+
+
+## Item Groups
+
+
+
+## Output Messages
+lava_tank.message.cancel=Cancelled operation.
+arena.message.cancel= Cancelled operation.

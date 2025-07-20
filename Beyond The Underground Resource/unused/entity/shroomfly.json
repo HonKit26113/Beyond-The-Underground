@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:shroomfly",
+      "materials": {
+        "default": "honkit26113_shroomfly"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_shroomfly"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_shroomfly"
+      },
+      "scripts": {
+        "scale": "0.35"
+      },
+      "animations": {
+        "resting": "animation.bat.resting",
+        "flying": "animation.bat.flying"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.bat.move" }
+      ],
+      "render_controllers": [ "controller.render.bat" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 18
+      }
+    }
+  }
+}

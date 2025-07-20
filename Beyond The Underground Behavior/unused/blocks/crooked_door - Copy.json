@@ -1,0 +1,464 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+/*{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:crooked_door",
+            "properties": {
+                "honkit26113:blockstate": [0, 2, 3, 4, 5, 12, 13, 14, 15],
+                "honkit26113:blockstate2": [0, 52, 53, 54, 55, 62, 63, 64, 65]
+            }
+        },
+        "components": {
+            "tag:honkit26113_dig_with_axe": {},
+            "tag:honkit26113_crooked_door": {},
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.door",
+                "category": "construction"
+            },
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "crooked_trapdoor",
+                    "render_method": "blend",
+                    "ambient_occlusion": true,
+                    "face_dimming": true
+                }
+            },
+            "minecraft:destroy_time": 0.5,
+            "minecraft:explosion_resistance": 2,
+            "minecraft:block_light_absorption": 0,
+            "minecraft:pick_collision": {
+                "origin": [-8, 0, 5],
+                "size": [16, 16, 3]
+            },
+            "minecraft:entity_collision": {
+                "origin": [-8, 0, 5],
+                "size": [16, 16, 3]
+            },
+            "minecraft:breathability": "air",
+            "minecraft:geometry": "geometry.door",
+            "minecraft:on_player_placing": {
+                "event": "honkit26113:on_placed"
+            },
+            "minecraft:on_interact": {
+                "event": "honkit26113:on_interact"
+            }
+        },
+        "events": {
+            // north: -Z 2
+            // south: +Z 3
+            // west:  -X 4
+            // east:  +X 5
+            "honkit26113:on_placed": {
+                "sequence": [
+                    {
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.cardinal_facing_2d"
+                        }
+                    }/*,
+                    {
+                        "set_block_at_pos": {
+                            "block_offset": [ 0, 1, 0 ],
+                            "block_type": "honkit26113:crooked_door"
+                        }
+                    }/*,
+                    {
+                        "run_command": {
+                            "command": "fill ~ ~1 ~ ~ ~1 ~ honkit26113:crooked_door 0 replace air"
+                        }
+                    }*/
+                ]
+            },/*
+            "honkit26113:change_blockstate": {
+                "sequence": [
+                    {
+                        "condition": "q.block_neighbor_has_all_tags(0,1,0,'honkit26113_crooked_door','honkit26113_top_62') || q.block_neighbor_has_all_tags(0,1,0,'honkit26113_crooked_door','honkit26113_top_63') || q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_top_64') || q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_top_65')",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.block_property('honkit26113:blockstate') + 10"
+                        }
+                    },
+                    {
+                        "condition": "q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_12') || q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_13') || q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_14') || q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_15')",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": "q.block_property('honkit26113:blockstate2') + 10"
+                        }
+                    }
+                ]
+            },
+            "honkit26113:on_placed_change_top_blockstate": {
+                "sequence": [
+                    {
+                        "condition": "q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_2')",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": 52
+                        }
+                    },
+                    {
+                        "condition": "q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_3')",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": 53
+                        }
+                    },
+                    {
+                        "condition": "q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_4')",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": 54
+                        }
+                    },
+                    {
+                        "condition": "q.block_neighbor_has_all_tags(0,-1,0,'honkit26113_crooked_door','honkit26113_bottom_5')",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": 55
+                        }
+                    }
+                ]
+            },*/
+            "honkit26113:on_interact": {
+                "sequence": [
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 2 || q.block_property('honkit26113:blockstate') == 3 || q.block_property('honkit26113:blockstate') == 4 || q.block_property('honkit26113:blockstate') == 5",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.block_property('honkit26113:blockstate') + 10"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate2') == 52 || q.block_property('honkit26113:blockstate2') == 53 || q.block_property('honkit26113:blockstate2') == 54 || q.block_property('honkit26113:blockstate2') == 55",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": "q.block_property('honkit26113:blockstate2') + 10"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 2 || q.block_property('honkit26113:blockstate') == 3 || q.block_property('honkit26113:blockstate') == 4 || q.block_property('honkit26113:blockstate') == 5 || q.block_property('honkit26113:blockstate2') == 52 || q.block_property('honkit26113:blockstate2') == 53 || q.block_property('honkit26113:blockstate2') == 54 || q.block_property('honkit26113:blockstate2') == 55",
+                        "run_command": {
+                            "command": "playsound random.door_open @a[r=10]"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 12 || q.block_property('honkit26113:blockstate') == 13 || q.block_property('honkit26113:blockstate') == 14 || q.block_property('honkit26113:blockstate') == 15",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.block_property('honkit26113:blockstate') - 10"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate2') == 62 || q.block_property('honkit26113:blockstate2') == 63 || q.block_property('honkit26113:blockstate2') == 64 || q.block_property('honkit26113:blockstate2') == 65",
+                        "set_block_property": {
+                            "honkit26113:blockstate2": "q.block_property('honkit26113:blockstate2') - 10"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 12 || q.block_property('honkit26113:blockstate') == 13 || q.block_property('honkit26113:blockstate') == 14 || q.block_property('honkit26113:blockstate') == 15 || q.block_property('honkit26113:blockstate2') == 62 || q.block_property('honkit26113:blockstate2') == 63 || q.block_property('honkit26113:blockstate2') == 64 || q.block_property('honkit26113:blockstate2') == 65",
+                        "run_command": {
+                            "command": "playsound random.door_close @a[r=10]"
+                        }
+                    }
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 0", // control
+                "components": {
+                    "minecraft:rotation": [ 0, 0, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 2", // north
+                "components": {
+                    "tag:honkit26113_bottom_2": {},
+                    "minecraft:rotation": [ 0, 0, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 3", // south
+                "components": {
+                    "tag:honkit26113_bottom_3": {},
+                    "minecraft:rotation": [ 180, 0, 180 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 4", // west
+                "components": {
+                    "tag:honkit26113_bottom_4": {},
+                    "minecraft:rotation": [ 0, 90, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 5", // east
+                "components": {
+                    "tag:honkit26113_bottom_5": {},
+                    "minecraft:rotation": [ 0, 270, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 12", // north opened
+                "components": {
+                    "tag:honkit26113_bottom_12": {},
+                    "minecraft:rotation": [ 0, 270, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 13", // south opened
+                "components": {
+                    "tag:honkit26113_bottom_13": {},
+                    "minecraft:rotation": [ 0, 90, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 14", // west opened
+                "components": {
+                    "tag:honkit26113_bottom_14": {},
+                    "minecraft:rotation": [ 0, 0, 0 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 15", // east opened
+                "components": {
+                    "tag:honkit26113_bottom_15": {},
+                    "minecraft:rotation": [ 180, 0, 180 ]/*,
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }*/
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 0", // control
+                "components": {
+                    "minecraft:rotation": [ 0, 0, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:on_placed_change_top_blockstate"
+                        },
+                        "looping": false,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 52", // north top
+                "components": {
+                    "tag:honkit26113_top_52": {},
+                    "minecraft:rotation": [ 0, 0, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 53", // south top
+                "components": {
+                    "tag:honkit26113_top_53": {},
+                    "minecraft:rotation": [ 180, 0, 180 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 54", // west top
+                "components": {
+                    "tag:honkit26113_top_54": {},
+                    "minecraft:rotation": [ 0, 90, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 55", // east top
+                "components": {
+                    "tag:honkit26113_top_55": {},
+                    "minecraft:rotation": [ 0, 270, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 62", // north opened top
+                "components": {
+                    "tag:honkit26113_top_62": {},
+                    "minecraft:rotation": [ 0, 270, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 63", // south opened top
+                "components": {
+                    "tag:honkit26113_top_63": {},
+                    "minecraft:rotation": [ 0, 90, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 64", // west opened top
+                "components": {
+                    "tag:honkit26113_top_64": {},
+                    "minecraft:rotation": [ 0, 0, 0 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate2') == 65", // east opened top
+                "components": {
+                    "tag:honkit26113_top_65": {},
+                    "minecraft:rotation": [ 180, 0, 180 ],
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "honkit26113:change_blockstate"
+                        },
+                        "looping": true,
+                        "range": [
+                            0.05,
+                            0.05
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

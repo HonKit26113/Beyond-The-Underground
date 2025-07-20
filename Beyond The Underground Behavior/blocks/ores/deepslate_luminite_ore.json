@@ -1,0 +1,33 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:deepslate_luminite_ore",
+            "menu_category": {
+                "group": "minecraft:itemGroup.name.ore",
+                "category": "nature"
+            }
+		},
+		"components": {
+			"tag:honkit26113_dig_with_pickaxe": {},
+			"tag:stone": {},
+            "tag:minecraft:iron_tier_destructible": {},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 15, // default: 22.5s
+                "item_specific_speeds": [
+                	{
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                		"destroy_speed": 15 // 11.25s
+                	}
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+			"minecraft:loot": "loot_tables/blocks/ores/luminite_ore.json"
+		}
+	}
+}

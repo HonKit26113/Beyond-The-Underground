@@ -1,0 +1,122 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_hoe",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.hoe"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [ 
+					"minecraft:is_hoe",
+					"honkit26113:luminite_tier"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "hoe"
+			},
+			"minecraft:icon": "luminite_hoe",
+			/*"minecraft:weapon": {
+        		"on_hurt_entity": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+          		}
+      		},*/
+			"minecraft:digger": {/*
+        		"on_dig": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+      			},*/
+    			"use_efficiency": true,
+    			"destroy_speeds": [
+        			{
+            			"block": {
+            				"tags": "query.any_tag('honkit26113:dig_with_hoe','minecraft:is_axe_item_destructible')"
+            			},
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:sculk_sensor",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:moss_block",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:nether_wart_block",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:warped_wart_block",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:shroomlight",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:hay_block",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:target",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:dried_kelp_block",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:sponge",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:leaves",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:leaves2",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:azalea_leaves",
+            			"speed": 9
+        			},
+        			{
+            			"block": "minecraft:azalea_leaves_flowered",
+            			"speed": 9
+        			}
+        		]
+      		},
+			"minecraft:damage": 6,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 1795
+			},
+			//"minecraft:mining_speed": 9.0,
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 449
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_hoe"
+            			],
+            			"repair_amount": 1795
+        			}
+    			]
+			}
+		}
+	}
+}

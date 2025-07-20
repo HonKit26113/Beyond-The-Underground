@@ -1,0 +1,101 @@
+{
+    "music.overworld.swampland": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/slimy_sewers",
+          "stream": true,
+          "volume": 0.5
+        }
+      ]
+    },
+    "music.overworld.desert": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/limestone_caves",
+          "stream": true,
+          "volume": 0.5
+        }
+      ]
+    },
+    "music.overworld.mushroom_island": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/luminous_caverns",
+          "stream": true,
+          "volume": 0.5
+        }
+      ]
+    },
+    "music.overworld.frozen": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/ice_caves",
+          "stream": true,
+          "volume": 0.5
+        },
+        {
+          "name": "sounds/music/flake",
+          "stream": true,
+          "volume": 0.5
+        },
+        {
+          "name": "sounds/music/kyoto",
+          "stream": true,
+          "volume": 0.5
+        }
+      ]
+    },
+    "music.nether.nether_wastes": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/crooked_caverns",
+          "stream": true,
+          "volume": 0.5
+        }
+      ]
+    },
+    "music.undergrowth": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/into_oblivion_darren_curtis",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "music.arena": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/music/arena_battle",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "arena.complete": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/arena_complete",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "arena.mob_spawn": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mob/endermen/portal",
+          "load_on_low_memory": true
+        }
+      ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.sandy_skelly.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "brandish_spear" ]
+				}
+			}
+		}
+	}
+}

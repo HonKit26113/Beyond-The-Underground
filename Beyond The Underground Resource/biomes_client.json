@@ -1,0 +1,165 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "biomes": {
+    "swampland": {
+	    "fog_identifier": "honkit26113:swampland_fog_settings"
+    },
+    "swampland_mutated": {
+	    "fog_identifier": "honkit26113:swampland_fog_settings"
+    },
+    "mangrove_swamp": {
+      "fog_identifier": "honkit26113:swampland_fog_settings"
+    },
+    "desert": {
+      "water_surface_color": "#32A598",
+      "water_fog_color": "#32A598",
+      "fog_identifier": "honkit26113:desert_fog_settings"
+    },
+    "desert_hills": {
+      "water_surface_color": "#1a7aa1",
+      "water_fog_color": "#1a7aa1",
+      "fog_identifier": "honkit26113:desert_fog_settings"
+    },
+    "frozen_ocean": {
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "deep_frozen_ocean": {
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "frozen_river": {
+      "water_surface_color": "#185390",
+      "water_fog_color": "#185390",
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "ice_plains": {
+      "water_surface_color": "#14559b",
+      "water_fog_color": "#14559b",
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "ice_plains_spikes": {
+      "water_surface_color": "#14559b",
+      "water_fog_color": "#14559b",
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "cold_taiga": {
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "cold_taiga_mutated": {
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "cold_taiga_hills": {
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "ice_mountains": {
+      "water_surface_color": "#1156a7",
+      "water_fog_color": "#1156a7",
+      "fog_identifier": "honkit26113:tundra_fog_settings"
+    },
+    "mushroom_island": {
+      "water_surface_color": "#8a8997",
+      "fog_identifier": "honkit26113:mushroom_island_fog_settings"
+    },
+    "mushroom_island_shore": {
+      "water_surface_color": "#818193",
+      "fog_identifier": "honkit26113:mushroom_island_fog_settings"
+    },
+    "hell": {
+      "water_surface_color": "#905957",
+      "water_fog_color": "#905957",
+      "fog_color": "#546493"
+      //"fog_identifier": "honkit26113:nether_wastes_fog_settings"
+    },
+    "roofed_forest": {
+      "water_surface_color": "#3B6CD1",
+      "water_fog_color": "#3B6CD1",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "jungle": {
+      "water_surface_color": "#14A2C5",
+      "water_fog_color": "#14A2C5",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "bamboo_jungle": {
+      "water_surface_color": "#14A2C5",
+      "water_fog_color": "#14A2C5",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "jungle_mutated": {
+      "water_surface_color": "#1B9ED8",
+      "water_fog_color": "#1B9ED8",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "jungle_hills": {
+      "water_surface_color": "#1B9ED8",
+      "water_fog_color": "#1B9ED8",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "bamboo_jungle_hills": {
+      "water_surface_color": "#1B9ED8",
+      "water_fog_color": "#1B9ED8",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "jungle_edge": {
+      "water_surface_color": "#0D8AE3",
+      "water_fog_color": "#0D8AE3",
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "flower_forest": {
+      "fog_identifier": "honkit26113:undergrowth_fog_settings"
+    },
+    "savanna": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "savanna_plateau": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "savanna_mutated": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "mesa": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "mesa_bryce": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "mesa_mutated": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "mesa_plateau_stone": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "mesa_plateau": {
+      "fog_identifier": "honkit26113:dry_caves_fog_settings"
+    },
+    "plains": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "sunflower_plains": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "forest": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "birch_forest": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "birch_forest_hills": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "mega_taiga": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "mega_spruce_taiga": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "mega_taiga_mutated": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "mega_spruce_taiga_mutated": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    },
+    "mega_taiga_hills": {
+      "fog_identifier": "honkit26113:crystal_caves_fog_settings"
+    }
+  }
+}

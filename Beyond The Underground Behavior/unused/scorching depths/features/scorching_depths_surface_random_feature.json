@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:scorching_depths_surface_random_feature"
+    },
+    "features": [
+      [ "honkit26113:scorching_depths_soul_sand_patch_feature", 30 ],
+      [ "honkit26113:scorching_depths_soul_soil_patch_feature", 45 ],
+      [ "honkit26113:scorching_depths_soul_magma_patch_feature", 25 ]
+    ]
+  }
+}

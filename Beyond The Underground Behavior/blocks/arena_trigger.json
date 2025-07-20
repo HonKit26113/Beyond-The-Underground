@@ -1,0 +1,110 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:arena_trigger",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": false // change to true
+            },
+			"states": {
+				"honkit26113:started": [ 0, 1, 2, 3 ]
+                // 0 == not used
+                // 1 == awaiting confirmation
+                // 2 == arena battle ongoing
+                // 3 == arena battle finished, pillar deactivated
+			}
+		},
+		"components": {
+            "minecraft:geometry": { 
+                "identifier": "geometry.honkit26113_arena_pillar"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "arena_trigger_flashing",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 9999999
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 99999
+            },
+            "minecraft:light_emission": 6,
+            "minecraft:selection_box": {
+                "origin": [ -8, 0, -8 ],
+                "size": [ 16, 8, 16 ]
+            },
+            "minecraft:collision_box": {
+                "origin": [ -8, 0, -8 ],
+                "size": [ 16, 8, 16 ]
+            }
+        },
+  		"permutations": [
+  			{
+  				"condition": "q.block_state('honkit26113:started') == 0",
+  				"components": {
+                    "minecraft:custom_components": [
+                        "honkit26113:particles_ticking_arena_trigger",
+                        "honkit26113:arena_ask_for_confirmation"
+                    ],
+                    "minecraft:tick": {
+                        "loop": true,
+                        "interval_range": [ 100, 100 ] // 5 secs
+                    }
+  				}
+  			},
+  			{
+  				"condition": "q.block_state('honkit26113:started') == 1",
+  				"components": {
+                    "minecraft:custom_components": [
+                        "honkit26113:arena_confirmed",
+                        "honkit26113:arena_cancel"
+                    ],
+                    "minecraft:tick": {
+                        "interval_range": [ 200, 200 ]
+                    }
+  				}
+  			},
+            {
+                "condition": "q.block_state('honkit26113:started') == 2",
+                "components": {
+                    "minecraft:custom_components": [
+                        "honkit26113:check_for_finish_round"
+                    ],
+                    "minecraft:tick": {
+                        "interval_range": [ 20, 20 ]
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "arena_trigger_on",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('honkit26113:started') == 3",
+                "components": {
+                    "minecraft:custom_components": [
+                        "honkit26113:arena_pillar_used_error"
+                    ],
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "arena_trigger_off",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            }
+  		]
+	}
+}

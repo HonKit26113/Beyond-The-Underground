@@ -1,0 +1,43 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Adds 6 new cave types for you to explore!\nCreator: HonKit26113.",
+		"name": "[BP] Beyond The Underground v1.7T1",
+		"uuid": "e8af1804-3441-4e95-b082-03d01f3e3314",
+		"version": [1, 5, 8],
+        "min_engine_version": [
+            1,
+            21,
+            60
+        ]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "3d0e46b7-ca42-4e53-84dd-71d99c3c0880",
+			"version": [1, 5, 8]
+		},
+    	{
+      		"type": "script",
+      		"language": "javascript",
+      		"uuid": "e7ce6ba9-ac98-41ed-a62e-5a60bd193ad3",
+      		"entry": "scripts/Main.js",
+      		"version": [0, 1, 0]
+    	}
+	],
+	"capabilities": [ "script_eval" ],
+    "dependencies": [
+        {
+			"uuid": "277503e9-7d60-4e9b-96c8-9665af8a4b0d",
+            "version": [1, 5, 8]
+        },
+        {
+      		"module_name": "@minecraft/server",
+      		"version": "1.16.0"
+    	},
+        {
+      		"module_name": "@minecraft/server-ui",
+      		"version": "1.2.0"
+    	}
+    ]
+}

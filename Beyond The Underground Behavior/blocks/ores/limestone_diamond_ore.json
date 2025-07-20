@@ -1,0 +1,35 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:limestone_diamond_ore",
+            "menu_category": {
+                "group": "minecraft:itemGroup.name.ore",
+                "category": "nature"
+            }
+		},
+		"components": {
+            //"tag:honkit26113:use_fortune": {},
+            //"tag:honkit26113:base_drop.minecraft:diamond-1": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+            "tag:minecraft:iron_tier_destructible": {},
+			"tag:honkit26113_dig_with_pickaxe": {},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10, // default: 15s
+                "item_specific_speeds": [
+                	{
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                		"destroy_speed": 2.5 // wooden: 7.5s
+                	}
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:loot": "loot_tables/blocks/ores/limestone_diamond_ore.json"
+		}
+	}
+}

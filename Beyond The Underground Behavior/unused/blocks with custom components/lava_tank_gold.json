@@ -1,0 +1,105 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:lava_tank_gold",
+            "menu_category": {
+                "category": "items",
+                "group": "none"
+            }/*,
+			"states": {
+				"honkit26113:confirmation": [ 0, 1 ]
+			}*/
+		},
+		"components": {
+			"tag:honkit26113_dig_with_pickaxe": {},
+			"tag:honkit26113_lava_tank": {},
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "lava_tank_gold",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:geometry": { 
+                "identifier": "geometry.lava_tank", 
+                "bone_visibility": {
+                    "glass": true,
+                    "base": true,
+                    "lava": false,
+                    "obsidian": false
+                } 
+            },/*
+			"minecraft:on_interact": {
+				"event": "honkit26113:ask_for_confirmation"
+			},*/
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:light_emission": 0
+        }/*,
+        "events": {
+        	"honkit26113:cancel": {
+        		"sequence": [
+          			{
+            			"set_block_state": {
+              				"honkit26113:confirmation": 0
+            			}
+          			},
+          			{
+            			"run_command": {
+              				"command": [
+              					"titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cancel\"}]}"
+              				]
+            			}
+          			}
+        		]
+        	},
+      		"honkit26113:activate_tank": {
+        		"sequence": [
+          			{
+            			"set_block": {
+              				"block_type": "honkit26113:lava_tank_gold_full"
+            			}
+          			},
+          			{
+            			"run_command": {
+              				"command": [
+              					"fill ~-3 ~-3 ~-3 ~3 ~ ~3 air replace lava",
+              					"fill ~-3 ~-3 ~-3 ~3 ~ ~3 air replace flowing_lava",
+              					"playsound bucket.fill_lava @a[r=10]"
+              				]
+            			}
+          			}
+        		]
+      		}
+  		},
+  		"permutations": [
+  			{
+  				"condition": "q.block_state('honkit26113:confirmation') == 0",
+  				"components": {
+  				}
+  			},
+  			{
+  				"condition": "q.block_state('honkit26113:confirmation') == 1",
+  				"components": {
+  					"minecraft:on_interact": {
+  						"event": "honkit26113:activate_tank"
+  					},
+        			"minecraft:queued_ticking": {
+            			"looping": true,
+            			"interval_range": [ 100, 100 ],
+            			"on_tick": {
+            	    		"event": "honkit26113:cancel"
+            			}
+        			}
+  				}
+  			}
+  		]*/
+	}
+}

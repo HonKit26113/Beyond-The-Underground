@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:undergrowth/chromatic_petals_random_feature"
+    },
+    "features": [
+      [ "honkit26113:undergrowth/chromatic_petals_1_feature", 1 ],
+      [ "honkit26113:undergrowth/chromatic_petals_2_feature", 1 ],
+      [ "honkit26113:undergrowth/chromatic_petals_3_feature", 1 ],
+      [ "honkit26113:undergrowth/chromatic_petals_4_feature", 1 ]
+    ]
+  }
+}

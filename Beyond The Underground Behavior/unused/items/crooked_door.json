@@ -1,0 +1,19 @@
+// This file was modified by clouddspiderr & HonKit26113 (@HonKit1103). Do not distribute without permission.
+/*{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:crooked_door_item",
+			"menu_category": {
+				"category": "construction",
+				"group": "minecraft:itemGroup.name.door"
+			}
+		},
+		"components": {
+			"minecraft:icon": "crooked_door_item",
+			"minecraft:block_placer": {
+				"block": "honkit26113:crooked_door"
+			}
+		}
+	}
+}

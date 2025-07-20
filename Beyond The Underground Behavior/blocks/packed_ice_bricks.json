@@ -1,0 +1,29 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:packed_ice_bricks"
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:honkit26113_dig_with_pickaxe": {},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5, // default: 0.75s
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.any_tag('minecraft:is_pickaxe','honkit26113:is_bane_of_frost')"
+                        },
+                        "destroy_speed": 0.53 // 0.4s
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.5
+            },
+            "minecraft:friction": 0.5,
+			"minecraft:map_color": "#92B9FE"
+        }
+	}
+}

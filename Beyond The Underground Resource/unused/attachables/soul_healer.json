@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "honkit26113:soul_healer",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/soul_healer_attachable"
+			},
+			"geometry": {
+				"default": "geometry.soul_healer_attachable"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

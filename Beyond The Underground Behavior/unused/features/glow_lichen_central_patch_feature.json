@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:sculk_patch_feature": {
+    "description": {
+      "identifier": "honkit26113:glow_lichen_central_patch_feature"
+    },
+    "replaceable_blocks": [
+      "minecraft:stone",
+      "minecraft:deepslate",
+      "minecraft:grass",
+      "minecraft:dirt"
+    ],
+    "cant_place_sculk_vein_on": [
+      "honkit26113:glow_lichen_block"
+    ],
+    "ground_block": "honkit26113:glow_lichen_block",
+    "surface": "floor",
+    "vertical_range": 5,
+    "growth_chance": 0.005,
+    "horizontal_radius": {
+      "range_min": 4,
+      "range_max": 5
+    }
+  }
+}

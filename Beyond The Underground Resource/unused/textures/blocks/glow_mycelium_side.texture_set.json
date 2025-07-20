@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "glow_mycelium_side",
+		"metalness_emissive_roughness": "glow_mycelium_side_mer",
+		"heightmap": "glow_mycelium_side_heightmap"
+	}
+}

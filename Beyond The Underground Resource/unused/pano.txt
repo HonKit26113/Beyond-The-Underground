@@ -1,0 +1,2 @@
+fov 90.00
+fov can be altered by gameplay off

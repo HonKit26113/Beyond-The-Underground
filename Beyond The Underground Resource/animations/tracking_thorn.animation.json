@@ -1,0 +1,15 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.tracking_thorn.trail_particles": {
+		  "loop": true,
+		  "animation_length": 0.2,
+		  "particle_effects": {
+		    "0.0": {
+          		"effect": "trail_particles",
+		      	"pre_effect_script": "variable.ground_particle_amount = 1; variable.ground_particle_initial_speed = math.random( 2, 3 ); variable.ground_particle_texture_coordinate = query.surface_particle_texture_coordinate; variable.ground_particle_texture_size = query.surface_particle_texture_size;"
+		    }
+		  }
+		}
+	}
+}

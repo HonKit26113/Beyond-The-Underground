@@ -1,0 +1,74 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "honkit26113:overworld_rooted_dirt_patch_feature",
+      "places_feature": "honkit26113:rooted_dirt_ceiling_patch_feature"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "overworld"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "ocean"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "caves"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "cold"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "frozen"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "desert"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "savanna"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mesa"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 1,
+      "x": {
+        "distribution": "gaussian",
+        "extent": [ 0, 8 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ 5, "q.heightmap(variable.worldx, variable.worldz) - 3" ]
+      },
+      "z": {
+        "distribution": "gaussian",
+        "extent": [ 0, 8 ]
+      }
+    }
+  }
+}

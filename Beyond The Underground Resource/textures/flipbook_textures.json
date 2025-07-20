@@ -1,0 +1,30 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/soul_magma",
+    "atlas_tile": "soul_magma",
+    "ticks_per_frame": 10,
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/crooked/crooked_stem_side",
+    "atlas_tile": "crooked_stem_side",
+    "ticks_per_frame": 15
+  },
+  {
+    "flipbook_texture": "textures/blocks/arena_limestone_pillar_side_on",
+    "atlas_tile": "arena_limestone_pillar_side_on",
+    "ticks_per_frame": 15
+  },
+  {
+    "flipbook_texture": "textures/blocks/arena_trigger_flashing",
+    "atlas_tile": "arena_trigger_flashing",
+    "ticks_per_frame": 20,
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/rainbow_gum_log_side",
+    "atlas_tile": "rainbow_gum_log_side",
+    "ticks_per_frame": 20,
+    "blend_frames": true
+  }
+]

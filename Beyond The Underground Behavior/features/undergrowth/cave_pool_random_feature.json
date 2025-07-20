@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:undergrowth/cave_pool_random_feature"
+    },
+    "features": [
+      [ "honkit26113:undergrowth/cave_turf_patch_snap_to_surface_feature", 7 ],
+      [ "honkit26113:undergrowth/cave_pool_patch_snap_to_surface_feature", 1 ]
+    ]
+  }
+}

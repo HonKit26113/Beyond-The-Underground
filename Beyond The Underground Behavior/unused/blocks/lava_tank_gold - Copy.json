@@ -1,0 +1,235 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:lava_tank_gold",
+			"properties": {
+				"honkit26113:activated": [ 0, 1, 2 ],
+				"honkit26113:countdown1": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+				"honkit26113:countdown2": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ]
+			}
+		},
+		"components": {
+      		"minecraft:creative_category": {
+        		"group": "itemGroup.name.items",
+      			"category": "items"
+      		},
+      		"minecraft:breathability": "air"
+        },
+        "events": {
+      		"honkit26113:activate_tank": {
+        		"sequence": [
+          			{
+            			"set_block_property": {
+              				"honkit26113:activated": 1
+            			}
+          			},
+          			{
+            			"set_block_property": {
+              				"honkit26113:countdown2": 30
+            			}
+          			},
+          			{
+            			"run_command": {
+              				"command": [
+              					"summon honkit26113:lava_tank_gold_countdown"
+              				]//"structure save lava_tank1 ~-3 ~-3 ~-3 ~3 ~ ~3 false memory true",//"fill ~-3 ~-3 ~-3 ~3 ~ ~3 air 0 replace lava",
+            			}
+          			}
+        		]
+      		},
+      		"honkit26113:countdown2_to_1": {
+            	"set_block_property": {
+              		"honkit26113:countdown1": 15
+            	}
+        	},
+      		"honkit26113:put_on_cooldown": {
+        		"sequence": [
+          			{
+            			"set_block_property": {
+              				"honkit26113:activated": 2
+            			}
+          			},
+          			{
+            			"run_command": {
+              				"command": [
+              					"structure load mystructure:lava_tank1 ~-3 ~-3 ~-3 0_degrees none layer_by_layer 2",
+              					"structure delete mystructure:lava_tank1"
+              				]
+            			}
+          			}
+        		]
+        	},
+      		"honkit26113:tank_is_on_cooldown": {
+      			"run_command": {
+      				"command": [
+      					"particle minecraft:critical_hit_emitter ~ ~ ~",
+      					"execute @p ~ ~ ~ title @s actionbar Lava Tank is on cooldown!"
+      				]
+      			}
+        	},
+      		"honkit26113:cooldown_ends": {
+        		"sequence": [
+          			{
+            			"set_block_property": {
+              				"honkit26113:activated": 0
+            			}
+          			}
+        		]
+        	},
+      		"honkit26113:countdown1_deduct_one": {
+      			"sequence": [
+            		{
+            			"set_block_property": {
+              				"honkit26113:countdown1": "q.block_property('honkit26113:countdown1') - 1"
+            			}
+            		},
+            		{
+            			"run_command": {
+            				"command": "say countdown1"
+            			}
+            		}
+            	]
+        	},
+      		"honkit26113:countdown2_deduct_one": {
+      			"sequence": [
+            		{
+            			"set_block_property": {
+              				"honkit26113:countdown2": "q.block_property('honkit26113:countdown2') - 1"
+            			}
+            		},
+            		{
+            			"run_command": {
+            				"command": "say countdown2"
+            			}
+            		}
+            	]
+        	}
+  		},
+        "permutations": [
+        	{
+        		"condition": "q.block_property('honkit26113:activated') == 0", // off
+        		"components": {
+					"minecraft:on_interact": {
+						"event": "honkit26113:activate_tank"
+					},
+					"minecraft:destroy_time": 0.5,
+					"minecraft:explosion_resistance": 2,
+					"minecraft:immovable": false
+				}
+        	},
+        	{
+        		"condition": "q.block_property('honkit26113:activated') == 1", // on
+        		"components": {
+            		"minecraft:ticking": {
+                		"on_tick": {
+                    		"event": "honkit26113:countdown_ends"
+                		},
+                		"looping": true,
+                		"range": [
+                    		30,
+                    		30
+                		]
+            		},
+					"minecraft:destroy_time": 999999,
+					"minecraft:explosion_resistance": 1200,
+					"minecraft:immovable": true
+        		}
+        	},
+        	{
+        		"condition": "q.block_property('honkit26113:activated') == 2", // cooldown
+        		"components": {
+					"minecraft:on_interact": {
+						"event": "honkit26113:tank_is_on_cooldown"
+					},
+            		"minecraft:ticking": {
+                		"on_tick": {
+                    		"event": "honkit26113:cooldown_ends"
+                		},
+                		"looping": true,
+                		"range": [
+                    		10,
+                    		10
+                		]
+            		},
+					"minecraft:destroy_time": 999999,
+					"minecraft:explosion_resistance": 1200,
+					"minecraft:immovable": true
+        		}
+        	},
+        	{
+        		"condition": "q.block_property('honkit26113:countdown1') == 0",
+        		"components": {
+            		"minecraft:ticking": {
+                		"on_tick": {
+                    		"event": "honkit26113:put_on_cooldown"
+                		},
+                		"looping": true,
+                		"range": [
+                    		1,
+                    		1
+                		]
+            		},
+					"minecraft:destroy_time": 999999,
+					"minecraft:explosion_resistance": 1200,
+					"minecraft:immovable": true
+        		}
+        	},
+        	{
+        		"condition": "q.block_property('honkit26113:countdown1') == 1 || q.block_property('honkit26113:countdown1') == 2 || q.block_property('honkit26113:countdown1') == 3 || q.block_property('honkit26113:countdown1') == 4 || q.block_property('honkit26113:countdown1') == 5 || q.block_property('honkit26113:countdown1') == 6 || q.block_property('honkit26113:countdown1') == 7 || q.block_property('honkit26113:countdown1') == 8 || q.block_property('honkit26113:countdown1') == 9 || q.block_property('honkit26113:countdown1') == 10 || q.block_property('honkit26113:countdown1') == 11 || q.block_property('honkit26113:countdown1') == 12 || q.block_property('honkit26113:countdown1') == 13 || q.block_property('honkit26113:countdown1') == 14 || q.block_property('honkit26113:countdown1') == 15",
+        		"components": {
+            		"minecraft:ticking": {
+                		"on_tick": {
+                    		"event": "honkit26113:countdown1_deduct_one"
+                		},
+                		"looping": true,
+                		"range": [
+                    		1,
+                    		1
+                		]
+            		},
+					"minecraft:destroy_time": 999999,
+					"minecraft:explosion_resistance": 1200,
+					"minecraft:immovable": true
+        		}
+        	},
+        	{
+        		"condition": "q.block_property('honkit26113:countdown2') == 16",
+        		"components": {
+            		"minecraft:ticking": {
+                		"on_tick": {
+                    		"event": "honkit26113:countdown2_to_1"
+                		},
+                		"looping": true,
+                		"range": [
+                    		1,
+                    		1
+                		]
+            		},
+					"minecraft:destroy_time": 999999,
+					"minecraft:explosion_resistance": 1200,
+					"minecraft:immovable": true
+        		}
+        	},
+        	{
+        		"condition": "q.block_property('honkit26113:countdown2') == 17 || q.block_property('honkit26113:countdown2') == 18 || q.block_property('honkit26113:countdown2') == 19 || q.block_property('honkit26113:countdown2') == 20 || q.block_property('honkit26113:countdown2') == 21 || q.block_property('honkit26113:countdown2') == 22 || q.block_property('honkit26113:countdown2') == 23 || q.block_property('honkit26113:countdown2') == 24 || q.block_property('honkit26113:countdown2') == 25 || q.block_property('honkit26113:countdown2') == 26 || q.block_property('honkit26113:countdown2') == 27 || q.block_property('honkit26113:countdown2') == 28 || q.block_property('honkit26113:countdown2') == 29 || q.block_property('honkit26113:countdown2') == 30",
+        		"components": {
+            		"minecraft:ticking": {
+                		"on_tick": {
+                    		"event": "honkit26113:countdown2_deduct_one"
+                		},
+                		"looping": true,
+                		"range": [
+                    		1,
+                    		1
+                		]
+            		},
+					"minecraft:destroy_time": 999999,
+					"minecraft:explosion_resistance": 1200,
+					"minecraft:immovable": true
+        		}
+        	}
+        ]
+	}
+}

@@ -1,0 +1,75 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:thrown_sand",
+      "runtime_identifier": "minecraft:snowball",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "honkit26113:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 4,
+            "knockback": true
+          },
+          "mob_effect": {
+            "effect": "blindness",
+            "durationeasy": 50,
+            "durationnormal": 50,
+            "durationhard": 50,
+            "amplifier": 0
+          },
+          //"remove_on_hit": {},
+          "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "target": "self",
+              "event": "hit_ground"
+            }
+          }
+        },
+        //"particle": "snowball_poof",
+        "power": 1.5,
+        "gravity": 0.03,
+        "angle_offset": 0.0,
+        "hit_sound": "dig.sand"
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "hit_ground": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": "particle honkit26113:thrown_sand_hit_particle ~ ~ ~"
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "honkit26113:despawn"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

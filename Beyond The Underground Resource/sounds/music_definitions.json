@@ -1,0 +1,123 @@
+{
+    // Luminous Caverns
+    "mushroom_island": {
+        "event_name": "music.overworld.mushroom_island",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "mushroom_island_shore": {
+        "event_name": "music.overworld.mushroom_island",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+
+    // Slimy Sewers
+    "swampland": {
+        "event_name": "music.overworld.swampland",
+        "min_delay": 0, // 60
+        "max_delay": 0 // 180
+    },
+    "swampland_mutated": {
+        "event_name": "music.overworld.swampland",
+        "min_delay": 0,
+        "max_delay": 0
+    },
+
+    // Luminous Caverns
+    "desert": {
+        "event_name": "music.overworld.desert",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "desert_hills": {
+        "event_name": "music.overworld.desert",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "desert_hills_mutated": {
+        "event_name": "music.overworld.desert",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+
+    // Ice Caves
+    "ice_mountains": {
+        "event_name": "music.overworld.frozen",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "ice_plains": {
+        "event_name": "music.overworld.frozen",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "ice_plains_spikes": {
+        "event_name": "music.overworld.frozen",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "frozen_river": {
+        "event_name": "music.overworld.frozen",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "frozen_ocean": {
+        "event_name": "music.overworld.frozen",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "deep_frozen_ocean": {
+        "event_name": "music.overworld.frozen",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+
+    // Crooked Caves
+    "hell": {
+        "event_name": "music.nether.nether_wastes",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    
+    // Undergrowth
+    "roofed_forest": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "jungle": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "bamboo_jungle": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "jungle_mutated": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "jungle_hills": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "bamboo_jungle_hills": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "jungle_edge": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    },
+    "flower_forest": {
+        "event_name": "music.undergrowth",
+        "min_delay": 60,
+        "max_delay": 120
+    }
+}
