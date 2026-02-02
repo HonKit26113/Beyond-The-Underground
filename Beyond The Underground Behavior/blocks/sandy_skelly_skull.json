@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.60",
+  "format_version": "1.21.130",
   "minecraft:block": {
     "description": {
       "identifier": "honkit26113:sandy_skelly_skull",
@@ -15,9 +15,6 @@
       }
     },
     "components": {
-      /*"minecraft:custom_components": [
-        "honkit26113:set_sandy_skelly_skull_rotation"
-      ],*/
       "minecraft:collision_box": {
         "origin": [-2, 0, -2],
         "size": [8, 8, 8]

@@ -1,11 +1,21 @@
 // This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
 {
-  "format_version": "1.21.60",
+  "format_version": "1.21.130",
   "minecraft:item": {
     "description": {
-    	"identifier": "honkit26113:fatal_poison_potion"
+    	"identifier": "honkit26113:fatal_poison_potion",
+      "menu_category": {
+        "category": "equipment"
+      }
     },
     "components": {
+      "honkit26113:potion": [
+        {
+          "name": "fatal_poison",
+          "duration": 40,
+          "amplifier": 0
+        }
+      ],
 		  "minecraft:icon": "fatal_poison_potion",
       "minecraft:display_name": {
         "value": "Potion of Fatal Poison\n§cFatal Poison (0:40)§r"

@@ -4,7 +4,9 @@
 	"minecraft:block": {
 		"description": {
 			"identifier": "honkit26113:luminite_block",
-			"category": "construction"
+            "menu_category": {
+                "category": "construction"
+            }
 		},
 		"components": {
 			"tag:honkit26113_dig_with_pickaxe": {},

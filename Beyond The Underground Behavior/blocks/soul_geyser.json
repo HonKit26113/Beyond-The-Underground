@@ -1,15 +1,16 @@
 // This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
 {
-  "format_version": "1.21.60",
+  "format_version": "1.21.130",
   "minecraft:block": {
     "description": {
       "identifier": "honkit26113:soul_geyser"
     },
     "components": {
-      "minecraft:custom_components": [
-        "honkit26113:particles_ticking_soul_geyser",
-        "honkit26113:soul_geyser_step_on"
-      ],
+      "honkit26113:particles": {
+          "name": "honkit26113:soul_geyser_particle",
+          "offset": [ 0, 0.5, 0 ]
+      },
+      "honkit26113:step_on_soul_geyser": {},
       "minecraft:tick": {
         "looping": true,
         "interval_range": [10, 40]

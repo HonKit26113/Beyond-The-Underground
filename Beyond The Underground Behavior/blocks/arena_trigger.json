@@ -48,8 +48,10 @@
   			{
   				"condition": "q.block_state('honkit26113:started') == 0",
   				"components": {
+                    "honkit26113:particles": {
+                        "name": "honkit26113:arena_trigger_particle"
+                    },
                     "minecraft:custom_components": [
-                        "honkit26113:particles_ticking_arena_trigger",
                         "honkit26113:arena_ask_for_confirmation"
                     ],
                     "minecraft:tick": {

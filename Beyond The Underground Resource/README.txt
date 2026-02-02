@@ -13,7 +13,7 @@ You are allowed to:
 
 You are NOT allowed to:
  - Distribute the pack using a new download link. Always share the link to to this page.
- - Monetise the pack download. Doing so will result in a copyright takedown.
+ - Monetize the pack download. Doing so could result in a copyright takedown.
 
 ====================
 Changelog
@@ -23,7 +23,7 @@ Released March 6, 2025
 New Cave Type: Arid Caves!
  - 
 
-New Cave Type: Crystal Caves!
+New Cave Type: Gypsum Caves!
  - 
 
 New Blocks:
@@ -59,11 +59,13 @@ Changes:
  - Luminite Ore and Deepslate Luminite Ore are now affected by Fortune.
  - Sand Layers and Slime Layers are now replaceable. This means a new block can replace them at their current position.
  - Sticky Spikes and Dripping Icicles now require Silk Touch to obtain.
+ - Crooked Fungi can now be placed on Cave Turf and Deepslate Cave Turf.
 
 Fixed Bugs:
  - Texture flickering no longer occurs on blocks with cross-shape geometries.
  - Fixed "Invalid asset path" errors that appeared in the content log.
  - Fixed the high spawn weights of mobs that prevented other mobs from spawning.
+ - Crooked Stems can now be stripped.
 
 ====================
 Credits

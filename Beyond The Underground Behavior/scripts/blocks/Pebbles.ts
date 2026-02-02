@@ -33,5 +33,4 @@ world.afterEvents.playerPlaceBlock.subscribe((data) => {
 			block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:variation": rand}));
 		})
 	}
-	return;
-  });
+});

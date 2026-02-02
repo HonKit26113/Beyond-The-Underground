@@ -1,6 +1,6 @@
 // This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "honkit26113:slimy_pebbles",
@@ -37,6 +37,9 @@
                     "texture": "slimy_stone_top",
                     "render_method": "alpha_test"
                 }
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.pebbles_var1"
             },
             "minecraft:placement_filter": {
                 "conditions": [

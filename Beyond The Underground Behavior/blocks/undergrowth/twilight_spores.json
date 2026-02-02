@@ -10,9 +10,11 @@
         },
         "components": {
             "tag:honkit26113:four_count": {},
+            "honkit26113:particles": {
+                "name": "honkit26113:twilight_spores_particle"
+            },
             "minecraft:custom_components": [
-                "honkit26113:count",
-                "honkit26113:particles_ticking_twilight_spores"
+                "honkit26113:count"
             ],
             "minecraft:tick": {
                 "looping": true,

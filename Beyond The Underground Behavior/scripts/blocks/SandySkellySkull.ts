@@ -1,6 +1,6 @@
 import { system, BlockPermutation, world } from "@minecraft/server";
 
-function getPreciseRotation(playerYRotation) {
+function getPreciseRotation(playerYRotation: number) {
 	// Transform player's head Y rotation to a positive
 	if (playerYRotation < 0) {
         playerYRotation += 360;
@@ -31,22 +31,3 @@ world.afterEvents.playerPlaceBlock.subscribe(data => {
         })
     }
 })
-
-/*world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-	blockComponentRegistry.registerCustomComponent("honkit26113:set_sandy_skelly_skull_rotation", {
-		beforeOnPlayerPlace(event) {
-			const { player } = event;
-			if (!player) return; // Exit if the player is undefined
-	
-			const blockFace = event.permutationToPlace.getState("minecraft:block_face");
-			if (blockFace !== "up") return; // Exit if the block hasn't been placed on the top of another block
-	
-			// Get the rotation using the function from earlier
-			const playerYRotation = player.getRotation().y;
-			const rotation = getPreciseRotation(playerYRotation);
-	
-			// Tell Minecraft to place the correct `wiki:rotation` value
-			event.permutationToPlace = event.permutationToPlace.withState("honkit26113:rotation", rotation);
-		}
-	});
-});*/

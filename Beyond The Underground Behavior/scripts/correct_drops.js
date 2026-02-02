@@ -1,6 +1,6 @@
 // This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
 import { world, system, BlockPermutation, ItemStack, Player } from '@minecraft/server';
-import { use_durability } from './functions.js';
+import { use_durability } from './Functions.js';
 
 world.beforeEvents.playerBreakBlock.subscribe((data) => {
 	const player = data.player;

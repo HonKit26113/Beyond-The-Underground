@@ -1,5 +1,5 @@
 import { world, ItemStack, system } from '@minecraft/server';
-import { use_durability } from 'functions.js';
+import { use_durability } from 'Functions.js';
 
 const stoneTierTools = [
     "minecraft:stone_tier",

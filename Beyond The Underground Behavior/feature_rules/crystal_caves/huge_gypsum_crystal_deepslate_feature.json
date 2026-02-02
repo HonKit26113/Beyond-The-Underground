@@ -31,10 +31,10 @@
         ]
       },
       "distribution": {
-        "iterations": 80,
+        "iterations": 200,
         "x": {
           "distribution": "uniform",
-          "extent": [ 0, 20 ]
+          "extent": [ 0, 216 ]
         },
       	"y": {
         	"distribution": "uniform",
@@ -42,7 +42,7 @@
       	},
         "z": {
           "distribution": "uniform",
-          "extent": [ 0, 20 ]
+          "extent": [ 0, 16 ]
         }
       }
     }

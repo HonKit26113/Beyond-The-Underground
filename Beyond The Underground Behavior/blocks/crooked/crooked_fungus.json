@@ -6,9 +6,7 @@
         "identifier": "honkit26113:crooked_fungus"
     },
     "components": {
-        "minecraft:custom_components": [
-            "honkit26113:grow_giant"
-        ],
+        "honkit26113:grow_giant": {},
         "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 0.0
         },
@@ -32,7 +30,9 @@
                         "minecraft:soul_soil",
                         "honkit26113:crooked_nylium",
                         "honkit26113:glow_mycelium",
-                        "honkit26113:deepslate_glow_mycelium"
+                        "honkit26113:deepslate_glow_mycelium",
+                        "honkit26113:cave_turf",
+                        "honkit26113:deepslate_cave_turf"
                     ],
                     "allowed_faces": [ "up" ]
                 }

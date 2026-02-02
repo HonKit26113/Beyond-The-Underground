@@ -3,7 +3,10 @@
 	"format_version": "1.14.0",
 	"minecraft:block": {
 		"description": {
-			"identifier": "honkit26113:deepslate_glow_mycelium"
+			"identifier": "honkit26113:deepslate_glow_mycelium",
+            "menu_category": {
+                "category": "nature"
+            }
 		},
 		"components": {
 			"tag:honkit26113_dig_with_pickaxe": {},

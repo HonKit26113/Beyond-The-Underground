@@ -1,9 +1,12 @@
 // This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "honkit26113:rainbow_gum_log",
+            "menu_category": {
+                "category": "nature"
+            },
             "traits": {
                 "minecraft:placement_position": {
                     "enabled_states": [
@@ -16,10 +19,10 @@
             }
         },
         "components": {
+            "honkit26113:strip_log": {},
             "tag:minecraft:is_axe_item_destructible": {},
             "tag:honkit26113_dig_with_axe": {},
             "minecraft:custom_components": [
-                "honkit26113:strip_log",
                 "honkit26113:leaves_decay"
             ],
             "minecraft:geometry": "minecraft:geometry.full_block",

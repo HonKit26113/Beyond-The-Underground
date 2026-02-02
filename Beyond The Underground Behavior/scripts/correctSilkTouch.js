@@ -1,5 +1,5 @@
-import { world, ItemStack, system } from '@minecraft/server';
-import { use_durability } from 'functions.js';
+import { world, ItemStack, system, GameMode } from '@minecraft/server';
+import { use_durability } from 'Functions.js';
 
 const special_vines = [
     "honkit26113:radiant_vines_body",
@@ -35,9 +35,7 @@ world.beforeEvents.playerBreakBlock.subscribe((data) => {
     let silkTouchLevel = 0;
 
     // Terminates if player is in creative mode
-    if (player.matches({gameMode:'creative'})) {
-        return;
-    }
+    if (player.getGameMode() === GameMode.Creative) return;
 
     try {
         silkTouchLevel = tool.getComponent("minecraft:enchantable").getEnchantment("silk_touch")?.level

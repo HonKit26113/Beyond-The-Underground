@@ -4,6 +4,9 @@
 	"minecraft:block": {
 		"description": {
 			"identifier": "honkit26113:gypsum_cluster",
+            "menu_category": {
+                "category": "nature"
+            },
             "traits": {
                 "minecraft:placement_position": {
                     "enabled_states": [ "minecraft:block_face" ]

@@ -3,7 +3,10 @@
 	"format_version": "1.21.60",
 	"minecraft:block": {
 		"description": {
-			"identifier": "honkit26113:packed_ice_bricks_cracked"
+			"identifier": "honkit26113:packed_ice_bricks_cracked",
+            "menu_category": {
+                "category": "construction"
+            }
 		},
 		"components": {
             "tag:minecraft:is_pickaxe_item_destructible": {},

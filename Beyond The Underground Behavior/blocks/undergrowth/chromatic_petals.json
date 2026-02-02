@@ -9,10 +9,8 @@
             }
         },
         "components": {
+            "honkit26113:add_count": {},
             "tag:honkit26113:four_count": {},
-            "minecraft:custom_components": [
-                "honkit26113:count"
-            ],
             "minecraft:material_instances": {
                 "*": {
                     "texture": "chromatic_petals",

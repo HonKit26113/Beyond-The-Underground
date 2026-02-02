@@ -1,5 +1,4 @@
 import { world, system, BlockPermutation, Dimension, Player } from '@minecraft/server';
-import { decrement_stack, use_durability } from '../functions.js';
 
 // This code is adapted from Kaioga's Block Templates. Thank you!
 const blockStates = new Map();
@@ -359,79 +358,7 @@ world.beforeEvents.worldInitialize.subscribe(eventData => {
         }
     });
 
-    /*eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_star_jasmine', {
-        onTick(e) {
-            const block = e.block;
-            const {x, y, z} = block.location;
-            block.dimension.spawnParticle("honkit26113:star_jasmine_particle", {x: x, y: y-.5, z: z});
-        }
-    });*/
-
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_twilight_spores', {
-        onTick(e) {
-            const block = e.block;
-            block.dimension.spawnParticle("honkit26113:twilight_spores_particle", block.location);
-        }
-    });
-
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_arena_trigger', {
-        onTick(e) {
-            const block = e.block;
-            block.dimension.spawnParticle("honkit26113:arena_trigger_particle", block.location);
-        }
-    });
-
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:soul_magma_ticking', {
-        onTick(e) {
-            const block = e.block;
-            const above = block.above();
-            let entities = block.dimension.getEntitiesAtBlockLocation(above.location);
-            for(const entity of entities) {
-                if (!entity.isSneaking && !entity.hasTag("undead")) {
-                    entity.addEffect("wither", 40, {amplifier: 3});
-                }
-            }
-        }
-    });
-    
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_soul_geyser', {
-        onTick(e) {
-            const block = e.block;
-            const { x, y, z } = block.location;
-            block.dimension.spawnParticle("honkit26113:soul_geyser_particle", {x: x, y: y+.5, z: z});
-        }
-    });
-
-    /*eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_glowing_obsidian', {
-        onTick(e) {
-            const block = e.block;
-            const { x, y, z } = block.location;
-            block.dimension.spawnParticle("honkit26113:obsidian_glow_spark_particle", {x: x, y: y+1, z: z});
-        }
-    });*/
-    
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_dripping_slime', {
-        onTick(e) {
-            const block = e.block;
-            block.dimension.spawnParticle("honkit26113:dripping_slime_particle", block.location);
-        }
-    });
-
-
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_dripping_icicle', {
-        onTick(e) {
-            const block = e.block;
-            const { x, y, z } = block.location;
-            block.dimension.spawnParticle("honkit26113:icicle_drip_particle", {x: x+.5, y: y, z: z+.5});
-        }
-    });
 
     
-    eventData.blockComponentRegistry.registerCustomComponent('honkit26113:particles_ticking_sandy_roots', {
-        onTick(e) {
-            const block = e.block;
-            const { x, y, z } = block.location;
-            block.dimension.spawnParticle("minecraft:falling_dust_sand_particle", {x: x, y: y-.5, z: z});
-        }
-    });
+
 });
