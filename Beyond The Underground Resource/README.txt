@@ -66,6 +66,7 @@ Fixed Bugs:
  - Fixed "Invalid asset path" errors that appeared in the content log.
  - Fixed the high spawn weights of mobs that prevented other mobs from spawning.
  - Crooked Stems can now be stripped.
+ - Crooked wood now play nether wood sounds.
 
 ====================
 Credits

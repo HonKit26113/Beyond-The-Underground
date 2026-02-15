@@ -263,31 +263,31 @@
 		"sound": "fungus"
 	},
 	"honkit26113:crooked_stem": {
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_stem_stripped": {
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_hyphae": {
 		"textures": "crooked_stem_side",
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_hyphae_stripped": {
 		"textures": "crooked_stem_stripped_side",
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_planks": {
 		"textures": "crooked_planks",
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_fence": {
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_fence_gate": {
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:crooked_trapdoor": {
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:glowing_obsidian": {
 		"textures": "glowing_obsidian",
@@ -354,7 +354,7 @@
 		"sound": "gravel"
 	},
 	"honkit26113:crooked_door": {
-		"sound": "wood"
+		"sound": "nether_wood"
 	},
 	"honkit26113:slimy_deepslate_pebbles": {
 		"sound": "gravel"
