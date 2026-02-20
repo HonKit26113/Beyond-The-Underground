@@ -3,7 +3,7 @@
   "format_version": "1.16.0",
   "minecraft:vegetation_patch_feature": {
     "description": {
-      "identifier": "honkit26113:crystal_caves/crystal_at_deepslate_patch_feature"
+      "identifier": "honkit26113:crystal_caves/gypsum_crystal_at_deepslate_patch_feature"
     },
     "replaceable_blocks": [
       "minecraft:deepslate"

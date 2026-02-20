@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:crystal_caves/deepslate_level_cave_surface_random_feature"
+    },
+    "features": [
+      [ "honkit26113:crystal_caves/tuff_patch_feature", 5 ],
+      [ "honkit26113:crystal_caves/gypsum_crystal_at_deepslate_patch_feature", 71 ],
+      [ "honkit26113:placeholder_test_feature", 24 ]
+    ]
+  }
+}

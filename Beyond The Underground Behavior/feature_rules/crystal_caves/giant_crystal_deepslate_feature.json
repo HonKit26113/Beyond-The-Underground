@@ -4,7 +4,7 @@
     "minecraft:feature_rules": {
       "description": {
         "identifier": "honkit26113:giant_crystal_deepslate_feature",
-        "places_feature": "honkit26113:crystal_caves/gypsum_deepslate_patch_random_feature"
+        "places_feature": "honkit26113:crystal_caves/deepslate_level_cave_surface_random_feature"
       },
       "conditions": {
         "placement_pass": "after_underground_pass",
@@ -17,14 +17,18 @@
               "value": "plains"
             },
             {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "forest"
-            },
-            {
-              "test": "has_biome_tag",
-              "operator": "!=",
-              "value": "roofed"
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "!=",
+                  "value": "roofed"
+                }
+              ]
             }
           ]
         }

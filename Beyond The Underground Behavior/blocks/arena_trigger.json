@@ -51,9 +51,7 @@
                     "honkit26113:particles": {
                         "name": "honkit26113:arena_trigger_particle"
                     },
-                    "minecraft:custom_components": [
-                        "honkit26113:arena_ask_for_confirmation"
-                    ],
+                    "honkit26113:arena_ask_for_confirmation": {},
                     "minecraft:tick": {
                         "loop": true,
                         "interval_range": [ 100, 100 ] // 5 secs
@@ -63,10 +61,10 @@
   			{
   				"condition": "q.block_state('honkit26113:started') == 1",
   				"components": {
-                    "minecraft:custom_components": [
-                        "honkit26113:arena_confirmed",
-                        "honkit26113:arena_cancel"
-                    ],
+                    "honkit26113:arena_confirmed": {
+                        "biome": "limestone_caves"
+                    },
+                    "honkit26113:arena_cancel": {},
                     "minecraft:tick": {
                         "interval_range": [ 200, 200 ]
                     }
@@ -75,9 +73,9 @@
             {
                 "condition": "q.block_state('honkit26113:started') == 2",
                 "components": {
-                    "minecraft:custom_components": [
-                        "honkit26113:check_for_finish_round"
-                    ],
+                    "honkit26113:check_for_finish_round": {
+                        "biome": "limestone_caves"
+                    },
                     "minecraft:tick": {
                         "interval_range": [ 20, 20 ]
                     },
@@ -94,9 +92,7 @@
             {
                 "condition": "q.block_state('honkit26113:started') == 3",
                 "components": {
-                    "minecraft:custom_components": [
-                        "honkit26113:arena_pillar_used_error"
-                    ],
+                    "honkit26113:arena_pillar_used_error": {},
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "arena_trigger_off",

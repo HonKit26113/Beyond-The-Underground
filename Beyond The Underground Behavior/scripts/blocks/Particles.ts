@@ -22,13 +22,10 @@ const ParticleComponent: BlockCustomComponent = {
 const SlimyParticles: BlockCustomComponent = {
     onStepOn({block}) {
         const { x, y, z} = block.location;
-        system.run(() => {
-            let rand = Math.floor(Math.random() * 4) + 1;
-            if (rand < 4) {
-                block.dimension.spawnParticle("honkit26113:dripping_slime_particle", {x: x, y: y+.25, z: z});
-            }
-        })
-        
+        let rand = Math.floor(Math.random() * 4) + 1;
+        if (rand < 4) {
+            block.dimension.spawnParticle("honkit26113:dripping_slime_particle", {x: x, y: y+.25, z: z});
+        }
     }
 }
 

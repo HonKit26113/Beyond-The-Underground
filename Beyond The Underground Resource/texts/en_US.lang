@@ -316,13 +316,15 @@ lava_tank.message.emptied= The Lava Tank has been emptied!
 
 soul_healer.message.activated= §bSoul Healer§r Activated!
 
+gypsum_fertilizer.message.fail= Failed to use Fertilizer. Is there enough room for the plant to grow?
+
 arena.message.wait= There is another arena battle ongoing, or a battle has just ended.
 arena.message.confirmation=Start battle? Interact with the pillar again to proceed.
 arena.message.cancel= Canceled operation.
 arena.message.starting_in= Get ready! Arena battle is starting in
 arena.message.battle_start=Good luck!
 arena.message.check_difficulty= Make sure your difficulty is at least set to Easy. If you are in Peaceful, you will not receive any rewards!
-arena.message.difficulty_error= Arena battle could not start in Peaceful difficulty.
+arena.message.difficulty_error= Arena Battles cannot start in Peaceful difficulty.
 arena.message.exit_world_canceled=§6[Arena]§r  Since you left the world before the battle has ended, you will not receive any rewards.
 arena.message.pillar_used= This pillar has already been triggered.
 arena.message.victory=

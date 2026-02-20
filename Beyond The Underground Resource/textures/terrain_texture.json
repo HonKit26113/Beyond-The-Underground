@@ -162,6 +162,8 @@
 		"petal_block_black": { "textures": [ "textures/blocks/petal_block/petal_block_black" ] },
 
 		"gypsum_block": { "textures": [ "textures/blocks/gypsum_block" ] },
-		"gypsum_cluster": { "textures": [ "textures/blocks/gypsum_cluster" ] }
+		"gypsum_cluster": { "textures": [ "textures/blocks/gypsum_cluster" ] },
+		"topaz_block": { "textures": [ "textures/blocks/topaz_block" ] },
+		"topaz_cluster": { "textures": [ "textures/blocks/topaz_cluster" ] }
 	}
 }

@@ -8,7 +8,6 @@ import "./HitEntity.js";
 //import "./events/onTick.js";
 //import "./events/onPlace.js";
 //import "./events/onPlayerDestroy.js";
-//import "./events/arena_pillar.js";
 
 import "./blocks/ChromaticPetals.js";
 import "./blocks/GrowGiant.js";
@@ -23,9 +22,21 @@ import "./blocks/SoulMagma.js";
 import "./blocks/StickySpikes.js";
 import "./blocks/StripLog.js";
 import "./blocks/Suitcase.js";
+import "./blocks/Slabs.js";
+import "./blocks/FenceGates.js";
+import "./blocks/Trapdoors.js";
+import "./blocks/Doors.js";
+import "./blocks/XpTank.js";
+import "./blocks/TemporaryRedstoneDetection.js";
+import "./blocks/LeavesDecay.js";
+
+import "./events/ArenaBattle.js";
+
 import "./items/CorruptedBouquet.js";
 import "./items/MysteriousStew.js";
 import "./items/Potions.js";
 import "./items/SlimeSoup.js";
 import "./items/SoulHealer.js";
 import "./items/WandOfTheSands.js";
+import "./items/GypsumFertilizer.js";
+import "./items/CombustionAmulet.js";

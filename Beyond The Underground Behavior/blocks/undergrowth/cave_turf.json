@@ -12,6 +12,8 @@
             "tag:minecraft:is_pickaxe_item_destructible": {},
 			"tag:honkit26113_dig_with_pickaxe": {},
 			"tag:stone": {},
+            "tag:dirt": {},
+            "tag:gravel": {}, // allows bamboo to be placed on top
 			"minecraft:loot": "loot_tables/blocks/cave_turf.json",
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 5,

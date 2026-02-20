@@ -1,4 +1,4 @@
-import { EquipmentSlot, GameMode, ItemStack, Player, system } from '@minecraft/server';
+import { Entity, EquipmentSlot, GameMode, ItemStack, Player, system } from '@minecraft/server';
 
 // durability
 export function use_durability(player: Player, item: ItemStack, add_damage: number) {
@@ -17,12 +17,13 @@ export function use_durability(player: Player, item: ItemStack, add_damage: numb
 }
 
 // decrement_stack
-export function decrement_stack(target: Player, execute_in_creative: boolean, amount: number) {
+export function decrement_stack(target: Entity, execute_in_creative: boolean = false, amount: number = 1) {
     const equipment = target.getComponent('equippable');
-    const selectedItem = equipment.getEquipment(EquipmentSlot.Mainhand);
-    
+    const selectedItem = equipment?.getEquipment(EquipmentSlot.Mainhand);
+    if (!selectedItem || amount <= 0) return;
+
     system.run(() => {
-        if (!execute_in_creative) {
+        if (!execute_in_creative && target instanceof Player) {
             if (target.getGameMode() === GameMode.Creative) return;
         }
         if (selectedItem.amount > amount) {

@@ -489,5 +489,12 @@
 	},
 	"honkit26113:gypsum_cluster": {
 		"sound": "amethyst"
+	},
+	"honkit26113:topaz_block": {
+		"textures": "topaz_block",
+		"sound": "amethyst"
+	},
+	"honkit26113:topaz_cluster": {
+		"sound": "amethyst"
 	}
 }

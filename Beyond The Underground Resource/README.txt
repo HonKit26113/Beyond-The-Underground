@@ -12,7 +12,7 @@ You are allowed to:
  - Make videos & media content with the pack if you leave the link to this page.
 
 You are NOT allowed to:
- - Distribute the pack using a new download link. Always share the link to to this page.
+ - Distribute the pack using a new download link. Always share the link to this page.
  - Monetize the pack download. Doing so could result in a copyright takedown.
 
 ====================
@@ -23,24 +23,21 @@ Released March 6, 2025
 New Cave Type: Arid Caves!
  - 
 
-New Cave Type: Gypsum Caves!
+New Cave Type: Crystal Caves!
  - 
 
 New Blocks:
- - Cave Turf
- - Deepslate Cave Turf
- - Rainbow Gum Log (Normal, Stripped)
- - Rainbow Gum Wood (Normal, Stripped)
- - Rainbow Gum Leaves
- - Petal Blocks (White, Blue, Red, Orange, Magenta, Black)
- - Chromatic Petals
- - Star Jasmine
- - Twilight Spores
- - Limestone Pillar
- - Arena Trigger & Arena Pillar (unobtainable)
+ - Gypsum Block
+ - Gypsum Cluster
+ - Topaz Block
+ - Topaz Cluster
+ - XP Tank
 
-New Special Weapon:
- - Corrupted Bouquet. Spawns tracking thorns towards the nearest entity, dealing 10 damage. Will not damage players.
+New Items:
+ - Gypsum Fertilizer. Grows a crop or tree instantly. Put 4 Azure Bluets, Cornflowers, Dandelions, or Oxeye Daisies in a 2x2 grid to spawn a Giant Flower.
+
+New Special Item:
+ - Combustion Amulet. 
 
 Introducing Arena Battles!
  - Arenas generate in Limestone Caves between y=6 and y=50.
@@ -60,6 +57,7 @@ Changes:
  - Sand Layers and Slime Layers are now replaceable. This means a new block can replace them at their current position.
  - Sticky Spikes and Dripping Icicles now require Silk Touch to obtain.
  - Crooked Fungi can now be placed on Cave Turf and Deepslate Cave Turf.
+ - When interacting with an Arena Trigger in Peaceful difficulty, an error message now shows and no battle is triggered.
 
 Fixed Bugs:
  - Texture flickering no longer occurs on blocks with cross-shape geometries.

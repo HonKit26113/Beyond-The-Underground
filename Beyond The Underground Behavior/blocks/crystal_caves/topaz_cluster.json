@@ -1,0 +1,109 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:topaz_cluster",
+            "menu_category": {
+                "category": "nature"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [ "minecraft:block_face" ]
+                }
+            }
+		},
+		"components": {
+            "honkit26113:particles": {
+                "name": "honkit26113:topaz_cluster_particle"
+            },
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [180, 240] // 9 - 12 secs
+            },
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "topaz_cluster",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.cross"
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin":  [-5, 0, -5],
+                "size":    [10, 7, 10]
+            },
+            "minecraft:collision_box": {
+                "origin":  [-5, 0, -5],
+                "size":    [10, 7, 10]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5,
+                "item_specific_speeds": [
+                	{
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                		"destroy_speed": 1.5 // 1.15s
+                	}
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:light_emission": 7,
+            "minecraft:light_dampening": 0,
+			"minecraft:map_color": "#FFC147"
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [180, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [0, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [-90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [0, 0, 90] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [0, 0, -90] }
+                }
+            }
+        ]
+	}
+}

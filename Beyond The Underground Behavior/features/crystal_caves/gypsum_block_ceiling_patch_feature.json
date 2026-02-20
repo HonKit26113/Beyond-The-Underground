@@ -20,8 +20,8 @@
     "vertical_range": 5,
     "vegetation_chance": 1.0,
     "horizontal_radius": {
-      "range_min": 5,
-      "range_max": 8
+      "range_min": 3,
+      "range_max": 5
     },
     "extra_edge_column_chance": 0.15
   }

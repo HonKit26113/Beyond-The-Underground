@@ -9,7 +9,6 @@
             }
         },
         "components": {
-            "honkit26113:place_pebbles": {},
             "tag:stone": {},
             "minecraft:map_color": "#C2A991",
             "minecraft:material_instances": {

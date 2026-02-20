@@ -1,4 +1,4 @@
-import { EquipmentSlot, GameMode, system } from '@minecraft/server';
+import { EquipmentSlot, GameMode, Player, system } from '@minecraft/server';
 // durability
 export function use_durability(player, item, add_damage) {
     if (player.getGameMode() === GameMode.Creative)
@@ -17,11 +17,13 @@ export function use_durability(player, item, add_damage) {
     });
 }
 // decrement_stack
-export function decrement_stack(target, execute_in_creative, amount) {
+export function decrement_stack(target, execute_in_creative = false, amount = 1) {
     const equipment = target.getComponent('equippable');
-    const selectedItem = equipment.getEquipment(EquipmentSlot.Mainhand);
+    const selectedItem = equipment?.getEquipment(EquipmentSlot.Mainhand);
+    if (!selectedItem || amount <= 0)
+        return;
     system.run(() => {
-        if (!execute_in_creative) {
+        if (!execute_in_creative && target instanceof Player) {
             if (target.getGameMode() === GameMode.Creative)
                 return;
         }

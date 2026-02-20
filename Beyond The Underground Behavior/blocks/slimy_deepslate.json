@@ -9,9 +9,7 @@
             }
 		},
 		"components": {
-            "minecraft:custom_components": [
-                "honkit26113:slimy_blocks_step_on"
-            ],
+            "honkit26113:slimy_blocks_step_on": {},
 			"tag:minecraft:is_pickaxe_item_destructible": {},
             "tag:honkit26113_dig_with_pickaxe": {},
 			"tag:stone": {},

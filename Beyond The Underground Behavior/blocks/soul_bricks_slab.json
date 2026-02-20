@@ -44,14 +44,17 @@
                     "texture": "soul_bricks",
                     "render_method": "alpha_test"
                 }
-            }
+            },
+            "minecraft:geometry": "geometry.slab_new"
         },
         "permutations": [
             // bottom slab
             {
                 "condition": "(q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('kai:double')) || q.block_state('honkit26113:placeontopside') == 0 || q.block_state('honkit26113:placeontopside') == 2 || q.block_state('honkit26113:placeontopside') == 3 || q.block_state('honkit26113:placeontopside') == 4 || q.block_state('honkit26113:placeontopside') == 5", // upright
                 "components": {
-                    "minecraft:custom_components": [ "honkit26113:make_double" ],
+                    "honkit26113:make_double_slab": {
+                        "sound": "nether_brick"
+                    },
                     "minecraft:geometry": "geometry.slab_new",
                     "minecraft:selection_box": {
                         "origin": [-8,0,-8],
@@ -71,7 +74,9 @@
             {
                 "condition": "(q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('kai:double')) || q.block_state('honkit26113:placeontopside') == 1.0",
                 "components": {
-                    "minecraft:custom_components": [ "honkit26113:make_double" ],
+                    "honkit26113:make_double_slab": {
+                        "sound": "nether_brick"
+                    },
                     "minecraft:geometry": "geometry.slab_top_new",
                     "minecraft:selection_box": {
                         "origin": [-8,8,-8],

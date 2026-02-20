@@ -7,7 +7,7 @@
         "places_feature": "honkit26113:crystal_caves/huge_gypsum_crystal_stone_patch_feature"
       },
       "conditions": {
-        "placement_pass": "after_underground_pass",
+        "placement_pass": "final_pass",
         "minecraft:biome_filter": [
         {
           "any_of": [
@@ -17,14 +17,18 @@
               "value": "plains"
             },
             {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "forest"
-            },
-            {
-              "test": "has_biome_tag",
-              "operator": "!=",
-              "value": "roofed"
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "!=",
+                  "value": "roofed"
+                }
+              ]
             }
           ]
         }

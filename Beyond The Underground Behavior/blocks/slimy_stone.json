@@ -9,13 +9,11 @@
             }
 		},
 		"components": {
+            "honkit26113:slimy_blocks_step_on": {},
             "tag:minecraft:is_pickaxe_item_destructible": {},
             "tag:honkit26113_dig_with_pickaxe": {},
 			"tag:stone": {},
             "minecraft:loot": "loot_tables/blocks/slimy_stone.json",
-            "minecraft:custom_components": [
-                "honkit26113:slimy_blocks_step_on"
-            ],
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 5,
                 "item_specific_speeds": [

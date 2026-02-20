@@ -217,7 +217,7 @@
                      "honkit26113:soul_shroomlight",
                      "honkit26113:crooked_fungus",
                      "honkit26113:crooked_roots",
-                     "honkit26113:soul_geyser",
+                     "honkit26113:soul_geyser"
                   ]
                },
                {
@@ -245,6 +245,19 @@
                      "honkit26113:chromatic_petals",
                      "honkit26113:star_jasmine",
                      "honkit26113:twilight_spores"
+                  ]
+               },
+               {
+                  // Crystal Caves
+                  "group_identifier": {
+                     "icon": "honkit26113:topaz_cluster",
+                     "name": "honkit26113:itemGroup.crystal_caves"
+                  },
+                  "items": [
+                     "honkit26113:gypsum_block",
+                     "honkit26113:gypsum_cluster",
+                     "honkit26113:topaz_block",
+                     "honkit26113:topaz_cluster"
                   ]
                },
                {
@@ -286,9 +299,7 @@
                {
                   "items": [
                      "honkit26113:glow_lichen_block",
-                     "honkit26113:quicksand",
-                     "honkit26113:gypsum_block",
-                     "honkit26113:gypsum_cluster"
+                     "honkit26113:quicksand"
                   ]
                }
             ]

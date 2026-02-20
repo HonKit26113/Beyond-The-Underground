@@ -17,14 +17,18 @@
               "value": "plains"
             },
             {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "forest"
-            },
-            {
-              "test": "has_biome_tag",
-              "operator": "!=",
-              "value": "roofed"
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "!=",
+                  "value": "roofed"
+                }
+              ]
             }
           ]
         }

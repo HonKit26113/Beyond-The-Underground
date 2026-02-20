@@ -9,13 +9,11 @@
             }
         },
         "components": {
+            "honkit26113:add_count": {},
             "tag:honkit26113:four_count": {},
             "honkit26113:particles": {
                 "name": "honkit26113:twilight_spores_particle"
             },
-            "minecraft:custom_components": [
-                "honkit26113:count"
-            ],
             "minecraft:tick": {
                 "looping": true,
                 "interval_range": [240, 400] // 12 - 20 secs

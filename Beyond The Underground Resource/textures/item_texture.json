@@ -1,13 +1,6 @@
 // This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
 {
 	"texture_data": {
-
-		/*"ice_stalagmite_item": { "textures": [ "textures/blocks/ice_stalagmite_tip" ] },
-		"ice_stalactite_item": { "textures": [ "textures/blocks/ice_stalactite_tip" ] },
-		"ice_spikes_item": { "textures": [ "textures/blocks/ice_shards" ] },
-		"ice_shards": { "textures": [ "textures/items/ice_shards" ] },
-		"frozen_iron_ore": { "textures": [ "textures/items/frozen_iron_ore" ] },
-		"blue_iced_iron_ore": { "textures": [ "textures/items/blue_iced_iron_ore" ] },*/
 		"luminite_ore": { "textures": [ "textures/items/luminite_ore" ] },
 		"deepslate_luminite_ore": { "textures": [ "textures/items/deepslate_luminite_ore" ] },
 		"glow_mycelium": { "textures": [ "textures/items/glow_mycelium" ] },
@@ -117,8 +110,11 @@
 		"sandstone_stick": { "textures": [ "textures/items/sandstone_stick" ] },
 		"wand_of_the_sands": { "textures": [ "textures/items/wand_of_the_sands" ] },
 		"frost_essence": { "textures": [ "textures/items/frost_essence" ] },
-		"frozen_core": { "textures": [ "textures/items/frozen_core" ] }
+		"frozen_core": { "textures": [ "textures/items/frozen_core" ] },
 
-		}
+		"gypsum_fertilizer": { "textures": [ "textures/items/gypsum_fertilizer" ] },
+		"topaz": { "textures": [ "textures/items/topaz" ] },
+		"gypsum_cluster_item": { "textures": [ "textures/blocks/gypsum_cluster" ] },
+		"topaz_cluster_item": { "textures": [ "textures/blocks/topaz_cluster" ] }
 	}
 }
