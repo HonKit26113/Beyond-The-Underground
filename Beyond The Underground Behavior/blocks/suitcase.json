@@ -18,14 +18,22 @@
             }
         },
         "components": {
+            /*"honkit26113:particles": {
+                "name": "honkit26113:suitcase_attention_particle"
+            },
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [1256, 1256] // 2pi secs
+            },*/
             "honkit26113:interact_suitcase": {},
             "minecraft:geometry": { 
                 "identifier": "geometry.suitcase"
             }, 
            	"minecraft:material_instances": {
                 "*": {
-                    "texture": "suitcase",
-                    "render_method": "alpha_test"
+                    "texture": "suitcase_flashing",
+                    "render_method": "alpha_test",
+                    "face_dimming": false
                 }
             },
             "minecraft:placement_filter": {

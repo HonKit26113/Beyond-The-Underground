@@ -67,6 +67,7 @@
 		"slimy_deepslate_side": { "textures": [ "textures/blocks/slimy_deepslate_side" ] },
 		"slimy_deepslate_top": { "textures": [ "textures/blocks/slimy_deepslate_top" ] },
 		"suitcase": { "textures": [ "textures/blocks/suitcase" ] },
+		"suitcase_flashing": { "textures": [ "textures/blocks/suitcase_flashing" ] },
 
 
 		"frosted_deepslate_side": { "textures": [ "textures/blocks/frosted_deepslate_side" ] },
@@ -163,7 +164,26 @@
 
 		"gypsum_block": { "textures": [ "textures/blocks/gypsum_block" ] },
 		"gypsum_cluster": { "textures": [ "textures/blocks/gypsum_cluster" ] },
+		"gypsum_needles": { "textures": [ "textures/blocks/gypsum_needles" ] },
 		"topaz_block": { "textures": [ "textures/blocks/topaz_block" ] },
-		"topaz_cluster": { "textures": [ "textures/blocks/topaz_cluster" ] }
+		"topaz_cluster": { "textures": [ "textures/blocks/topaz_cluster" ] },
+
+		"petrified_log_side": { "textures": [ "textures/blocks/petrified_log_side" ] },
+		"petrified_log_top": { "textures": [ "textures/blocks/petrified_log_top" ] },
+		"petrified_planks": { "textures": [ "textures/blocks/petrified_planks" ] },
+		"petrified_door_top": { "textures": [ "textures/blocks/petrified_door_top" ] },
+		"petrified_door_bottom": { "textures": [ "textures/blocks/petrified_door_bottom" ] },
+		"petrified_trapdoor": { "textures": [ "textures/blocks/petrified_trapdoor" ] },
+		"petrified_door_item": { "textures": [ "textures/items/petrified_door" ] },
+		"petrified_bush": { "textures": [ "textures/blocks/petrified_bush" ] },
+
+		"frostslate_bricks": { "textures": [ "textures/blocks/frostslate_bricks" ] },
+		"frostslate_bricks_chiseled": { "textures": [ "textures/blocks/frostslate_bricks_chiseled" ] },
+		"ice_fort_lamp": { "textures": [ "textures/blocks/ice_fort_lamp" ] },
+		"xp_tank": { "textures": [ "textures/blocks/xp_tank" ] },
+		"arena_pillar_top_off": { "textures": [ "textures/blocks/arena_pillar_top_off" ] },
+		"arena_pillar_top_on": { "textures": [ "textures/blocks/arena_pillar_top_on" ] },
+		"arena_pillar_side_off": { "textures": [ "textures/blocks/arena_pillar_side_off" ] },
+		"arena_pillar_side_on": { "textures": [ "textures/blocks/arena_pillar_side_on" ] }
 	}
 }

@@ -38,6 +38,7 @@
       "minecraft:destructible_by_explosion": {
         "explosion_resistance": 6
       },
+			"minecraft:map_color": "#27344A",
       "minecraft:material_instances" : {
         "*": {
           "texture": "frosted_deepslate_side",

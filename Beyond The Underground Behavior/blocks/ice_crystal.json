@@ -33,8 +33,7 @@
             "detection_rules": [
                 {
                     "can_contain_liquid": true,
-                    "liquid_type": "water",
-                    "on_liquid_touches": "no_reaction"
+                    "liquid_type": "water"
                 }
             ]
         },
@@ -45,7 +44,7 @@
       	"minecraft:material_instances" : {
         	"*": {
           		"texture": "ice_crystal",
-          		"render_method": "alpha_test",
+          		"render_method": "alpha_test_single_sided",
           		"ambient_occlusion": false,
           		"face_dimming": false
         	}

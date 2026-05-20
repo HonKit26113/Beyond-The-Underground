@@ -15,11 +15,11 @@
         },
         "minecraft:brightness_filter": {
           "min": 0,
-          "max": 7,
+          "max": 0,
           "adjust_for_weather": false
         },
         "minecraft:weight": {
-          "default": 1300
+          "default": 200
         },
         "minecraft:herd": {
           "min_size": 2,
@@ -29,9 +29,22 @@
           "min": -63,
           "max": 55
         },
-        "minecraft:biome_filter": {
-          "test": "has_biome_tag", "operator": "==", "value": "frozen"
-        }
+        "minecraft:biome_filter": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "frozen"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "cold"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

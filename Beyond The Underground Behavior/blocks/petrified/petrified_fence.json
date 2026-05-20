@@ -1,0 +1,459 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.21.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:petrified_fence",
+            "menu_category": {
+                "category": "construction"
+            },
+            "states": {
+                "fence:connect_north": [ false, true ],
+                "fence:connect_south": [ false, true ],
+                "fence:connect_east": [ false, true ],
+                "fence:connect_west": [ false, true ]
+            }
+        },
+        "components": {
+            "tag:honkit26113_dig_with_pickaxe": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {},
+            "tag:stone": {},
+            "tag:is_fence": {},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 5,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 1.5333 // 1.15s
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:map_color": "#B9B2B2",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "petrified_planks",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": true,
+                    "face_dimming": true
+                }
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.block_fence",
+                "bone_visibility": {
+                    "north": "q.block_state('fence:connect_north')",
+                    "south": "q.block_state('fence:connect_south')",
+                    "east": "q.block_state('fence:connect_east')",
+                    "west": "q.block_state('fence:connect_west')"
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:redstone_conductivity": {
+                "allows_wire_to_step_down": false,
+                "redstone_conductor": false
+            },
+            "minecraft:light_dampening": 0
+        },
+        "permutations": [
+            {
+                "condition": "!q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [ -2, 0, -2 ],
+                        "size": [ 4, 24, 4 ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [ -2, 0, -2 ],
+                        "size": [ 4, 16, 4 ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_east') && !q.block_state('fence:connect_west') && q.block_state('fence:connect_north') && q.block_state('fence:connect_south')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [ -2, 0, -8 ],
+                        "size": [ 4, 24, 16 ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [ -2, 0, -8 ],
+                        "size": [ 4, 16, 16 ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_east') && q.block_state('fence:connect_west') && !q.block_state('fence:connect_north') && !q.block_state('fence:connect_south')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [ -8, 0, -2 ],
+                        "size": [ 16, 24, 4 ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [ -8, 0, -2 ],
+                        "size": [ 16, 16, 4 ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            4,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            4,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_north') && q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            4,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            4,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            4
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            4
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_north') && q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_north') && q.block_state('fence:connect_south') && q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_north') && !q.block_state('fence:connect_south') && q.block_state('fence:connect_east') && q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_north') && q.block_state('fence:connect_south') && !q.block_state('fence:connect_east') && q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('fence:connect_north') && q.block_state('fence:connect_south') && q.block_state('fence:connect_east') && !q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            24,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('fence:connect_north') && q.block_state('fence:connect_south') && q.block_state('fence:connect_east') && q.block_state('fence:connect_west')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            16,
+                            24,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

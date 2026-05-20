@@ -1,11 +1,11 @@
-import { system, BlockPermutation, BlockCustomComponent, Vector3 } from '@minecraft/server';
+import { system, BlockPermutation, BlockCustomComponent, Player } from '@minecraft/server';
 
 const SoulMagmaComponent: BlockCustomComponent = {
     onStepOn({block, entity}, {}) {
         if (!entity) return;
-        block.setPermutation(BlockPermutation.resolve("honkit26113:soul_magma", {"honkit26113:damage": 1}));
-        if (!entity.isSneaking && !entity.hasTag("undead")) {
+        if (!entity.hasTag("undead") && (entity instanceof Player && !entity.isSneaking)) {
             entity.addEffect("wither", 40, {amplifier: 3});
+            block.setPermutation(BlockPermutation.resolve("honkit26113:soul_magma", {"honkit26113:damage": 1}));
         }
     },
     onStepOff({block}, {}) {
@@ -18,7 +18,7 @@ const SoulMagmaTickingComponent: BlockCustomComponent = {
         const {x, y, z} = block.location;
         let entities = block.dimension.getEntitiesAtBlockLocation({ x, y: y+1, z});
         for (const entity of entities) {
-            if (!entity.isSneaking && !entity.hasTag("undead")) {
+            if (!entity.hasTag("undead") && (entity instanceof Player && !entity.isSneaking)) {
                 entity.addEffect("wither", 40, {amplifier: 3});
             }
         }

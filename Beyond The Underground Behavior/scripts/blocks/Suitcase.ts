@@ -6,10 +6,10 @@ const SuitcaseComponent: BlockCustomComponent = {
 		if (!player) return;
 		const {x, y, z} = block.location;
 		const equipment = player.getComponent('equippable');
-		const selectedItem = equipment?.getEquipment(EquipmentSlot.Mainhand);
+		//const selectedItem = equipment?.getEquipment(EquipmentSlot.Mainhand);
 		
-		if(selectedItem?.typeId == "minecraft:emerald") {
-			decrement_stack(player, false, 1);
+		//if(selectedItem?.typeId == "minecraft:emerald") {
+			//decrement_stack(player, false, 1);
 			if (block.permutation.getState("honkit26113:direction" as any) == 0 || block.permutation.getState( "minecraft:cardinal_direction" ) === 'north' || block.permutation.getState( "minecraft:cardinal_direction" ) === 'south') {
 				block.setType("honkit26113:suitcase_used");
 			} else {
@@ -17,9 +17,9 @@ const SuitcaseComponent: BlockCustomComponent = {
 			}
 			player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "suitcase.message.summoned" }]});
 			player.dimension.spawnEntity("honkit26113:lost_explorer", {x: x, y: y + 1, z: z});
-		} else {
-			player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "suitcase.message.interact_with_emerald" }]});	
-		};
+		//} else {
+			//player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "suitcase.message.interact_with_emerald" }]});	
+		//};
     }
 };
 

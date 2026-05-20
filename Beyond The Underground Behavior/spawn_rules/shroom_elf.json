@@ -9,7 +9,7 @@
     "conditions": [
       {
         "minecraft:weight": {
-          "default": 1400
+          "default": 30
         },
         "minecraft:spawns_on_block_filter": [
           "honkit26113:glow_mycelium",

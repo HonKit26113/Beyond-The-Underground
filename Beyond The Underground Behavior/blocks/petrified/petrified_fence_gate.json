@@ -1,0 +1,127 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+// This code is adapted from Kaioga's Block Templates. Thank you!
+{
+    "format_version": "1.26.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:petrified_fence_gate",
+            "menu_category": {
+                "category": "construction"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"]
+                }
+            },
+            "states": {
+                "kai:open": [false, true],
+                "kai:in_wall_bit": [false, true]  // Wheter the fence gate is connected to a wall or not
+            }
+        },
+        "components": {
+            "minecraft:tags": [
+                "honkit26113_dig_with_pickaxe",
+                "minecraft:is_pickaxe_item_destructible",
+                "stone",
+                "fence_gate"
+            ],
+            "honkit26113:fence_gate": {},
+            "minecraft:geometry": {
+                "identifier": "geometry.fence_gate", // Our fence gate geometry.
+                "bone_visibility": {
+                    "fence_gate_closed": "!q.block_state('kai:open') && !q.block_state('kai:in_wall_bit')",
+                    "fence_gate_open": "q.block_state('kai:open') && ((q.block_state('minecraft:cardinal_direction') == 'south') || q.block_state('minecraft:cardinal_direction') == 'west') && !q.block_state('kai:in_wall_bit')",
+                    "fence_gate_open_inverted": "q.block_state('kai:open') && (q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'east') && !q.block_state('kai:in_wall_bit')",
+                    "post": "!q.block_state('kai:in_wall_bit')",
+                    "fence_gate_closed_wall": "!q.block_state('kai:open') && q.block_state('kai:in_wall_bit')",
+                    "fence_gate_open_wall": "q.block_state('kai:open') && ((q.block_state('minecraft:cardinal_direction') == 'south') || q.block_state('minecraft:cardinal_direction') == 'west') && q.block_state('kai:in_wall_bit')",
+                    "fence_gate_open_inverted_wall": "q.block_state('kai:open') && (q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'east') && q.block_state('kai:in_wall_bit')",
+                    "post_wall": "q.block_state('kai:in_wall_bit')"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [-2, 0, -8],
+                "size": [4, 24, 16]
+            },
+            "minecraft:selection_box": {
+                "origin": [-2, 0, -8],
+                "size": [4, 16, 16]
+            },
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "petrified_planks",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": 0,
+                    "face_dimming": true
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:redstone_conductivity": {
+                "allows_wire_to_step_down": false,
+                "redstone_conductor": true
+            },
+            "minecraft:redstone_consumer": {
+                "min_power": 1
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 5,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 1.5333 // 1.15s
+                    }
+                ]
+            },
+			"minecraft:destructible_by_explosion": {
+    		    "explosion_resistance": 6
+			},
+            "minecraft:map_color": "#B9B2B2",
+            "minecraft:light_dampening": 0,
+
+            // used to render the block in the inventory with the proper rotation
+            "minecraft:transformation": {
+                "rotation": [0, 180, 0]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [0, -90, 0]
+                    },
+                    "minecraft:connection_rule": {
+                        "enabled_directions": ["east", "west"]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east' || q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [0, -180, 0]
+                    },
+                    "minecraft:connection_rule": {
+                        "enabled_directions": ["north", "south"]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('kai:open')",
+                "components": {
+                    "minecraft:collision_box": false
+                }
+            }
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-import { system, BlockPermutation, BlockCustomComponent, Block, world, BlockSignComponent } from '@minecraft/server';
+import { system, BlockPermutation, BlockCustomComponent, Block, world } from '@minecraft/server';
 
 // Create a Map to keep track of processed blocks
 const processedBlocks = new Map();
@@ -7,6 +7,12 @@ world.afterEvents.playerBreakBlock.subscribe(eventData => {
 	const { block } = eventData;
 	const { x, y, z } = block.location;
 
+	const doors = [
+		"honkit26113:crooked_door",
+		"honkit26113:rainbow_gum_door",
+		"honkit26113:petrified_door"
+	]
+
 	system.run(() => {
 		// Remove the block's entry from the processedBlocks map
 		processedBlocks.delete(`${x},${y},${z}`);
@@ -14,10 +20,10 @@ world.afterEvents.playerBreakBlock.subscribe(eventData => {
 		// Check if the block above or below the destroyed block is also kai:door
 		const aboveBlock = block.above();
 		const belowBlock = block.below();
-		if (belowBlock.typeId === "honkit26113:rainbow_gum_door" || belowBlock.typeId === "honkit26113:crooked_door") {
+		if (doors.includes(belowBlock?.typeId)) {
 			belowBlock.setType('minecraft:air');
 			processedBlocks.delete(`${x},${y-1},${z}`); // Remove the below block's entry
-		} else if (aboveBlock.typeId === "honkit26113:rainbow_gum_door" || aboveBlock.typeId === "honkit26113:crooked_door") {
+		} else if (doors.includes(aboveBlock?.typeId)) {
 			aboveBlock.setType('minecraft:air');
 			processedBlocks.delete(`${x},${y+1},${z}`); // Remove the above block's entry
 		}

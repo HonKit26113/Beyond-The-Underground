@@ -1,0 +1,225 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:processor_list": {
+        "description": {
+            "identifier": "honkit26113:element_replacement"
+        },
+        "processors": [
+            {
+                "processor_type": "minecraft:rule",
+                "rules": [
+                    {
+                        "input_predicate": {
+                            "predicate_type": "minecraft:random_block_match",
+                            "block": "honkit26113:packed_ice_bricks",
+                            "probability": 0.35
+                        },
+                        "output_state": {
+                            "name": "honkit26113:packed_ice_bricks_cracked"
+                        }
+                    },
+                    {
+                        "input_predicate": {
+                            "predicate_type": "minecraft:random_block_match",
+                            "block": "minecraft:iron_bars",
+                            "probability": 0.2
+                        },
+                        "output_state": {
+                            "name": "minecraft:air"
+                        }
+                    },
+                    {
+                        "input_predicate": {
+                            "predicate_type": "minecraft:random_block_match",
+                            "block": "minecraft:white_carpet",
+                            "probability": 0.2
+                        },
+                        "output_state": {
+                            "name": "minecraft:air"
+                        }
+                    },
+                    {
+                        "input_predicate": {
+                            "predicate_type": "minecraft:random_block_match",
+                            "block": "minecraft:light_blue_carpet",
+                            "probability": 0.2
+                        },
+                        "output_state": {
+                            "name": "minecraft:air"
+                        }
+                    }
+                ]
+            },
+
+            // Corridor with chest loot
+            {
+                "processor_type": "minecraft:rule",
+                "rules": [
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_corridor.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "north"
+                            }
+                        },
+                        "output_state": {
+                            "name": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "north"
+                            }
+                        }
+                    },
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_corridor.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "south"
+                            }
+                        },
+                        "output_state": {
+                            "name": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "south"
+                            }
+                        }
+                    },
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_corridor.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "east"
+                            }
+                        },
+                        "output_state": {
+                            "name": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "east"
+                            }
+                        }
+                    },
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_corridor.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "west"
+                            }
+                        },
+                        "output_state": {
+                            "name": "minecraft:chest",
+                            "states": {
+                                "minecraft:cardinal_direction": "west"
+                            }
+                        }
+                    }
+                ]
+            },
+            
+            // Storage room loot
+            {
+                "processor_type": "minecraft:rule",
+                "rules": [
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "north"
+                            },
+                            "probability": 0.5
+                        },
+                        "output_state": {
+                            "name": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "north"
+                            }
+                        }
+                    },
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "south"
+                            },
+                            "probability": 0.5
+                        },
+                        "output_state": {
+                            "name": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "south"
+                            }
+                        }
+                    },
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "east"
+                            },
+                            "probability": 0.5
+                        },
+                        "output_state": {
+                            "name": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "east"
+                            }
+                        }
+                    },
+                    {
+                        "block_entity_modifier": {
+                            "type": "minecraft:append_loot",
+                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
+                        },
+                        "input_predicate": {
+                            "predicate_type": "minecraft:blockstate_match",
+                            "block": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "west"
+                            },
+                            "probability": 0.5
+                        },
+                        "output_state": {
+                            "name": "minecraft:barrel",
+                            "states": {
+                                "minecraft:cardinal_direction": "west"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

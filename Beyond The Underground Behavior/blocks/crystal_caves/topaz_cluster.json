@@ -19,9 +19,10 @@
             },
             "minecraft:tick": {
                 "looping": true,
-                "interval_range": [180, 240] // 9 - 12 secs
+                "interval_range": [120, 360] // 6 - 18 secs
             },
 			"tag:minecraft:is_pickaxe_item_destructible": {},
+            "minecraft:loot": "loot_tables/blocks/topaz_cluster.json",
             "minecraft:material_instances": {
                 "*": {
                     "texture": "topaz_cluster",

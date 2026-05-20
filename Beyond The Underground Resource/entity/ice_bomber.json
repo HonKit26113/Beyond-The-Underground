@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:ice_bomber",
+      "materials": {
+        "default": "drowned"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_ice_bomber"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_ice_bomber"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "animate": [
+          "look_at_target",
+          "move",
+          "holding",
+          { "brandish_spear": "variable.is_brandishing_spear" },
+          "bob",
+          { "damage_nearby_mobs": "variable.damage_nearby_mobs" },
+          { "use_item_progress": "( variable.use_item_interval_progress > 0.0 ) || ( variable.use_item_startup_progress > 0.0 )" },
+          { "swimming": "variable.swim_amount > 0.0" }
+        ]
+      },
+      "animations": {
+        "look_at_target": "animation.humanoid.look_at_target.default",
+        "attack.rotations": "animation.humanoid.attack.rotations",
+        "humanoid_big_head": "animation.humanoid.big_head",
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "move": "animation.humanoid.move",
+        "riding.arms": "animation.humanoid.riding.arms",
+        "riding.legs": "animation.humanoid.riding.legs",
+        "holding": "animation.humanoid.holding",
+        "brandish_spear": "animation.humanoid.brandish_spear",
+        "charging": "animation.humanoid.charging",
+        "bob": "animation.humanoid.bob",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "use_item_progress": "animation.humanoid.use_item_progress",
+        "attack_rotations": "animation.drowned.attack.rotations",
+        "swimming": "animation.zombie.swimming"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "base_color": "#91B8FD",
+        "overlay_color": "#F7FEFE"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:ice_bomb_projectile",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_ice_bomb_projectile"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_ice_bomb_projectile"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "particle_effects": {
+        "fuse_particles": "minecraft:basic_smoke_particle"
+      },
+      "animations": {
+        "fuse": "animation.ice_bomb_projectile.fuse"
+      },
+      "scripts": {
+        "animate": [
+          "fuse"
+        ]
+      }
+    }
+  }
+} 

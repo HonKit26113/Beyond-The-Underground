@@ -6,6 +6,9 @@
 			"identifier": "honkit26113:xp_tank",
             "menu_category": {
                 "category": "items"
+            },
+            "states": {
+                "honkit26113:filled": [0, 1, 2, 3, 4, 5, 6]
             }
 		},
 		"components": {
@@ -15,21 +18,36 @@
             "honkit26113:xp_tank_interact": {},
            	"minecraft:material_instances": {
                 "*": {
-                    "texture": "lava_tank_gold",
+                    "texture": "xp_tank",
                     "render_method": "alpha_test",
                     "ambient_occlusion": false,
                     "face_dimming": false
                 }
             },
             "minecraft:geometry": { 
-                "identifier": "geometry.lava_tank", 
+                "identifier": "geometry.xp_tank",
                 "bone_visibility": {
-                    "glass": true,
-                    "base": true,
-                    "lava": false,
-                    "obsidian": false
-                } 
+                    "xp_1/6_full": false,
+                    "xp_2/6_full": false,
+                    "xp_3/6_full": false,
+                    "xp_4/6_full": false,
+                    "xp_5/6_full": false,
+                    "xp_full": true
+                }
             },
+            // The layer models and textures are ready, but code isn't.
+            // Each player has individual XP tank stats, it's not possible to change the tank appearance based on only 1 player.
+            /*"minecraft:geometry": { 
+                "identifier": "geometry.lava_tank",
+                "bone_visibility": {
+                    "xp_1/6_full": "q.block_state('honkit26113:filled') == 1",
+                    "xp_2/6_full": "q.block_state('honkit26113:filled') == 2",
+                    "xp_3/6_full": "q.block_state('honkit26113:filled') == 3",
+                    "xp_4/6_full": "q.block_state('honkit26113:filled') == 4",
+                    "xp_5/6_full": "q.block_state('honkit26113:filled') == 5",
+                    "xp_full": "q.block_state('honkit26113:filled') == 6"
+                }
+            },*/
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 3
             },

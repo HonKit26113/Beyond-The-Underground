@@ -15,7 +15,6 @@
 				"value": " §aSlime Dagger\n§3Special Ability: Intoxication\n§cPoison II (0:05)\n§cJump Boost (0:03)"
 			},*/
 			"minecraft:damage": 4,
-			"minecraft:render_offsets": "tools",
 			"minecraft:can_destroy_in_creative": false,
 			"minecraft:hand_equipped": true,
 			"minecraft:durability": {

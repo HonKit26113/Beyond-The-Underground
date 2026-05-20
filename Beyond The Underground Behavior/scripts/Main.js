@@ -8,6 +8,7 @@ import "./HitEntity.js";
 //import "./events/onTick.js";
 //import "./events/onPlace.js";
 //import "./events/onPlayerDestroy.js";
+import "./Commands.js";
 
 import "./blocks/ChromaticPetals.js";
 import "./blocks/GrowGiant.js";
@@ -40,3 +41,4 @@ import "./items/SoulHealer.js";
 import "./items/WandOfTheSands.js";
 import "./items/GypsumFertilizer.js";
 import "./items/CombustionAmulet.js";
+import "./items/IceBomb.js";

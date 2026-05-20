@@ -5,8 +5,7 @@
         "description": {
             "identifier": "honkit26113:soul_bricks_fence",
             "menu_category": {
-                "category": "construction",
-                "group": "minecraft:itemGroup.name.fence"
+                "category": "construction"
             },
             "states": {
                 "fence:connect_north": [ false, true ],

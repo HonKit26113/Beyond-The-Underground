@@ -1,33 +1,49 @@
-import { system, EquipmentSlot, BlockPermutation, BlockCustomComponent, ItemStack, GameMode } from '@minecraft/server';
+import { system, EquipmentSlot, BlockPermutation, BlockCustomComponent, ItemStack, GameMode, BlockVolume } from '@minecraft/server';
 import { decrement_stack } from "../Functions";
 
+// The key must match the typeId of lava tanks
+const LAVA_TANK_RADII = {
+	"honkit26113:lava_tank_gold": 3,
+	"honkit26113:lava_tank_diamond": 5
+} as const;
+
 const PlaceLavaTankComponent: BlockCustomComponent = {
-    beforeOnPlayerPlace({block, player}, {}) {
-		if (!player) return;
-		const block_below = block.below();
+    onPlace({block}, {}) {
+		const blockBelow = block.below();
+		const dim = block.dimension;
 		const { x, y, z } = block.location;
 		
-		// check for lava under the tank
-		if(block.typeId == "honkit26113:lava_tank_gold" || block.typeId == "honkit26113:lava_tank_diamond") {
-			system.run(() => {
-				if (block_below?.typeId != "minecraft:lava" && block_below?.typeId != "minecraft:flowing_lava") {
-					player.onScreenDisplay.setActionBar({"rawtext":[{"translate":"lava_tank.message.error_not_above_lava"}]});
-				} else {
-					player.runCommand(`fill ${x-5} ${y-5} ${z-5} ${x+5} ${y} ${z+5} air replace lava`);
-					player.runCommand(`fill ${x-5} ${y-5} ${z-5} ${x+5} ${y} ${z+5} air replace flowing_lava`);
-					player.runCommand("playsound bucket.fill_lava @a[r=10]");
-					switch (block.typeId) {
-						case "honkit26113:lava_tank_gold": 
-							block.setType("honkit26113:lava_tank_gold_full");
-							break;
-						case "honkit26113:lava_tank_diamond": 
-							block.setType("honkit26113:lava_tank_diamond_full");
-							break;
-					}
-				}
-			})
+		// Return if the block placed is not a lava tank (this should never happen)
+		if (block.typeId !== "honkit26113:lava_tank_gold" && block.typeId !== "honkit26113:lava_tank_diamond") return;
+
+		// Return if the block below the tank is not lava or flowing lava
+		if (blockBelow?.typeId != "minecraft:lava" && blockBelow?.typeId != "minecraft:flowing_lava") {
+			const players = dim.getPlayers({location: block.location, maxDistance: 10});
+			for (const p of players) {
+				p.onScreenDisplay.setActionBar({"rawtext":[{"translate":"lava_tank.message.error_not_above_lava"}]});
+			}
+			return;
 		}
-    }
+
+		const radius = LAVA_TANK_RADII[block.typeId];
+		const volume = new BlockVolume(
+			{ x: x-radius, y: y-radius, z: z-radius },
+			{ x: x+radius, y: y+radius, z: z+radius }
+		);
+		const blocks = block.dimension.getBlocks(volume, {includeTypes: [ "lava", "flowing_lava" ]}).getBlockLocationIterator();
+		for (const b of blocks) {
+			dim.setBlockType(b, "minecraft:air");
+		}
+		dim.playSound("bucket.fill_lava", block.location);
+		switch (block.typeId) {
+			case "honkit26113:lava_tank_gold": 
+				block.setType("honkit26113:lava_tank_gold_full");
+				break;
+			case "honkit26113:lava_tank_diamond": 
+				block.setType("honkit26113:lava_tank_diamond_full");
+				break;
+		}
+	}
 };
 
 interface LavaTankState {
@@ -38,25 +54,27 @@ const LavaTankErrorComponent: BlockCustomComponent = {
     onPlayerInteract({block, player}, {params}) {
 		if (!player) return;
 		const state = (params as LavaTankState).type;
+		const {x, y, z} = block.location;
+		const spawnPos = {x: x+0.5, y, z: z+0.5};
 
 		switch (state) {
 			case "locked": 
 				player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "lava_tank.message.locked" }]});
-				block.dimension.spawnParticle("minecraft:critical_hit_emitter", block.location);
-				block.dimension.playSound('random.anvil_land', block.location);
+				block.dimension.spawnParticle("minecraft:critical_hit_emitter", spawnPos);
+				block.dimension.playSound('block.false_permissions', block.location);
 				break;
 			case "broken":
 				player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "lava_tank.message.broken" }]});
-				block.dimension.spawnParticle("minecraft:cauldron_explosion_emitter", block.location)
+				block.dimension.spawnParticle("minecraft:cauldron_explosion_emitter", spawnPos)
 				block.dimension.playSound('random.fizz', block.location);
 				break;
 			case "cooldown": 
 				player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "lava_tank.message.cooldown" }]});
-				block.dimension.spawnParticle("minecraft:critical_hit_emitter", block.location);
-				block.dimension.playSound('random.anvil_land', block.location);
+				block.dimension.spawnParticle("minecraft:critical_hit_emitter", spawnPos);
+				block.dimension.playSound('block.false_permissions', block.location);
 				break;
 			default:
-				throw new Error("invalid lava tank type");
+				return console.error("invalid lava tank type");
 		}
     }
 }
@@ -78,7 +96,7 @@ const EmptyLavaTank: BlockCustomComponent = {
 		const selectedItem = equipment?.getEquipment(EquipmentSlot.Mainhand);
 		const drop_item = new ItemStack("minecraft:obsidian", 1);
 		// Return if not holding correct pickaxe
-		if (!selectedItem || !pickaxe_types.includes(selectedItem.typeId)) {
+		if (!pickaxe_types.includes(selectedItem?.typeId)) {
 			player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "lava_tank.message.interact_with_pickaxe" }]});
 			return;
 		}
@@ -95,10 +113,10 @@ const EmptyLavaTank: BlockCustomComponent = {
 				break;
 		}
 
-		// cooling down countdown
-		var count_secs = 5;
+		// cooldown countdown
+		let countdownSeconds = 5;
 		const countdown = system.runInterval(() => {
-			count_secs--;
+			countdownSeconds--;
 		}, 20);
 			
 		system.runTimeout(() => {

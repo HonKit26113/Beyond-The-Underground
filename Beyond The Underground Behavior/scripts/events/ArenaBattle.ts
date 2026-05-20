@@ -1,42 +1,40 @@
-import { world, system, BlockPermutation, ItemStack, BlockCustomComponent, Difficulty } from '@minecraft/server';
-import { arenaConfig } from './ArenaConfig';
+import { world, system, BlockPermutation, ItemStack, BlockCustomComponent, Difficulty, Vector3, TicksPerSecond, Block } from '@minecraft/server';
+import { arenaBiomes, arenaConfig } from './ArenaConfig';
 
-interface arena {
-    biome: arenaBiome;
-    phases: arenaPhase[];
-    rewards: arenaReward[];
+interface Arena {
+    biome: ArenaBiome;
+    phases: ArenaPhase[];
 }
 
-interface arenaPhase {
+interface ArenaPhase {
     id: number;
-    mobs: arenaMob[];
+    mobs: ArenaMob[];
+    rewards: ArenaReward[];
 }
 
-interface arenaMob {
+interface ArenaMob {
     entity: string;
     count: number;
 }
 
-interface arenaReward {
+interface ArenaReward {
     item: string;
     count: number;
 }
 
 // CUSTOM COMPONENT PARAMS ////
-const arenaBiomes = {
-    LimestoneCaves: "limestone_caves",
-    IceCaves: "ice_caves"
-} as const;
 
-type arenaBiome = typeof arenaBiomes[keyof typeof arenaBiomes];
+// Edit arenaBiomes in ArenaConfig.ts
 
-interface arenaParams {
-    "biome": arenaBiome
+type ArenaBiome = typeof arenaBiomes[keyof typeof arenaBiomes];
+
+interface ArenaParams {
+    "biome": ArenaBiome
 }
 ////////////////////////////////
 
-function isArenaBiome(value: string): value is arenaBiome {
-    return Object.values(arenaBiomes).includes(value as arenaBiome);
+function isArenaBiome(value: string): value is ArenaBiome {
+    return Object.values(arenaBiomes).includes(value as ArenaBiome);
 }
 
 const arenaData = arenaConfig.map(b => {
@@ -50,7 +48,7 @@ const arenaData = arenaConfig.map(b => {
     };
 });
 
-function getArenaData(biome: string): arena {
+function getArenaData(biome: string): Arena {
     for (let i = 0; i < arenaData.length; i++) {
         if (arenaData[i].biome === biome) {
             return arenaData[i];
@@ -60,14 +58,12 @@ function getArenaData(biome: string): arena {
 
 /**
  * 
- * @returns total entity amount across all phases for an arena type
+ * @returns total entity amount for an arena phase
  */
-function getEntityCount(arena: arena): number {
+function getEntityCount(phase: ArenaPhase): number {
     let count = 0;
-    for (const phase of arena.phases) {
-        for (const mob of phase.mobs) {
-            count += mob.count;
-        }
+    for (const mob of phase.mobs) {
+        count += mob.count;
     }
     return count;
 }
@@ -110,17 +106,21 @@ const cancelFunction: BlockCustomComponent = {
 }
 
 const confirmStart: BlockCustomComponent = {
-    onPlayerInteract({block, player}, {params}) {
+    onPlayerInteract({block}, {params}) {
         const {x, y, z} = block.location;
         const dim = block.dimension;
 
+        const thisArena = getArenaData((params as ArenaParams).biome);
+        if (thisArena === undefined) {
+            console.error("Undefined arena config. Check the biome ID?");
+            return;
+        }
+        const thisPhases = thisArena.phases;
+        const phaseId = 0; // This placeholder will change once phases are implemented
+        entityCount = getEntityCount(thisPhases[phaseId]); // This entity_count system needs to be refactored for phases to be implemented
+
         world.setDynamicProperty("honkit26113:arena_over", 1); // ongoing
         world.setDynamicProperty("honkit26113:countdown_ongoing", true);
-
-        const thisArena = getArenaData((params as arenaParams).biome);
-        const phaseId = 0; // This placeholder will change once phases are implemented
-        const thisPhases = thisArena.phases;
-        entity_count = getEntityCount(thisArena); // This entity_count system needs to be refactored for phases to be implemented
 
         dim.playSound('block.bell.hit', block.location, {volume: 4});
         block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 2}));
@@ -129,28 +129,37 @@ const confirmStart: BlockCustomComponent = {
         }
 
         let count_secs = 3;
+        const nearbyPlayers = getNearbyPlayers(block, 32);
         const countdown = system.runInterval(() => {
-            player.onScreenDisplay.setActionBar([{ "rawtext": [{ "translate":"arena.message.starting_in" }]}, { "text": " §6[0:0" }, { "text": count_secs.toString() }, { "text": "]§r!" }]);
+            for (const p of nearbyPlayers) {
+                p.onScreenDisplay.setActionBar([{ "rawtext": [{ "translate":"arena.message.starting_in" }]}, 
+                    { "text": ` §6[0:0${count_secs.toString()}]§r!` }]); 
+            }
             count_secs--;
         }, 20);
-        
-        const randVector3 = { 
-            x: x+Math.round(Math.random()*9+1)-5, 
-            y: y-3, 
-            z: z+Math.round(Math.random()*9+1)-5
-        };
-        const tag = 'honkit26113.is_arena_placeholder';
 
+        const tag = 'honkit26113.is_arena_placeholder';
 
         system.runTimeout(() => {
             system.clearRun(countdown);
-            player.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "arena.message.battle_start" }]});
+            for (const p of nearbyPlayers) {
+                p.onScreenDisplay.setActionBar({ "rawtext": [{ "translate": "arena.message.battle_start" }]});
+            }
 
-            dim.spawnEntity('honkit26113:arena_entity_counter', block.location);
+            dim.spawnEntity('honkit26113:arena_entity_counter', block.location).triggerEvent((params as ArenaParams).biome);
             dim.spawnEntity('honkit26113:arena_countdown', block.location);
             for (const mob of thisPhases[phaseId].mobs) {
                 for (let i = 0; i < mob.count; i++) {
-                    dim.spawnEntity(mob.entity, randVector3).addTag(tag);
+                    const randVector3: Vector3 = { 
+                        x: x+Math.floor(Math.random()*9)-4, 
+                        y: y-3, 
+                        z: z+Math.floor(Math.random()*9)-4
+                    };
+                    const monster = dim.spawnEntity("honkit26113:arena_monster_placeholder", randVector3);
+                    monster.addTag(tag);
+                    // Colons are not allowed in enum values in entity properties. Therefore, in the enum, the colon following the namespace is replaced with an underscore.
+                    // Here we replace it back with a colon. This also means all entities listed in the enum must follow namespace:id.
+                    monster.setProperty("honkit26113:monster_type", mob.entity.replace(":", "_"));
                 }
             }
             dim.runCommand(`execute positioned ${x} ${y} ${z} run camerashake add @a[r=40] 1 1 positional`);
@@ -166,70 +175,153 @@ const confirmStart: BlockCustomComponent = {
     }
 }
 
+/**
+ * Given a block, return a list of players within the given radius
+ * @param block 
+ * @param radius 
+ * @returns 
+ */
+function getNearbyPlayers(block: Block, radius: number) {
+    return block.dimension.getPlayers({
+        location: block.location, 
+        maxDistance: radius
+    });
+}
 
 const checkForFinish: BlockCustomComponent = {
     onTick({block}, {params}) {
         // 1 == ongoing battle
         // 2 == victory
         // 3 == defeat
-        const biome: arenaBiome = (params as arenaParams).biome;
+        let victory: boolean = undefined;
+        if (world.getDynamicProperty("honkit26113:arena_over") === 2) victory = true;
+        if (world.getDynamicProperty("honkit26113:arena_over") === 3) victory = false;
+        if (victory !== undefined) {
+            const thisArena = getArenaData((params as ArenaParams).biome);
+            arenaCleanup(victory, block, thisArena);
+        }
+
         const dim = block.dimension;
         const loc = block.location;
-        if (world.getDynamicProperty("honkit26113:arena_over") == 2) { // victory
-            dim.runCommand(`title @a times 20 120 30`)
-            dim.runCommand(`title @a title `)
-            dim.runCommand(`titleraw @a subtitle { "rawtext": [{ "translate": "arena.message.victory" }]}`)
-            dim.runCommand(`title @a reset`)
-            world.setDynamicProperty("honkit26113:arena_over", 0) // battle over
-            block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 3}))
+        // if (world.getDynamicProperty("honkit26113:arena_over") === 2) { // victory
+        //     // Show victory text and play victory SFX to nearby players
+        //     const nearbyPlayers = getNearbyPlayers(block, 32);
+        //     for (const p of nearbyPlayers) {
+        //         // text
+        //         p.onScreenDisplay.setTitle("", {
+        //             fadeInDuration: 1 * TicksPerSecond,
+        //             stayDuration: 6 * TicksPerSecond,
+        //             fadeOutDuration: 1.5 * TicksPerSecond,
+        //             subtitle: { "rawtext": [{ "translate": "arena.message.victory" }]}
+        //         })
+                
+        //         // sound
+        //         p.playSound("arena.complete", {pitch: 1, volume: 3});
+        //     }
 
-            // play victory sound to nearby players
-            const nearbyPlayers = block.dimension.getPlayers({
-                location: block.location, 
-                maxDistance: 32
-            });
-            for (const p of nearbyPlayers) {
-                p.playSound("arena.complete", {pitch: 1, volume: 3});
-            }
+        //     world.setDynamicProperty("honkit26113:arena_over", 0) // battle over
+        //     block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 3}))
 
-            dim.getEntities({ type: "honkit26113:arena_entity_counter", location: loc}).forEach(entity => {
-                entity.getComponent('health').setCurrentValue(0);
-            })
-            dim.getEntities({ type: "honkit26113:arena_countdown", location: loc}).forEach(entity => {
-                entity.getComponent('health').setCurrentValue(0);
-            })
 
-            
-            const thisArena = getArenaData((params as arenaParams).biome);
-            for (const r of thisArena.rewards) {
-                dim.spawnItem(new ItemStack(r.item, r.count), loc);
-            }
+        //     dim.getEntities({ type: "honkit26113:arena_entity_counter", location: loc}).forEach(entity => {
+        //         entity.getComponent('health').setCurrentValue(0);
+        //     })
+        //     dim.getEntities({ type: "honkit26113:arena_countdown", location: loc}).forEach(entity => {
+        //         entity.getComponent('health').setCurrentValue(0);
+        //     })
 
-            world.stopMusic();
-            entity_count = getEntityCount(getArenaData(biome));
-        }
+        //     // Spawn rewards
+        //     const thisArena = getArenaData((params as ArenaParams).biome);
+        //     const thisPhases = thisArena.phases;
+        //     const phaseId = 0; // Placeholder
+        //     for (const r of thisPhases[phaseId].rewards) {
+        //         dim.spawnItem(new ItemStack(r.item, r.count), loc);
+        //     }
 
-        if (world.getDynamicProperty("honkit26113:arena_over") == 3) { // defeat
-            block.dimension.runCommand(`title @a times 20 120 30`)
-            block.dimension.runCommand(`title @a title `)
-            block.dimension.runCommand(`titleraw @a subtitle { "rawtext": [{ "translate": "arena.message.defeat" }]}`)
-            block.dimension.runCommand(`title @a reset`)
-            world.setDynamicProperty("honkit26113:arena_over", 0) // battle over
-            block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 3}))
-            block.dimension.getEntities({ type: "honkit26113:arena_entity_counter", location: block.location}).forEach(entity => {
-                entity.getComponent('health').setCurrentValue(0);
-            })
-            block.dimension.getEntities({ type: "honkit26113:arena_countdown", location: block.location}).forEach(entity => {
-                entity.getComponent('health').setCurrentValue(0);
-            })
-            world.stopMusic();
-            entity_count = getEntityCount(getArenaData(biome));
-        }
+        //     world.stopMusic();
+        // }
 
-        if (world.getDynamicProperty('honkit26113:arena_over') != 1 && block.dimension.getEntities({ type: "honkit26113:arena_entity_counter", location: block.location}).length == 0 && block.dimension.getEntities({ type: "honkit26113:arena_countdown", location: block.location}).length == 0) {
+        // if (world.getDynamicProperty("honkit26113:arena_over") === 3) { // defeat
+        //     const nearbyPlayers = getNearbyPlayers(block, 32);
+        //     for (const p of nearbyPlayers) {
+        //         // show victory text
+        //         p.onScreenDisplay.setTitle("", {
+        //             fadeInDuration: 1 * TicksPerSecond,
+        //             stayDuration: 6 * TicksPerSecond,
+        //             fadeOutDuration: 1.5 * TicksPerSecond,
+        //             subtitle: { "rawtext": [{ "translate": "arena.message.defeat" }]}
+        //         })
+                
+        //         // play defeat sound to nearby players
+        //         p.playSound("arena.defeat", {pitch: 1, volume: 3});
+        //     }
+
+        //     world.setDynamicProperty("honkit26113:arena_over", 0) // battle over
+        //     block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 3}))
+
+        //     dim.getEntities({ type: "honkit26113:arena_entity_counter", location: loc}).forEach(entity => {
+        //         entity.getComponent('health').setCurrentValue(0);
+        //     })
+        //     dim.getEntities({ type: "honkit26113:arena_countdown", location: loc}).forEach(entity => {
+        //         entity.getComponent('health').setCurrentValue(0);
+        //     })
+        //     world.stopMusic();
+        // }
+
+        if (world.getDynamicProperty('honkit26113:arena_over') != 1 && dim.getEntities({ type: "honkit26113:arena_entity_counter", location: loc}).length === 0 && dim.getEntities({ type: "honkit26113:arena_countdown", location: loc}).length === 0) {
             block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 3}))
         }
     }
+}
+
+/**
+ * 
+ * @param victory victory = `true`, defeat = `false`
+ * @param block the arena trigger
+ * @param arena the arena. Use `getArenaData` from trigger params
+ */
+function arenaCleanup(victory: boolean, block: Block, arena: Arena) {
+    const dim = block.dimension;
+    const loc = block.location;
+
+    // Show victory or defeat text and play sound to nearby players
+    const nearbyPlayers = getNearbyPlayers(block, 32);
+    for (const p of nearbyPlayers) {
+        // text
+        p.onScreenDisplay.setTitle("", {
+            fadeInDuration: 1 * TicksPerSecond,
+            stayDuration: 6 * TicksPerSecond,
+            fadeOutDuration: 1.5 * TicksPerSecond,
+            subtitle: { "rawtext": [{ "translate": victory ? "arena.message.victory" : "arena.message.defeat"}]}
+        })
+        
+        // sound
+        p.playSound(victory ? "arena.complete" : "arena.defeat", {pitch: 1, volume: 3});
+    }
+
+    // Spawn rewards if victory
+    if (victory) {
+        const thisPhases = arena.phases;
+        const phaseId = 0; // Placeholder
+        for (const r of thisPhases[phaseId].rewards) {
+            dim.spawnItem(new ItemStack(r.item, r.count), loc);
+        }
+    }
+
+    // Reset dynamic property and arena trigger block property
+    world.setDynamicProperty("honkit26113:arena_over", 0) // 0 = battle over
+    block.setPermutation(BlockPermutation.resolve(block.typeId, {"honkit26113:started": 3}))
+
+    // Reset entity counter and countdown
+    dim.getEntities({ type: "honkit26113:arena_entity_counter", location: loc}).forEach(entity => {
+        entity.getComponent('health').setCurrentValue(0);
+    })
+    dim.getEntities({ type: "honkit26113:arena_countdown", location: loc}).forEach(entity => {
+        entity.getComponent('health').setCurrentValue(0);
+    })
+
+    // Stop arena music
+    world.stopMusic();
 }
 
 const pillarUsedError: BlockCustomComponent = {
@@ -246,27 +338,22 @@ const checkArenaStatus: BlockCustomComponent = {
     }
 }
 
-var entity_count = 0;
+var entityCount = 0;
 
 
 world.afterEvents.entityDie.subscribe((data) => {
-    /*const arena_mobs = [
-        "honkit26113:scorpion",
-        "honkit26113:sandy_skelly"
-    ];*/
 	const entity = data.deadEntity;
     
-    //if (arena_mobs.includes(entity.typeId) && entity.hasTag("honkit26113.is_from_arena")) {
     if (entity.isValid && entity.hasTag("honkit26113.is_from_arena")) {
         const arena_placeholder = entity.dimension.getEntities({
             type: "honkit26113:arena_entity_counter",
             location: entity.location
         })
-        entity_count--;
+        entityCount--;
         arena_placeholder.forEach(entity => {
-            entity.getComponent('health').setCurrentValue(entity_count);
+            entity.getComponent('health').setCurrentValue(entityCount);
         })
-        if (entity_count == 0) {
+        if (entityCount === 0) {
             world.setDynamicProperty("honkit26113:arena_over", 2); // victory
         }
     }
@@ -283,8 +370,10 @@ world.afterEvents.entitySpawn.subscribe((data) => {
             count_secs--;
             if (world.getDynamicProperty("honkit26113:countdown_ongoing") == true) {
                 entity.getComponent('health').setCurrentValue(count_secs);
-                if (entity_count == 0) {
-                    system.clearRun(countdown); 
+                if (entityCount === 0) {
+                    system.clearRun(countdown);
+                    world.setDynamicProperty("honkit26113:countdown_ongoing", false);
+                    return;
                 }
             }
         }, 20);
@@ -295,19 +384,17 @@ world.afterEvents.entitySpawn.subscribe((data) => {
         }, 3600);
     }
 
-    /*const arena_mobs = [
-        'honkit26113:arena_sandy_skelly_placeholder',
-        'honkit26113:arena_scorpion_placeholder'
-    ]*/
-
-    //if (arena_mobs.includes(entity.typeId)) {
-    // This REQUIRES that ALL arena mobs follow the same naming convention.
-    if (entity.typeId.includes("honkit26113:arena_") && entity.typeId.includes("_placeholder")) {
+    if (entity.typeId === "honkit26113:arena_monster_placeholder") {
         system.runTimeout(() => {
             entity.dimension.playSound('arena.mob_spawn', entity.location, {volume: 4})
             entity.dimension.spawnParticle('minecraft:cauldron_explosion_emitter', entity.location)
             try {
-                entity.dimension.spawnEntity((entity.typeId.replace('arena_', '')).replace('_placeholder', ''), entity.location).addTag("honkit26113.is_from_arena");
+                const monsterType = entity.getProperty("honkit26113:monster_type");
+                if (typeof monsterType !== "string") {
+                    world.sendMessage("Monster does not have the correct data type");
+                    return;
+                }
+                entity.dimension.spawnEntity(monsterType.replace("_", ":"), entity.location).addTag("honkit26113.is_from_arena");
             }
             catch (error) {
                 world.sendMessage({ "rawtext": [{ "translate": "arena.message.difficulty_error" }]});
@@ -320,16 +407,15 @@ world.afterEvents.entitySpawn.subscribe((data) => {
 world.afterEvents.playerSpawn.subscribe(event => { 
     const {player, initialSpawn} = event;
     system.run(() => {
-        if (world.getAllPlayers().length == 1 && initialSpawn) {
-            if (world.getDynamicProperty("honkit26113:arena_over") == 1) {
-                world.sendMessage({ rawtext: [{ translate: "arena.message.exit_world_canceled" }]})
+        if (world.getAllPlayers().length === 1 && initialSpawn) {
+            if (world.getDynamicProperty("honkit26113:arena_over") === 1) {
+                world.sendMessage({ rawtext: [{ translate: "arena.message.exit_world_canceled" }]});
                 player.onScreenDisplay.setActionBar({ rawtext: [{ translate: "arena.message.exit_world_canceled" }]});
             }
-            world.setDynamicProperty("honkit26113:arena_over", 0)
-            world.setDynamicProperty("honkit26113:countdown_ongoing", false)
-            entity_count = 7;
-            world.getDimension("overworld").runCommand("kill @e[family=arena_dummy]")
-            
+            world.setDynamicProperty("honkit26113:arena_over", 0);
+            world.setDynamicProperty("honkit26113:countdown_ongoing", false);
+            //entityCount = 7;
+            world.getDimension("overworld").runCommand("kill @e[family=arena_dummy]");
         }
     })
 })

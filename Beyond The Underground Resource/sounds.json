@@ -177,7 +177,39 @@
           			},
 					"attack": "game.player.attack.strong"
         		}
-      		}
+      		},
+      		"honkit26113:ice_bomb_projectile": {
+        		"volume": 1.0,
+        		"pitch": 1,
+        		"events": {
+          			"death": "wind_charge.burst"
+        		}
+      		},
+			"honkit26113:ice_bomber": {
+				"events": {
+					"ambient": "mob.witch.ambient",
+					"death": "mob.witch.death",
+					"hurt": "mob.witch.hurt",
+					"throw": "mob.witch.celebrate"
+				},
+				"pitch": 0.45,
+				"volume": 30
+			},
+			"honkit26113:crystal_firefly": {
+				"events": {
+					"ambient": "step.amethyst_block",
+					"hurt": {
+						"sound": "mob.bee.hurt",
+						"volume": 0.6,
+						"pitch": [ 1.3 ]
+					},
+					"death": {
+						"sound": "mob.bee.death",
+						"volume": 0.6,
+						"pitch": [ 1.3 ]
+					}
+				}
+			}
 		}
 	}
 }

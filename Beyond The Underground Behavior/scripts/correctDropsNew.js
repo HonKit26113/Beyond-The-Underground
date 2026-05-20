@@ -28,15 +28,13 @@ world.beforeEvents.playerBreakBlock.subscribe((data) => {
     const tool = player.getComponent("minecraft:inventory").container.getItem(player.selectedSlotIndex);
 
     // Terminates if player is in creative mode
-    if (player.matches({gameMode:'creative'})) {
-        return;
-    }
+    if (player.matches({gameMode:'creative'})) return;
 
-    if (tool == undefined) {
+    /*if (tool == undefined) {
         player.sendMessage(`undefined`);
     } else {
         player.sendMessage(`${tool.typeId}`);
-    }
+    }*/
 
     /*// Terminates if not using right pickaxe
     // TODO: THIS FUNCTION NEEDS TO BE FIXED

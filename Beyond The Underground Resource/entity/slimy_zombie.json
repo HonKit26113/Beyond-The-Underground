@@ -17,14 +17,9 @@
           "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
         ],
         "animate": [
-          { "humanoid_big_head": "query.is_baby" },
           "look_at_target",
           "move",
-          { "riding.arms": "query.is_riding" },
-          { "riding.legs": "query.is_riding" },
           "holding",
-          { "charging": "query.is_charging" },
-          "attack_controller",
           { "brandish_spear": "variable.is_brandishing_spear" },
           "bob",
           { "damage_nearby_mobs": "variable.damage_nearby_mobs" },
@@ -47,7 +42,6 @@
         "bob": "animation.humanoid.bob",
         "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
         "use_item_progress": "animation.humanoid.use_item_progress",
-        "attack_controller": "controller.animation.drowned.attack.rotations",
         "zombie_attack_bare_hand": "animation.zombie.attack_bare_hand",
         "attack_rotations": "animation.drowned.attack.rotations",
         "swimming": "animation.zombie.swimming"

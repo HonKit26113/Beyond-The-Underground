@@ -75,6 +75,12 @@
 		"textures": "limestone",
 		"sound": "deepslate"
 	},
+	"honkit26113:limestone_slab": {
+		"sound": "deepslate"
+	},
+	"honkit26113:limestone_stairs": {
+		"sound": "deepslate"
+	},
 	"honkit26113:cobbled_limestone": {
 		"textures": "cobbled_limestone",
 		"sound": "deepslate"
@@ -96,6 +102,9 @@
 		"sound": "deepslate"
 	},
 	"honkit26113:limestone_bricks_slab": {
+		"sound": "deepslate"
+	},
+	"honkit26113:limestone_bricks_stairs": {
 		"sound": "deepslate"
 	},
 	"honkit26113:limestone_bricks_chiseled": {
@@ -173,6 +182,9 @@
 	"honkit26113:packed_ice_bricks_slab": {
 		"sound": "glass"
 	},
+	"honkit26113:packed_ice_bricks_stairs": {
+		"sound": "glass"
+	},
 	"honkit26113:frosted_deepslate": {
 		"sound": "deepslate"
 	},
@@ -207,6 +219,12 @@
 		"textures": "slimy_deepslate_bricks",
 		"sound": "deepslate"
 	},
+	"honkit26113:slimy_deepslate_bricks_slab": {
+		"sound": "deepslate"
+	},
+	"honkit26113:slimy_deepslate_bricks_stairs": {
+		"sound": "deepslate"
+	},
 	"honkit26113:slimy_deepslate_bricks_cracked": {
 		"textures": "slimy_deepslate_bricks_cracked",
 		"sound": "deepslate"
@@ -217,6 +235,9 @@
 	},
 	"honkit26113:slimy_deepslate_tiles_cracked": {
 		"textures": "slimy_deepslate_tiles_cracked",
+		"sound": "deepslate"
+	},
+	"honkit26113:slimy_deepslate_tiles_stairs": {
 		"sound": "deepslate"
 	},
 	"honkit26113:slime_lantern": {
@@ -280,6 +301,12 @@
 		"textures": "crooked_planks",
 		"sound": "nether_wood"
 	},
+	"honkit26113:crooked_slab": {
+		"sound": "nether_wood"
+	},
+	"honkit26113:crooked_stairs": {
+		"sound": "nether_wood"
+	},
 	"honkit26113:crooked_fence": {
 		"sound": "nether_wood"
 	},
@@ -329,6 +356,9 @@
 		"sound": "nether_brick"
 	},
 	"honkit26113:soul_bricks_slab": {
+		"sound": "nether_brick"
+	},
+	"honkit26113:soul_bricks_stairs": {
 		"sound": "nether_brick"
 	},
 	"honkit26113:soul_bricks_fence": {
@@ -439,6 +469,9 @@
 	"honkit26113:rainbow_gum_slab": {
 		"sound": "wood"
 	},
+	"honkit26113:rainbow_gum_stairs": {
+		"sound": "wood"
+	},
 	"honkit26113:rainbow_gum_trapdoor": {
 		"sound": "wood"
 	},
@@ -485,16 +518,45 @@
 	},
 	"honkit26113:gypsum_block": {
 		"textures": "gypsum_block",
-		"sound": "amethyst"
+		"sound": "amethyst_block"
 	},
 	"honkit26113:gypsum_cluster": {
-		"sound": "amethyst"
+		"sound": "amethyst_cluster"
+	},
+	"honkit26113:gypsum_needles": {
+		"sound": "amethyst_cluster"
 	},
 	"honkit26113:topaz_block": {
 		"textures": "topaz_block",
-		"sound": "amethyst"
+		"sound": "amethyst_block"
 	},
 	"honkit26113:topaz_cluster": {
-		"sound": "amethyst"
+		"sound": "amethyst_cluster"
+	},
+	"honkit26113:frostslate_bricks": {
+		"textures": "frostslate_bricks",
+		"sound": "deepslate"
+	},
+	"honkit26113:frostslate_bricks_slab": {
+		"sound": "deepslate"
+	},
+	"honkit26113:frostslate_bricks_stairs": {
+		"sound": "deepslate"
+	},
+	"honkit26113:frostslate_bricks_chiseled": {
+		"textures": "frostslate_bricks_chiseled",
+		"sound": "deepslate"
+	},
+	"honkit26113:ice_fort_lamp": {
+		"textures": "ice_fort_lamp",
+		"sound": "glass"
+	},
+	"honkit26113:petrified_planks": {
+		"textures": "petrified_planks",
+		"sound": "stone"
+	},
+	"honkit26113:petrified_wood": {
+		"textures": "petrified_log_side",
+		"sound": "stone"
 	}
 }

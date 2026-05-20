@@ -5,7 +5,7 @@
         "description": {
             "identifier": "honkit26113:suitcase_used",
             "menu_category": {
-                "category": "none",
+                "category": "items",
                 "is_hidden_in_commands": false
             },
             "traits": {

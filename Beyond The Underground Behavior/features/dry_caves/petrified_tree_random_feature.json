@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:dry_caves/petrified_tree_random_feature"
+    },
+    "features": [
+      [ "honkit26113:dry_caves/petrified_fallen_tree1_feature", 1 ],
+      [ "honkit26113:dry_caves/petrified_fallen_tree2_feature", 1 ],
+      [ "honkit26113:dry_caves/petrified_tree1_feature", 1 ],
+      [ "honkit26113:dry_caves/petrified_tree2_feature", 1 ],
+      [ "honkit26113:dry_caves/petrified_tree3_feature", 1 ]
+    ]
+  }
+}

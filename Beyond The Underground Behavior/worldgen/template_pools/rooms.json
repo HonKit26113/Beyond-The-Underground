@@ -1,0 +1,72 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "ice_fort:rooms"
+        },
+        "elements": [
+            {
+                "weight": 8,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_fountain",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 6,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_storage",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 3,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_spawner",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 2,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_legacy_dungeon",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 11,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_tree",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 4,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_vertical_connection",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 4,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/room_arena",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            }
+        ]
+    }
+}

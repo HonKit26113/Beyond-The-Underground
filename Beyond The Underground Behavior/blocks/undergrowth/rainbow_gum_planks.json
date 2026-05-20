@@ -5,7 +5,6 @@
         "description": {
             "identifier": "honkit26113:rainbow_gum_planks",
             "menu_category": {
-                "group": "minecraft:itemGroup.name.planks",
                 "category": "construction"
             }
         },
@@ -31,7 +30,7 @@
                 "catch_chance_modifier": 0,
                 "destroy_chance_modifier": 20
             },
-            "minecraft:map_color": "#629531" // change map color
+            "minecraft:map_color": "#BCF8FF"
         }
     }
 }

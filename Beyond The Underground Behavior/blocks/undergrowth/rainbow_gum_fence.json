@@ -5,8 +5,7 @@
         "description": {
             "identifier": "honkit26113:rainbow_gum_fence",
             "menu_category": {
-                "category": "construction",
-                "group": "minecraft:itemGroup.name.fence"
+                "category": "construction"
             },
             "states": {
                 "fence:connect_north": [ false, true ],
@@ -53,7 +52,7 @@
                     {
                         "can_contain_liquid": true,
                         "liquid_type": "water",
-                        "on_liquid_touches": "no_reaction"
+                        "on_liquid_touches": "blocking"
                     }
                 ]
             },
@@ -76,7 +75,7 @@
                 "components": {
                     "minecraft:collision_box": {
                         "origin": [ -2, 0, -2 ],
-                        "size": [ 4, 16, 4 ]
+                        "size": [ 4, 24, 4 ]
                     },
                     "minecraft:selection_box": {
                         "origin": [ -2, 0, -2 ],
@@ -89,7 +88,7 @@
                 "components": {
                     "minecraft:collision_box": {
                         "origin": [ -2, 0, -8 ],
-                        "size": [ 4, 16, 16 ]
+                        "size": [ 4, 24, 16 ]
                     },
                     "minecraft:selection_box": {
                         "origin": [ -2, 0, -8 ],
@@ -102,7 +101,7 @@
                 "components": {
                     "minecraft:collision_box": {
                         "origin": [ -8, 0, -2 ],
-                        "size": [ 16, 16, 4 ]
+                        "size": [ 16, 24, 4 ]
                     },
                     "minecraft:selection_box": {
                         "origin": [ -8, 0, -2 ],
@@ -121,7 +120,7 @@
                         ],
                         "size": [
                             4,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -150,7 +149,7 @@
                         ],
                         "size": [
                             4,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -179,7 +178,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             4
                         ]
                     },
@@ -208,7 +207,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             4
                         ]
                     },
@@ -237,7 +236,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -266,7 +265,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -295,7 +294,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -324,7 +323,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -353,7 +352,7 @@
                         ],
                         "size": [
                             16,
-                            16,
+                            24,
                             10
                         ]
                     },
@@ -382,7 +381,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             16
                         ]
                     },
@@ -411,7 +410,7 @@
                         ],
                         "size": [
                             10,
-                            16,
+                            24,
                             16
                         ]
                     },
@@ -440,7 +439,7 @@
                         ],
                         "size": [
                             16,
-                            16,
+                            24,
                             10
                         ]
                     },

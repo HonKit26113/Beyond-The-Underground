@@ -27,6 +27,11 @@
                   "test": "has_biome_tag",
                   "operator": "!=",
                   "value": "roofed"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "!=",
+                  "value": "cold"
                 }
               ]
             }
@@ -42,7 +47,7 @@
         },
       	"y": {
         	"distribution": "uniform",
-        	"extent": [ 0, "q.heightmap(variable.worldx, variable.worldz) - 8" ]
+        	"extent": [ 0, "q.heightmap(variable.worldx, variable.worldz) - 12" ]
       	},
         "z": {
           "distribution": "uniform",

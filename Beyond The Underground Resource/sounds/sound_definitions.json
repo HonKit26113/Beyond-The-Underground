@@ -63,7 +63,7 @@
       "category": "music",
       "sounds": [
         {
-          "name": "sounds/music/into_oblivion_darren_curtis",
+          "name": "sounds/music/excuse",
           "stream": true,
           "volume": 1
         }
@@ -86,6 +86,25 @@
           "name": "sounds/arena_complete",
           "stream": true,
           "volume": 1
+        }
+      ]
+    },
+    "arena.defeat": {
+      "category": "music",
+      "sounds": [
+        {
+          "name": "sounds/arena_defeat",
+          "stream": true,
+          "volume": 1
+        }
+      ]
+    },
+    "arena.mobs_appear": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/arena_mobs_appear",
+          "load_on_low_memory": true
         }
       ]
     },

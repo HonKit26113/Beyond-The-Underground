@@ -1,0 +1,55 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "ice_fort:corridors"
+        },
+        "elements": [
+            {
+                "weight": 5,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/corridor",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 4,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/corridor_frosted",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 4,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/corridor_melting",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 3,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/corridor_chest",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            },
+            {
+                "weight": 5,
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "ice_fort/corridor_jail",
+                    "processors": "honkit26113:element_replacement",
+                    "projection": "rigid"
+                }
+            }
+        ]
+    }
+}

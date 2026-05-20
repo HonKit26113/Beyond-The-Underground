@@ -19,7 +19,7 @@
           "adjust_for_weather": false
         },
         "minecraft:weight": {
-          "default": 300
+          "default": 200
         },
         "minecraft:herd": {
           "min_size": 1,
@@ -29,9 +29,22 @@
           "min": -63,
           "max": 59
         },
-        "minecraft:biome_filter": {
-          "test": "has_biome_tag", "operator": "==", "value": "swamp"
-        }
+        "minecraft:biome_filter": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "swamp"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mangrove_swamp"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

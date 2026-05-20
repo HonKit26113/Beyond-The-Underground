@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "honkit26113:topaz_cluster_particle",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/topaz_cluster_particle"
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "v.acceleration_x = math.random( -5, 5 ); v.acceleration_y = math.random( -5, 5 ); v.acceleration_z = math.random( -5, 5 );",
+				"per_update_expression": "v.should_change = math.random( 0, 1 ) <= 0.05; v.should_change ? ( v.acceleration_x = math.random( -5, 5 ) ); v.should_change ? ( v.acceleration_y = math.random( -5, 5 ) ); v.should_change ? ( v.acceleration_z = math.random( -5, 5 ) );"
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random( 6, 9 )"
+			},
+			"minecraft:particle_initial_speed": 0.5,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": ["v.acceleration_x * 1", "math.abs(v.acceleration_y) * 0.6", "v.acceleration_z * 1"],
+				"linear_drag_coefficient": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.125, 0.125],
+				"facing_camera_mode": "lookat_xyz"
+			},
+			"minecraft:particle_motion_collision": {
+				"coefficient_of_restitution": 2,
+				"collision_radius": 0.0375
+			}
+		}
+	}
+}

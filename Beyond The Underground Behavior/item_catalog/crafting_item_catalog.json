@@ -6,6 +6,54 @@
             "category_name": "construction",
             "groups": [
                {
+                  // Crooked Planks
+                  "group_identifier": {
+                     "icon": "honkit26113:crooked_planks",
+                     "name": "honkit26113:itemGroup.crooked_planks"
+                  },
+                  "items": [
+                     "honkit26113:crooked_planks",
+                     "honkit26113:crooked_slab",
+                     "honkit26113:crooked_stairs",
+                     "honkit26113:crooked_fence",
+                     "honkit26113:crooked_fence_gate",
+                     "honkit26113:crooked_door",
+                     "honkit26113:crooked_trapdoor"
+                  ]
+               },
+               {
+                  // Rainbow Gum Planks
+                  "group_identifier": {
+                     "icon": "honkit26113:rainbow_gum_planks",
+                     "name": "honkit26113:itemGroup.rainbow_gum_planks"
+                  },
+                  "items": [
+                     "honkit26113:rainbow_gum_planks",
+                     "honkit26113:rainbow_gum_slab",
+                     "honkit26113:rainbow_gum_stairs",
+                     "honkit26113:rainbow_gum_fence",
+                     "honkit26113:rainbow_gum_fence_gate",
+                     "honkit26113:rainbow_gum_door",
+                     "honkit26113:rainbow_gum_trapdoor"
+                  ]
+               },
+               {
+                  // Petrified Planks
+                  "group_identifier": {
+                     "icon": "honkit26113:petrified_planks",
+                     "name": "honkit26113:itemGroup.petrified_planks"
+                  },
+                  "items": [
+                     "honkit26113:petrified_planks",
+                     "honkit26113:petrified_slab",
+                     "honkit26113:petrified_stairs",
+                     "honkit26113:petrified_fence",
+                     "honkit26113:petrified_fence_gate",
+                     "honkit26113:petrified_door",
+                     "honkit26113:petrified_trapdoor"
+                  ]
+               },
+               {
                   // Slimy Stone Bricks
                   "group_identifier": {
                      "icon": "honkit26113:slimy_stone_bricks",
@@ -15,12 +63,15 @@
                      "honkit26113:slimy_stone_bricks",
                      "honkit26113:slimy_stone_bricks_cracked",
                      "honkit26113:slimy_stone_bricks_slab",
+                     "honkit26113:slimy_stone_bricks_stairs",
                      "honkit26113:slimy_deepslate_bricks",
                      "honkit26113:slimy_deepslate_bricks_cracked",
                      "honkit26113:slimy_deepslate_bricks_slab",
+                     "honkit26113:slimy_deepslate_bricks_stairs",
                      "honkit26113:slimy_deepslate_tiles",
                      "honkit26113:slimy_deepslate_tiles_cracked",
-                     "honkit26113:slimy_deepslate_tiles_slab"
+                     "honkit26113:slimy_deepslate_tiles_slab",
+                     "honkit26113:slimy_deepslate_tiles_stairs"
                   ]
                },
                {
@@ -34,24 +85,60 @@
                      "honkit26113:limestone_bricks_mossy",
                      "honkit26113:limestone_bricks_cracked",
                      "honkit26113:limestone_bricks_chiseled",
+                     "honkit26113:limestone_pillar",
                      "honkit26113:limestone_bricks_slab",
+                     "honkit26113:limestone_bricks_stairs",
                      "honkit26113:limestone_slab",
-                     "honkit26113:limestone_pillar"
+                     "honkit26113:limestone_stairs"
+                  ]
+               },
+               {
+                  // Packed Ice Bricks
+                  "group_identifier": {
+                     "icon": "honkit26113:packed_ice_bricks",
+                     "name": "honkit26113:itemGroup.packed_ice_bricks"
+                  },
+                  "items": [
+                     "honkit26113:packed_ice_bricks",
+                     "honkit26113:packed_ice_bricks_cracked",
+                     "honkit26113:packed_ice_chiseled",
+                     "honkit26113:packed_ice_bricks_slab",
+                     "honkit26113:packed_ice_bricks_stairs"
+                  ]
+               },
+               {
+                  // Frostslate Bricks
+                  "group_identifier": {
+                     "icon": "honkit26113:frostslate_bricks",
+                     "name": "honkit26113:itemGroup.frostslate_bricks"
+                  },
+                  "items": [
+                     "honkit26113:frostslate_bricks",
+                     "honkit26113:frostslate_bricks_chiseled",
+                     "honkit26113:frostslate_bricks_slab",
+                     "honkit26113:frostslate_bricks_stairs"
+                  ]
+               },
+               {
+                  // Soul Bricks
+                  "group_identifier": {
+                     "icon": "honkit26113:soul_bricks",
+                     "name": "honkit26113:itemGroup.soul_bricks"
+                  },
+                  "items": [
+                     "honkit26113:soul_bricks",
+                     "honkit26113:soul_bricks_cracked",
+                     "honkit26113:soul_bricks_chiseled",
+                     "honkit26113:soul_bricks_slab",
+                     "honkit26113:soul_bricks_stairs",
+                     "honkit26113:soul_bricks_fence"
                   ]
                },
                {
                   "items": [
                      "honkit26113:luminite_block",
-                     
-                     "honkit26113:packed_ice_bricks",
-                     "honkit26113:packed_ice_bricks_cracked",
-                     "honkit26113:packed_ice_chiseled",
-                     "honkit26113:packed_ice_bricks_slab",
-
-                     "honkit26113:soul_bricks",
-                     "honkit26113:soul_bricks_cracked",
-                     "honkit26113:soul_bricks_chiseled",
-                     "honkit26113:soul_bricks_slab"
+                     "honkit26113:frosted_stone_slab",
+                     "honkit26113:frosted_stone_stairs"
                   ]
                }
             ]
@@ -61,13 +148,21 @@
             "groups": [
                {
                   "items": [
+                     "honkit26113:luminous_mushroom_stew",
+                     "honkit26113:mysterious_stew",
+                     "honkit26113:slime_soup",
+                     "honkit26113:cooked_scorpion",
+                     "honkit26113:crooked_fungus_stew",
+
                      "honkit26113:hardened_slimeball",
                      "honkit26113:sand_lump",
+                     "honkit26113:ice_bomb",
                      "honkit26113:slingshot",
                      "honkit26113:slime_dagger",
                      "honkit26113:wand_of_the_sands",
                      "honkit26113:bane_of_frost",
                      "honkit26113:corrupted_bouquet",
+                     "honkit26113:combustion_amulet",
                      "honkit26113:soul_healer",
                      
                      "honkit26113:fatal_poison_potion",
@@ -106,6 +201,7 @@
                      "honkit26113:sandstone_stick",
                      "honkit26113:sandy_skelly_skull",
                      "honkit26113:suitcase",
+                     "honkit26113:suitcase_used",
                      "honkit26113:ice_shard",
                      "honkit26113:frost_essence",
                      "honkit26113:frozen_core",
@@ -256,8 +352,21 @@
                   "items": [
                      "honkit26113:gypsum_block",
                      "honkit26113:gypsum_cluster",
+                     "honkit26113:gypsum_needles",
                      "honkit26113:topaz_block",
                      "honkit26113:topaz_cluster"
+                  ]
+               },
+               {
+                  // Arid Caves
+                  "group_identifier": {
+                     "icon": "honkit26113:petrified_bush",
+                     "name": "honkit26113:itemGroup.arid_caves"
+                  },
+                  "items": [
+                     "honkit26113:petrified_log",
+                     "honkit26113:petrified_wood",
+                     "honkit26113:petrified_bush"
                   ]
                },
                {
@@ -279,27 +388,10 @@
                   ]
                },
                {
-                  // Spawn Eggs
-                  "group_identifier": {
-                     "name": "minecraft:itemGroup.name.mobEgg"
-                  },
-                  "items": [
-                     "honkit26113:shroom_elf_spawn_egg",
-                     "honkit26113:luminous_mooshroom_spawn_egg",
-                     "honkit26113:slimy_zombie_spawn_egg",
-                     "honkit26113:scorpion_spawn_egg",
-                     "honkit26113:sandy_skelly_spawn_egg",
-                     "honkit26113:penguin_spawn_egg",
-                     "honkit26113:lost_explorer_spawn_egg",
-                     "honkit26113:frost_spirit_spawn_egg",
-                     "honkit26113:wisp_spawn_egg",
-                     "honkit26113:thornspitter_spawn_egg"
-                  ]
-               },
-               {
                   "items": [
                      "honkit26113:glow_lichen_block",
-                     "honkit26113:quicksand"
+                     "honkit26113:quicksand",
+                     "honkit26113:gypsum_fertilizer"
                   ]
                }
             ]

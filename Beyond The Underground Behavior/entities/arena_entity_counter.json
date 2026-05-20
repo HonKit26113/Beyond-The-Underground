@@ -7,6 +7,24 @@
       "is_summonable": true,
       "is_experimental": false
     },
+    "component_groups": {
+      "honkit26113:arena_end": {
+        "minecraft:instant_despawn": {}
+      },
+      // Add a new component group for every new arena type
+      "limestone_caves": {
+        "minecraft:health": {
+          "value": 7,
+          "max": 7
+        }
+      },
+      "ice_caves": {
+        "minecraft:health": {
+          "value": 9,
+          "max": 9
+        }
+      }
+    },
     "components": {
       "minecraft:type_family": {
         "family": [ "arena_dummy" ]
@@ -14,10 +32,6 @@
       "minecraft:collision_box": {
         "width": 0.1,
         "height": 0.1
-      },
-      "minecraft:health": {
-        "value": 7,
-        "max": 7
       },
       "minecraft:boss": {
         "should_darken_sky": false,
@@ -33,17 +47,25 @@
       "minecraft:pushable": {
         "is_pushable": false,
         "is_pushable_by_piston": false
-      }//,
-      //"minecraft:physics": {}
-    },
-
-    "component_groups": {
-      "honkit26113:arena_end": {
-        "minecraft:instant_despawn": {}
       }
     },
 
+    // Add a new event for each new arena type
     "events": {
+      "limestone_caves": {
+        "add": {
+          "component_groups": [
+            "limestone_caves"
+          ]
+        }
+      },
+      "ice_caves": {
+        "add": {
+          "component_groups": [
+            "ice_caves"
+          ]
+        }
+      }
     }
   }
 }

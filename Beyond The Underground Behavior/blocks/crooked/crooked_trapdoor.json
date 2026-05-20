@@ -6,8 +6,7 @@
     "description": {
       "identifier": "honkit26113:crooked_trapdoor",
       "menu_category": {
-        "category": "construction",
-        "group": "minecraft:itemGroup.name.trapdoor"
+        "category": "construction"
       },
       "traits": {
         "minecraft:placement_position": {
@@ -49,7 +48,7 @@
           {
             "can_contain_liquid": true,
             "liquid_type": "water",
-            "on_liquid_touches": "no_reaction"
+            "on_liquid_touches": "blocking"
           }
         ]
       },

@@ -3,7 +3,10 @@
   "format_version": "1.21.130",
   "minecraft:item": {
     "description": {
-    	"identifier": "honkit26113:luminous_mushroom_stew"
+    	"identifier": "honkit26113:luminous_mushroom_stew",
+      "menu_category": {
+          "category": "equipment"
+      }
     },
     "components": {
       "honkit26113:potion": [

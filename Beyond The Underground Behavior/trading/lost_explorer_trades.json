@@ -3,29 +3,132 @@
     {
       "groups": [
         {
-          "num_to_select": 6,
+          "num_to_select": 2,
           "trades": [
+            {
+              "max_uses": 2,
+              "wants": [
+                {
+                  "item": "minecraft:bread",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ]
+            },
             {
               "max_uses": 12,
               "wants": [
                 {
-                  "item": "minecraft:wheat_seeds",
-                  "quantity": 15
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
                 }
               ],
               "gives": [
                 {
                   "choice": [
                     {
-                      "item": "honkit26113:pebbles",
-                      "quantity": 16
+                      "item": "honkit26113:slimy_pebbles",
+                      "quantity": 12
                     },
                     {
-                      "item": "honkit26113:cobblestone_pebbles",
-                      "quantity": 16
+                      "item": "honkit26113:slimy_deepslate_pebbles",
+                      "quantity": 12
+                    },
+                    {
+                      "item": "honkit26113:cobbled_limestone_pebbles",
+                      "quantity": 12
+                    },
+                    {
+                      "item": "honkit26113:limestone_pebbles",
+                      "quantity": 12
                     },
                     {
                       "item": "honkit26113:frosted_pebbles",
+                      "quantity": 12
+                    },
+                    {
+                      "item": "honkit26113:frosted_deepslate_pebbles",
+                      "quantity": 12
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        // Luminous Caverns
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "honkit26113:luminous_mushroom",
+                      "quantity": 2
+                    },
+                    {
+                      "item": "honkit26113:gloomy_mushroom",
+                      "quantity": 2
+                    },
+                    {
+                      "item": "honkit26113:mysterious_fungus",
+                      "quantity": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "honkit26113:luminous_mushroom_stew",
+                      "quantity": 1
+                    },
+                    {
+                      "item": "honkit26113:mysterious_stew",
+                      "quantity": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "honkit26113:radiant_vines_item",
                       "quantity": 16
                     }
                   ]
@@ -33,11 +136,225 @@
               ]
             },
             {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "honkit26113:glow_mycelium",
+                      "quantity": 12
+                    },
+                    {
+                      "item": "honkit26113:deepslate_glow_mycelium",
+                      "quantity": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 2,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 12
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "honkit26113:luminite_shard",
+                      "quantity": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        // Slimy Sewers
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
               "max_uses": 5,
               "wants": [
                 {
-                  "item": "minecraft:apple",
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:slimy_blossom",
+                  "quantity": 2
+                },
+                {
+                  "item": "honkit26113:slimy_sprouts",
+                  "quantity": 2
+                }
+              ]
+            },
+            {
+              "max_uses": 3,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:sticky_spikes",
+                  "quantity": 2
+                },
+                {
+                  "item": "honkit26113:dripping_slime_item",
+                  "quantity": 2
+                }
+              ]
+            },
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:dripping_slime_item",
+                  "quantity": 16
+                }
+              ]
+            },
+            {
+              "max_uses": 3,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:slime_lantern",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:slimy_stone",
                   "quantity": 12
+                },
+                {
+                  "item": "honkit26113:slimy_deepslate",
+                  "quantity": 12
+                }
+              ]
+            }
+          ]
+        },
+
+        // Limestone Caves
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:sandy_roots_item",
+                  "quantity": 16
+                }
+              ]
+            },
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:limestone",
+                  "quantity": 12
+                }
+              ]
+            },
+            {
+              "max_uses": 5,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:sand_lump",
+                  "quantity": 12
+                }
+              ]
+            }
+          ]
+        },
+
+        // Ice Caves
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:frosted_stone",
+                  "quantity": 12
+                },
+                {
+                  "item": "honkit26113:frosted_deepslate",
+                  "quantity": 12
+                }
+              ]
+            },
+            {
+              "max_uses": 5,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 6
                 }
               ],
               "gives": [
@@ -48,109 +365,10 @@
               ]
             },
             {
-              "max_uses": 3,
-              "wants": [
-                {
-                  "item": "minecraft:carrot",
-                  "quantity": 8
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:iron_ingot",
-                      "quantity": 5
-                    },
-                    {
-                      "item": "minecraft:raw_iron",
-                      "quantity": 6
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "max_uses": 3,
-              "wants": [
-                {
-                  "item": "minecraft:potato",
-                  "quantity": 8
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:coal",
-                  "quantity": 10
-                }
-              ]
-            },
-            {
-              "max_uses": 3,
-              "wants": [
-                {
-                  "item": "minecraft:log",
-                  "quantity": 15
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:gold_ingot",
-                      "quantity": 5
-                    },
-                    {
-                      "item": "minecraft:raw_gold",
-                      "quantity": 6
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "max_uses": 2,
-              "wants": [
-                {
-                  "item": "minecraft:honey_bottle",
-                  "quantity": 2
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:diamond",
-                      "quantity": 2
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "max_uses": 1,
-              "wants": [
-                {
-                  "item": "minecraft:diamond",
-                  "quantity": 1
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "honkit26113:frost_essence",
-                      "quantity": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "max_uses": 6,
               "wants": [
                 {
-                  "item": "minecraft:coral:0",
+                  "item": "honkit26113:topaz",
                   "quantity": 3
                 }
               ],
@@ -165,14 +383,78 @@
               "max_uses": 4,
               "wants": [
                 {
-                  "item": "minecraft:cactus",
-                  "quantity": 8
+                  "item": "honkit26113:topaz",
+                  "quantity": 6
                 }
               ],
               "gives": [
                 {
                   "item": "honkit26113:dripping_icicle_item",
                   "quantity": 16
+                }
+              ]
+            }
+          ]
+        },
+
+        // Undergrowth
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:cave_turf",
+                  "quantity": 12
+                },
+                {
+                  "item": "honkit26113:deepslate_cave_turf",
+                  "quantity": 12
+                }
+              ]
+            },
+            {
+              "max_uses": 5,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:chromatic_petals",
+                  "quantity": 2
+                },
+                {
+                  "item": "honkit26113:twilight_spores",
+                  "quantity": 2
+                },
+                {
+                  "item": "honkit26113:star_jasmine",
+                  "quantity": 2
+                }
+              ]
+            },
+            {
+              "max_uses": 8,
+              "wants": [
+                {
+                  "item": "honkit26113:topaz",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:rainbow_gum_log",
+                  "quantity": 6
                 }
               ]
             }

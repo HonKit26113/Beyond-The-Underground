@@ -1,5 +1,6 @@
-import { BlockCustomComponent, CommandPermissionLevel, CustomCommand, CustomCommandResult, CustomCommandStatus, Player, system, world } from '@minecraft/server';
-import { ModalFormData, ActionFormData, ModalFormResponse } from "@minecraft/server-ui";
+import { BlockCustomComponent, CommandPermissionLevel, CustomCommand, CustomCommandResult, CustomCommandStatus, EquipmentSlot, ItemStack, Player, PlayerCursorInventoryComponent, system, world } from '@minecraft/server';
+import { ModalFormData, ActionFormData, ModalFormResponse, MessageFormData } from "@minecraft/server-ui";
+import { REPAIR_LIMIT } from '../items/CombustionAmulet';
 
 // debug only
 /*world.afterEvents.itemUse.subscribe((data) => {
@@ -13,8 +14,8 @@ import { ModalFormData, ActionFormData, ModalFormResponse } from "@minecraft/ser
 
 system.beforeEvents.startup.subscribe((init) => {
   const helloCommand: CustomCommand = {
-    name: "btu:xp_tank_count",
-    description: "Prints `honkit26113:xp_tank_count`",
+    name: "honkit26113:xp_tank_count",
+    description: "DEBUG: Prints `honkit26113:xp_tank_count`",
     permissionLevel: CommandPermissionLevel.GameDirectors,
     optionalParameters: []
   };
@@ -75,7 +76,7 @@ system.runInterval(() => {
 const xpTankInteract: BlockCustomComponent = {
     onPlayerInteract({player}, {}) {
         // Initalize
-        let currentTankLevel = player.getDynamicProperty("honkit26113:xp_tank_level") as tankLevel;
+        let currentTankLevel = player.getDynamicProperty("honkit26113:xp_tank_level") as TankLevel;
        // if (typeof currentTankLevel != "number") {
            // throw new Error("wrong type for honkit26113:xp_tank_level");
        // }
@@ -93,26 +94,53 @@ const xpTankInteract: BlockCustomComponent = {
             player.setDynamicProperty("honkit26113:xp_tank_generated", 0);
             generated = 0;
         }
-        let xpNeeded = levelXPNeeded[(currentTankLevel + 1) as tankLevel] - deposited;
+        let xpNeeded = levelXPNeeded[(currentTankLevel + 1) as TankLevel] - deposited;
 
         // XP Tank menu
         const form = new ActionFormData();
         form.title(`XP Tank - §2Grade ${currentTankLevel}§r`);
+
+        // Collect XP
         if (generated > 0) {
             form.button(`Collect\n§2[${Math.round(generated * 10) / 10} Levels]§r`, "textures/ui/download_backup");
         } else {
             form.button("Collect\n§c[None to collect]§r", "textures/ui/download_backup")
         }
+
+        // Deposit XP
         if (currentTankLevel < 10) {
-            form.body(`The XP Tank generates XP levels every new Minecraft day!\nAt §aGrade ${currentTankLevel}§r, you'll receive §a${levelXPGenerated[currentTankLevel]}§r Levels.\nAt §aGrade ${currentTankLevel + 1}§r, you'll receive §a${levelXPGenerated[(currentTankLevel + 1) as tankLevel]}§r Levels.\n\nYour current XP level: §a${player.level}§r\nLevels to be collected: §a${Math.round(generated * 10) / 10}§r\nDeposit §a${xpNeeded}§r more levels to reach Grade ${currentTankLevel + 1} [ ${deposited} / ${levelXPNeeded[(currentTankLevel + 1) as tankLevel]} ] (${Math.round((Number(deposited) / Number(levelXPNeeded[(currentTankLevel + 1) as tankLevel]) * 100) * 10) / 10}%%)`);
+            form.body(`The XP Tank generates XP levels every new Minecraft day!\nAt §aGrade ${currentTankLevel}§r, you'll receive §a${levelXPGenerated[currentTankLevel]}§r Levels.\nAt §aGrade ${currentTankLevel + 1}§r, you'll receive §a${levelXPGenerated[(currentTankLevel + 1) as TankLevel]}§r Levels.\n\nYour current XP level: §a${player.level}§r\nLevels to be collected: §a${Math.round(generated * 10) / 10}§r\nDeposit §a${xpNeeded}§r more levels to reach Grade ${currentTankLevel + 1} [ ${deposited} / ${levelXPNeeded[(currentTankLevel + 1) as TankLevel]} ] (${Math.round((Number(deposited) / Number(levelXPNeeded[(currentTankLevel + 1) as TankLevel]) * 100) * 10) / 10}%%)`);
             if (player.level > 0) {
                 form.button("Deposit", "textures/ui/backup_replace");
             } else {
                 form.button("Deposit\n§c[None to deposit]§r", "textures/ui/backup_replace");
             }
         } else {
-            form.body(`The XP Tank generates XP levels every new Minecraft day!\nAt §aGrade ${currentTankLevel}§r, you'll receive §a${levelXPGenerated[currentTankLevel]}§r Levels.\n\nYour current XP level: §a${player.level}§r\nLevels to be collected: §a${Math.round(generated * 10) / 10}§r\nXP Tank is at max level!`);
+            form.body(`The XP Tank generates XP levels every new Minecraft day!\nAt §aGrade ${currentTankLevel}§r, you'll receive §a${levelXPGenerated[currentTankLevel]}§r Levels.\nThis tank is at Max Grade!\n\nYour current XP level: §a${player.level}§r\nLevels to be collected: §a${Math.round(generated * 10) / 10}§r`);
+            form.button("Deposit\n§c[Tank is at Max Grade]§r", "textures/ui/backup_replace");
         }
+        
+        // Combustion Amulet section
+        const amulet = player.getComponent('equippable')?.getEquipment(EquipmentSlot.Mainhand);
+
+        if (isHoldingAmulet(player)) {
+            const repairCount = amulet.getDynamicProperty("honkit26113:repair_count") ?? 0;
+            if (typeof repairCount !== "number") {
+                console.error(`Unexpected type for repairCount: Expected number, got ${typeof repairCount}`);
+                return;
+            }
+            if (repairCount >= REPAIR_LIMIT) {
+                form.button("Repair Amulet\n§c[Repair Limit Reached]§r", "textures/items/combustion_amulet");
+            } else {
+                form.button(
+                    `Repair Amulet\n${player.level >= 1 ? "§2" : "§c"}[Cost: 1 Level / 30 Seconds]§r`,
+                    "textures/items/combustion_amulet"
+                );
+            }
+        } else {
+            form.button("Repair Amulet\n§c[Not holding broken Amulet]§r", "textures/items/combustion_amulet");
+        }
+
         form.show(player).then(
             (response) => {
                 switch (response?.selection) {
@@ -120,10 +148,10 @@ const xpTankInteract: BlockCustomComponent = {
                         collectXP(player);
                         break;
                     case 1:
-                        if (player.level > 0) {
-                            depositXP(player);
-                        }
+                        depositXP(player);
                         break;
+                    case 2:
+                        repairAmulet(player);
                     default:
                         break;
                 }
@@ -137,40 +165,46 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent("honkit26113:xp_tank_placement", xpTankPlacement);
 });
 
-type tankLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+type TankLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
-const levelXPNeeded: Record<tankLevel, number> = {
-    // Tank level: XP Levels required
+const levelXPNeeded: Record<TankLevel, number> = {
+    // Tank level: XP Levels required (Cumulative)
     0: 0,
-    1: 10,
-    2: 20,
-    3: 30,
-    4: 50,
-    5: 70,
-    6: 100,
-    7: 140,
-    8: 180,
-    9: 240,
-    10: 300
+    1: 5,
+    2: 10,
+    3: 18,
+    4: 28,
+    5: 40,
+    6: 55,
+    7: 75,
+    8: 100,
+    9: 135,
+    10: 185
 }
 
-const levelXPGenerated: Record<tankLevel, number> = {
+const levelXPGenerated: Record<TankLevel, number> = {
     // Tank level: XP Levels generated each day
     0: 0,
     1: 1,
     2: 2,
     3: 3,
     4: 4,
-    5: 6,
-    6: 8,
-    7: 10,
-    8: 12,
-    9: 14,
-    10: 15
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 10,
+    10: 12
 }
 
+const MAX_TANK_LEVEL = 10;
+
 function incrementPlayerTankStorage(player: Player) {
-    const tankLevel = player.getDynamicProperty(`honkit26113:xp_tank_level`) as tankLevel;
+    const tankLevel = (player.getDynamicProperty(`honkit26113:xp_tank_level`) ?? 0) as TankLevel;
+    if (typeof tankLevel !== "number" || tankLevel < 0 || tankLevel > MAX_TANK_LEVEL) {
+        console.error("Unexpected tankLevel");
+        return;
+    }
     generateXPLevel(player, levelXPGenerated[tankLevel]);
 }
 
@@ -181,21 +215,37 @@ function generateXPLevel(player: Player, level: number) {
 
 function collectXP(player: Player) {
     const toCollect = Number(player.getDynamicProperty(`honkit26113:xp_tank_generated`)) || 0;
+    if (toCollect === 0) {
+        const TITLE = "None to Collect";
+        const CONTENT = "No XP is available for collection at the moment. Check back tomorrow!"
+        showPopup(player, TITLE, CONTENT);
+        return;
+    }
     player.setDynamicProperty(`honkit26113:xp_tank_generated`, 0);
     if (toCollect % 1 != 0) {
         player.addExperience(player.totalXpNeededForNextLevel * (toCollect % 1));
     }
     player.addLevels(Math.floor(toCollect));
+    player.playSound("random.levelup");
 }
 
 function depositXP(player: Player) {
     const deposited = Number(player.getDynamicProperty(`honkit26113:xp_tank_deposited`)) || 0;
     let tankLevel = Number(player.getDynamicProperty(`honkit26113:xp_tank_level`)) || 0;
+
+    // Return if tank is already at max level
+    if (tankLevel === MAX_TANK_LEVEL) {
+        const TITLE = "Max Grade";
+        const CONTENT = "This XP Tank is already at Max Grade and cannot be upgraded!"
+        showPopup(player, TITLE, CONTENT);
+        return;
+    }
+
     const level = player.level;
     const form = new ModalFormData();
     form.title("Deposit XP Levels");
-    if (level > levelXPNeeded[10] - deposited) {
-        form.slider("Select levels to deposit", Math.floor(level * 0.1), levelXPNeeded[9] - deposited, {defaultValue: Math.floor(level * 0.5)});
+    if (level > levelXPNeeded[MAX_TANK_LEVEL] - deposited) {
+        form.slider("Select levels to deposit", Math.floor(level * 0.1), levelXPNeeded[(MAX_TANK_LEVEL - 1) as TankLevel] - deposited, {defaultValue: Math.floor(level * 0.5)});
     } else {
         form.slider("Select levels to deposit", Math.floor(level * 0.1), Math.floor(level), {defaultValue: Math.floor(level * 0.5)});
     }
@@ -207,18 +257,110 @@ function depositXP(player: Player) {
     
                 player.setDynamicProperty(`honkit26113:xp_tank_deposited`, newDeposited);
     
-                while (tankLevel < 10 && newDeposited >= (levelXPNeeded[(tankLevel + 1) as tankLevel])) {
+                while (tankLevel < 10 && newDeposited >= (levelXPNeeded[(tankLevel + 1) as TankLevel])) {
                     tankLevel++;
                 }
     
                 player.setDynamicProperty(`honkit26113:xp_tank_level`, tankLevel);
-                player.addLevels(Math.floor(amount * -1));
+                player.addLevels(Math.floor(-amount));
                 if (tankLevel == 10) {
-                    player.addLevels(newDeposited - Number(levelXPNeeded[(tankLevel + 1) as tankLevel]));
+                    player.addLevels(newDeposited - Number(levelXPNeeded[(tankLevel + 1) as TankLevel]));
                 }
             } catch (error) {
                 console.log(error);
             }
         }
     );
+}
+
+/**
+ * Returns `true` if the player is holding `honkit26113:combustion_amulet_broken`, false otherwise.
+ * @param player 
+ */
+function isHoldingAmulet(player: Player) {
+	const inventory = player.getComponent("minecraft:inventory").container;
+    const selected = player.selectedSlotIndex;
+
+    // I Use try-catch because calling `matches` checks for both an item and
+    // a block, which throws an error since I don't have a block with that ID.
+    let isHoldingAmulet = false;
+    try {
+        isHoldingAmulet = inventory.getItem(selected)?.matches("honkit26113:combustion_amulet_broken");
+    } catch (error) {}
+    return isHoldingAmulet;
+}
+
+function repairAmulet(player: Player) {
+    // TODO: charged with xp using xp tank, 1 xp level = 30s, max 5 min, charge once every Minecraft day
+
+	const inventory = player.getComponent("minecraft:inventory").container;
+    const selected = player.selectedSlotIndex;
+
+    // Check holding broken amulet
+    if (!isHoldingAmulet(player)) {
+        const TITLE = "Not holding broken amulet";
+        const CONTENT = "You are not holding a Broken Combustion Amulet in your hand.";
+        showPopup(player, TITLE, CONTENT);
+        return;
+    }
+
+    // Check player XP level
+    if (player.level < 1) {
+        const TITLE = "Not enough XP!";
+        const CONTENT = "You don't have enough XP levels to complete this operation.";
+        showPopup(player, TITLE, CONTENT);
+        return;
+    }
+
+    const repairCount = inventory.getItem(selected).getDynamicProperty("honkit26113:repair_count") ?? 0;
+    if (typeof repairCount !== "number") {
+        console.error(`Unexpected type for repairCount: Expected number, got ${typeof repairCount}`);
+        return;
+    }
+    if (repairCount >= REPAIR_LIMIT) {
+        const TITLE = "Repair Limit Reached!";
+        const CONTENT = "You've repaired this Amulet too many times. It's time to craft a new one!";
+        showPopup(player, TITLE, CONTENT);
+        return;
+    }
+    
+    // Repair
+    const form = new ModalFormData();
+    const INTERVAL = 30;
+    form.title("Charge Amulet with XP");
+    form.slider("1 Level per 30 seconds", 1 * INTERVAL, Math.min(6, player.level) * INTERVAL, {valueStep: INTERVAL, defaultValue: 1 * INTERVAL});
+    form.show(player).then(response => {
+        if (response.canceled) return;
+        const duration = response.formValues[0] as number;
+
+        // Show confirmation popup
+        const confirmation = new MessageFormData()
+            .title("Are you sure?")
+            .body(`You are about to charge your amulet using ${duration / INTERVAL} level${duration / INTERVAL === 1 ? "" : "s"} for ${Math.floor(duration / 60)}m ${duration % 60}s of use.`)
+            .button1("Confirm")
+            .button2("Cancel")
+            .show(player)
+            .then(response => {
+                // Cancel
+                if (response.canceled || response.selection === undefined || response.selection === 1) {
+                    return;
+                }
+                // Confirm
+                const amulet = new ItemStack("honkit26113:combustion_amulet");
+                amulet.setDynamicProperty("honkit26113:use_duration", duration);
+                amulet.setDynamicProperty("honkit26113:repair_count", repairCount + 1);
+                amulet.setLore([`Use duration: ${Math.floor(duration / 60)}m ${duration % 60}s`, `Can charge ${REPAIR_LIMIT - (repairCount + 1)} more times`]);
+                inventory.setItem(player.selectedSlotIndex, amulet);
+                player.playSound("random.anvil_use");
+                player.addLevels(duration / -INTERVAL);
+            });
+    })
+}
+
+function showPopup(player: Player, title: string, content: string) {
+    new ModalFormData()
+        .title(title)
+        .label(content)
+        .submitButton("Ok")
+        .show(player);
 }

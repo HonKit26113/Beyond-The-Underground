@@ -1,0 +1,74 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.26.20",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:petrified_log",
+      "menu_category": {
+          "category": "nature"
+      },
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": [
+            "minecraft:block_face"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:tags": [
+        "honkit26113_dig_with_pickaxe",
+        "minecraft:is_pickaxe_item_destructible",
+        "stone"
+      ],
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 5,
+        "item_specific_speeds": [
+          {
+            "item": {
+              "tags": "query.all_tags('minecraft:is_pickaxe')"
+            },
+            "destroy_speed": 1.5333 // 1.15s
+          }
+        ]
+      },
+			"minecraft:destructible_by_explosion": {
+    		"explosion_resistance": 6
+			},
+      "minecraft:map_color": "#B9B2B2",
+      "minecraft:material_instances" : {
+        "*": {
+          "texture": "petrified_log_side",
+          "render_method" : "opaque"
+        },
+        "up": {
+          "texture": "petrified_log_top",
+          "render_method" : "opaque"
+        },
+        "down": {
+          "texture": "petrified_log_top",
+          "render_method" : "opaque"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'", // north & south
+        "components": {
+          "minecraft:transformation": {
+            "rotation" : [90, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'east' || q.block_state('minecraft:block_face') == 'west'", // east & west
+        "components": {
+          "minecraft:transformation": {
+            "rotation" : [0, 90, -90]
+          }
+        }
+      }
+    ]
+  }
+}

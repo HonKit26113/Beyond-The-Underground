@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:crystal_firefly",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_crystal_firefly"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_crystal_firefly"
+      },
+      "particle_effects": {
+        "particles": "honkit26113:crystal_firefly_trail"
+      },
+      "scripts": {
+        "animate": [
+          "flying",
+          "particles"
+        ]
+      },
+      "animations": {
+        "flying": "animation.honkit26113_crystal_firefly.flying_new",
+        "particles": "animation.honkit26113_crystal_firefly.particles"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "base_color": "#2B1604",
+        "overlay_color": "#F9DD57"
+      }
+    }
+  }
+}

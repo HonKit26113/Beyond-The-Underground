@@ -27,6 +27,11 @@
                   "test": "has_biome_tag",
                   "operator": "!=",
                   "value": "roofed"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "!=",
+                  "value": "cold"
                 }
               ]
             }

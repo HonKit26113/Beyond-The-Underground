@@ -1,0 +1,94 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.21.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:gypsum_needles",
+            "menu_category": {
+                "category": "nature"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [ "minecraft:block_face" ]
+                }
+            }
+		},
+		"components": {
+            "minecraft:loot": "loot_tables/blocks/gypsum_needles.json",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "gypsum_needles",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.cross"
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "on_liquid_touches": "broken"
+                    }
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin":  [-6, 11, -6],
+                "size":    [12, 5, 12]
+            },
+            "minecraft:collision_box": {
+                "origin":  [-6, 11, -6],
+                "size":    [12, 5, 12]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:light_emission": 3,
+            "minecraft:light_dampening": 0,
+			"minecraft:map_color": "#F6F6F6"
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [180, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [0, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [-90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [0, 0, 90] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                  "minecraft:transformation": { "rotation": [0, 0, -90] }
+                }
+            }
+        ]
+	}
+}

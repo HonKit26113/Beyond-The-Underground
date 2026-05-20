@@ -9,20 +9,20 @@
       "conditions": {
         "placement_pass": "after_underground_pass",
         "minecraft:biome_filter": [
-        {
-          "any_of": [
-            {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "swamp"
-            },
-            {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "mangrove_swamp"
-            }
-          ]
-        }
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "swamp"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mangrove_swamp"
+              }
+            ]
+          }
         ]
       },
       "distribution": {

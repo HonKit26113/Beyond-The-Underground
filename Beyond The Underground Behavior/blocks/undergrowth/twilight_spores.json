@@ -16,7 +16,7 @@
             },
             "minecraft:tick": {
                 "looping": true,
-                "interval_range": [240, 400] // 12 - 20 secs
+                "interval_range": [300, 460] // 15 - 23 secs
             },
             "minecraft:material_instances": {
                 "*": {

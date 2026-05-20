@@ -26,5 +26,11 @@
     "atlas_tile": "rainbow_gum_log_side",
     "ticks_per_frame": 20,
     "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/suitcase_flashing",
+    "atlas_tile": "suitcase_flashing",
+    "ticks_per_frame": 20,
+    "blend_frames": true
   }
 ]

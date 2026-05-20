@@ -9,7 +9,7 @@
     "conditions": [
       {
         "minecraft:weight": {
-          "default": 2000
+          "default": 200
         },
         "minecraft:difficulty_filter": {
           "min": "easy",
@@ -28,6 +28,11 @@
           "any_of": [
             {"test": "has_biome_tag", "operator":"==", "value": "desert"}
           ]
+        },
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 0,
+          "adjust_for_weather": false
         },
         "minecraft:herd": {
           "min_size": 2,
@@ -40,7 +45,7 @@
       },
       {
         "minecraft:weight": {
-          "default": 1500
+          "default": 300
         },
         "minecraft:difficulty_filter": {
           "min": "easy",
@@ -59,6 +64,11 @@
           "any_of": [
             {"test": "has_biome_tag", "operator":"==", "value": "desert"}
           ]
+        },
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 0,
+          "adjust_for_weather": false
         },
         "minecraft:herd": {
           "min_size": 1,

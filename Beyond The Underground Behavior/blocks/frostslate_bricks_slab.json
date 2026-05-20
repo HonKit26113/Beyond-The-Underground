@@ -1,0 +1,114 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+// This code is adapted from Kaioga's Block Templates. Thank you!
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:frostslate_bricks_slab",
+            "menu_category": {
+                "category": "construction"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:vertical_half"
+                    ]
+                }
+            },
+            "states": {
+                "kai:double": [ false, true ]
+            }
+        },
+        "components": {
+            "tag:minecraft:is_pickaxe_item_destructible": {},
+            "tag:honkit26113_dig_with_pickaxe": {},
+            "tag:honkit26113_stone": {},
+            "tag:is_slab": {},
+            "honkit26113:make_double_slab": {
+                "sound": "deepslate"
+            },
+            "minecraft:loot": "loot_tables/blocks/frostslate_bricks_slab.json",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10, // default: 15s
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                        "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 3 // 2.25s
+                    }
+                ]
+            },
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:map_color": "#27344A",
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": {
+                "identifier": "geometry.kai_slab",
+                "bone_visibility": {
+                    "bottom_slab": "q.block_state('minecraft:vertical_half') == 'bottom'",
+                    "top_slab": "q.block_state('minecraft:vertical_half') == 'top'"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "frostslate_bricks"
+                }
+            }
+        },
+        "permutations": [
+            // Bottom Slab
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('kai:double')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16 ]
+                    }
+                }
+            },
+            // Top Slab
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('kai:double')",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [-8, 8, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 8, -8],
+                        "size": [16, 8, 16]
+                    }
+                }
+            },
+            // Double Slab
+            {
+                "condition": "q.block_state('kai:double')",
+                "components": {
+                    "minecraft:geometry": "minecraft:geometry.full_block",
+                    "minecraft:liquid_detection": {
+                        "detection_rules": [
+                            {
+                                "can_contain_liquid": false
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

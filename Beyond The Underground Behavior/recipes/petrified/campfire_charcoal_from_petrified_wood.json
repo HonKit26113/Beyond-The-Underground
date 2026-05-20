@@ -1,0 +1,32 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:campfire_charcoal_from_petrified_wood"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " A ",
+            "ABA",
+            "CCC"
+        ],
+        "key": {
+            "A": {
+                "item": "stick"
+            },
+            "B": {
+                "item": "charcoal"
+            },
+            "C": {
+                "item": "honkit26113:petrified_wood"
+            }
+        },
+        "result": {
+            "item": "campfire",
+            "count": 1
+        },
+        "priority": 2
+    }
+}
