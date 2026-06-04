@@ -160,7 +160,7 @@ const breakHandler = (e: PlayerBreakBlockAfterEvent) => {
 		const stack = item.getComponent("minecraft:item").itemStack;
 		if (stack.typeId === targetId) {
 			count += stack.amount;
-			world.sendMessage(`got ${stack.amount} ${item.getComponent("minecraft:item").itemStack.typeId}, count is now ${count}`);
+			//world.sendMessage(`got ${stack.amount} ${item.getComponent("minecraft:item").itemStack.typeId}, count is now ${count}`);
 			item.kill();
 		}
 	}

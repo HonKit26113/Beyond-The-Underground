@@ -10,7 +10,6 @@
 		},
 		"components": {
             "honkit26113:gypsum_fertilizer": {},
-			"minecraft:max_stack_size": 1,
 			"minecraft:icon": "gypsum_fertilizer"
 		}
 	}

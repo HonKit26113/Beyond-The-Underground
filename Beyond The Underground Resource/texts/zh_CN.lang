@@ -42,12 +42,15 @@ tile.honkit26113:slimy_stone.name=粘液石头
 tile.honkit26113:slimy_deepslate.name=粘液深板岩
 tile.honkit26113:slimy_stone_bricks.name=粘液石砖
 tile.honkit26113:slimy_stone_bricks_slab.name=粘液石砖台阶
+tile.honkit26113:slimy_stone_bricks_stairs.name=粘液石砖阶梯
 tile.honkit26113:slimy_stone_bricks_cracked.name=裂纹粘液石砖
 tile.honkit26113:slimy_deepslate_bricks.name=粘液深板岩砖
-tile.honkit26113:slimy_deepslate_bricks_slab.name=粘液深板岩台阶
+tile.honkit26113:slimy_deepslate_bricks_slab.name=粘液深板岩砖台阶
+tile.honkit26113:slimy_deepslate_bricks_stairs.name=粘液深板岩砖阶梯
 tile.honkit26113:slimy_deepslate_bricks_cracked.name=裂纹粘液深板岩砖
 tile.honkit26113:slimy_deepslate_tiles.name=粘液深板岩瓦
 tile.honkit26113:slimy_deepslate_tiles_slab.name=粘液深板岩瓦台阶
+tile.honkit26113:slimy_deepslate_tiles_stairs.name=粘液深板岩瓦阶梯
 tile.honkit26113:slimy_deepslate_tiles_cracked.name=裂纹粘液深板岩瓦
 tile.honkit26113:slime_layer.name=粘液层
 tile.honkit26113:dripping_slime_head.name=滴落的粘液顶部
@@ -64,7 +67,7 @@ item.honkit26113:slime_soup=粘液汤
 item.honkit26113:dripping_slime_item=滴落的粘液
 item.honkit26113:slimeball_part=破烂粘液球
 item.honkit26113:hardened_slimeball=硬化粘液球
-item.honkit26113:slime_dagger= §a史莱姆匕首\n§3特别技能：神志不清\n§c剧毒 II (0:05)\n§c跳跃提升 (0:03)
+item.honkit26113:slime_dagger= §a史莱姆匕首\n§3特别技能：史萊姆的咀咒\n§c剧毒 II (0:05)\n§c跳跃提升 (0:03)
 item.honkit26113:slingshot=弹弓\n§3按住不放来发射\n弹药： §6硬化史莱姆球§r
 
 item.spawn_egg.entity.honkit26113:slimy_zombie.name=生成史莱姆僵尸
@@ -76,12 +79,14 @@ entity.honkit26113:thrown_slimeball.name=硬化粘液球
 ## Limestone Caves
 tile.honkit26113:limestone.name=石灰岩
 tile.honkit26113:limestone_slab.name=石灰岩台阶
+tile.honkit26113:limestone_stairs.name=石灰岩阶梯
 tile.honkit26113:limestone_pebbles.name=石灰岩碎石
 tile.honkit26113:cobbled_limestone.name=石灰岩圆石
 tile.honkit26113:cobbled_limestone_pebbles.name=石灰岩圆石碎石
 tile.honkit26113:polished_limestone.name=磨制石灰岩
 tile.honkit26113:limestone_bricks.name=石灰岩砖
 tile.honkit26113:limestone_bricks_slab.name=石灰岩砖台阶
+tile.honkit26113:limestone_bricks_stairs.name=石灰岩砖阶梯
 tile.honkit26113:limestone_bricks_chiseled.name=錾制石灰岩砖
 tile.honkit26113:limestone_bricks_cracked.name=裂纹石灰岩砖
 tile.honkit26113:limestone_bricks_mossy.name=苔石灰岩砖
@@ -91,9 +96,17 @@ tile.honkit26113:quicksand.name=流沙
 tile.honkit26113:sandy_roots_head.name=有沙的垂根顶部
 tile.honkit26113:sandy_roots_body.name=有沙的垂根本部
 tile.honkit26113:sandy_skelly_skull.name=沙漠骷髅头颅
+tile.honkit26113:limestone_coal_ore.name=石灰岩煤礦
+tile.honkit26113:limestone_copper_ore.name=石灰岩銅礦
+tile.honkit26113:limestone_diamond_ore.name=石灰岩鑽石礦
+tile.honkit26113:limestone_emerald_ore.name=石灰岩绿宝石矿
+tile.honkit26113:limestone_gold_ore.name=石灰岩金矿
+tile.honkit26113:limestone_iron_ore.name=石灰岩铁矿
+tile.honkit26113:limestone_lapis_ore.name=石灰岩青金石矿
+tile.honkit26113:limestone_redstone_ore.name=石灰岩红石矿
 
-tile.honkit26113:arena_trigger.name=竞技场触发器
-tile.honkit26113:arena_limestone_pillar.name=竞技场柱
+tile.honkit26113:arena_trigger.name=石灰岩洞竞技场触发器
+tile.honkit26113:arena_limestone_pillar.name=石灰岩洞竞技场柱
 
 item.honkit26113:raw_scorpion=生蝎子
 item.honkit26113:cooked_scorpion=熟蝎子
@@ -114,29 +127,40 @@ entity.honkit26113:thrown_sand.name=沙堆
 ## Ice Caves
 tile.honkit26113:frosted_stone.name=霜冻石头
 tile.honkit26113:frosted_stone_slab.name=霜冻石头台阶
-tile.honkit26113:frosted_deepslate.name=霜冻深板岩
+tile.honkit26113:frosted_stone_stairs.name=霜冻石头阶梯
 tile.honkit26113:pebbles.name=碎石
 tile.honkit26113:cobblestone_pebbles.name=圆石碎石
 tile.honkit26113:frosted_pebbles.name=霜冻碎石
 tile.honkit26113:deepslate_pebbles.name=深板岩碎石
 tile.honkit26113:cobbled_deepslate_pebbles.name=深板岩圆石碎石
-tile.honkit26113:frosted_deepslate_pebbles.name=霜冻深板岩碎石
 tile.honkit26113:crystallized_ice.name=冰结晶
 tile.honkit26113:ice_crystal.name=冰晶
 tile.honkit26113:dripping_icicle_small.name=小型滴水冰柱
 tile.honkit26113:dripping_icicle_medium.name=中型滴水冰柱
 tile.honkit26113:packed_ice_bricks.name=浮冰砖
 tile.honkit26113:packed_ice_bricks_slab.name=浮冰砖台阶
+tile.honkit26113:packed_ice_bricks_stairs.name=浮冰砖阶梯
 tile.honkit26113:packed_ice_bricks_cracked.name=裂纹浮冰砖
 tile.honkit26113:packed_ice_chiseled.name=錾制浮冰
 tile.honkit26113:suitcase.name=行李箱
 tile.honkit26113:suitcase_used.name=行李箱
+tile.honkit26113:frosted_deepslate.name=霜板岩
+tile.honkit26113:frosted_deepslate_pebbles.name=霜板岩碎石
+tile.honkit26113:frostslate_bricks.name=霜板岩砖
+tile.honkit26113:frostslate_bricks_chiseled.name=刻纹霜板岩砖
+tile.honkit26113:frostslate_bricks_slab.name=霜板岩砖板
+tile.honkit26113:frostslate_bricks_stairs.name=霜板岩砖阶梯
+tile.honkit26113:ice_fort_lamp.name=冰堡灯
+
+tile.honkit26113:arena_trigger_ice_fort.name=冰堡竞技场触发器
+tile.honkit26113:arena_pillar_ice_fort.name=冰堡竞技场触发器柱
 
 item.honkit26113:ice_shard=冰碎片
 item.honkit26113:dripping_icicle_item=滴水冰柱
 item.honkit26113:frost_essence=冰霜精华\n§3用来合成 §6冰霜煞星§r
 item.honkit26113:frozen_core=霜冻核心\n§3用来合成 §6冰霜煞星§r
 item.honkit26113:bane_of_frost= §b冰霜煞星\n§3特别技能：霜害\n§c缓速 IV (0:03)§r\n§c挖掘疲劳 III (0:03)§r
+item.honkit26113:ice_bomb=冰弹\n§7投掷至敌人身上，使其冻结1.5秒§r
 
 item.spawn_egg.entity.honkit26113:penguin.name=生成企鹅
 entity.honkit26113:penguin.name=企鹅
@@ -144,6 +168,8 @@ item.spawn_egg.entity.honkit26113:lost_explorer.name=生成迷失探险家
 entity.honkit26113:lost_explorer.name=迷失探险家
 item.spawn_egg.entity.honkit26113:frost_spirit.name=生成冰雪精灵
 entity.honkit26113:frost_spirit.name=冰雪精灵
+item.spawn_egg.entity.honkit26113:ice_bomber.name=冰弹兵 生成蛋
+entity.honkit26113:ice_bomber.name=冰弹兵
 
 
 
@@ -158,6 +184,7 @@ tile.honkit26113:crooked_hyphae.name=弯曲菌丝
 tile.honkit26113:crooked_hyphae_stripped.name=去皮弯曲菌丝体
 tile.honkit26113:crooked_planks.name=弯曲木板
 tile.honkit26113:crooked_slab.name=弯曲台阶
+tile.honkit26113:crooked_stairs.name=彎曲阶梯
 tile.honkit26113:crooked_fence.name=弯曲栅栏
 tile.honkit26113:crooked_fence_gate.name=弯曲栅栏门
 tile.honkit26113:crooked_door.name=弯曲门
@@ -165,6 +192,7 @@ tile.honkit26113:crooked_trapdoor.name=弯曲活板门
 tile.honkit26113:soul_stone.name=灵魂岩
 tile.honkit26113:soul_bricks.name=灵魂砖
 tile.honkit26113:soul_bricks_slab.name=灵魂砖台阶
+tile.honkit26113:soul_bricks_stairs.name=灵魂砖阶梯
 tile.honkit26113:soul_bricks_fence.name=灵魂砖栅栏
 tile.honkit26113:soul_bricks_chiseled.name=錾制灵魂砖
 tile.honkit26113:soul_bricks_cracked.name=裂纹灵魂砖
@@ -202,6 +230,7 @@ tile.honkit26113:rainbow_gum_wood.name=彩虹桉木块
 tile.honkit26113:rainbow_gum_wood_stripped.name=剥皮彩虹桉木块
 tile.honkit26113:rainbow_gum_planks.name=彩虹桉木材
 tile.honkit26113:rainbow_gum_slab.name=彩虹桉木半砖
+tile.honkit26113:rainbow_gum_stairs.name=彩虹桉木砖梯
 tile.honkit26113:rainbow_gum_trapdoor.name=彩虹桉木地板门
 tile.honkit26113:rainbow_gum_door.name=彩虹桉木门
 tile.honkit26113:rainbow_gum_fence.name=彩虹桉木栅栏
@@ -225,6 +254,40 @@ item.spawn_egg.entity.honkit26113:thornspitter.name=棘刺投射者 生成蛋
 entity.honkit26113:thornspitter.name=棘刺投射者
 entity.honkit26113:thrown_thorn.name=棘刺
 entity.honkit26113:tracking_thorn.name=§6棘刺投射者§r的棘刺
+
+
+
+## Crystal Caves
+tile.honkit26113:gypsum_block.name=石膏方块
+tile.honkit26113:gypsum_cluster.name=石膏群
+tile.honkit26113:gypsum_needles.name=石膏针
+tile.honkit26113:topaz_block.name=托帕石方块
+tile.honkit26113:topaz_cluster.name=托帕石群
+tile.honkit26113:xp_tank.name=经验值储槽
+
+item.honkit26113:gypsum_fertilizer=石膏肥料\n§7立即培育作物、树木与巨型花卉§r
+item.honkit26113:combustion_amulet= §c燃烧护身符\n§3特殊能力：火焰触碰\n§r破坏方块时\n立即熔炼掉落的物品。
+item.honkit26113:combustion_amulet_broken=破损的燃烧护身符\n§7使用经验值槽修复§r
+item.honkit26113:gypsum_shard=石膏碎片\n§7可制成肥料，熔炼成煅烧石膏。§r\n§3用于制作 §6燃烧护身符§r
+item.honkit26113:calcined_gypsum=煅烧石膏\n§7用于将水泥粉制成混凝土§r
+item.honkit26113:topaz=黄玉\n§7与迷失探险家交易的货币§r\n§3用于制作 §6燃烧护身符§r 及 经验槽
+
+item.spawn_egg.entity.honkit26113:crystal_firefly.name=水晶萤火虫生成蛋
+entity.honkit26113:crystal_firefly.name=水晶萤火虫
+
+
+
+## Arid Caves
+tile.honkit26113:petrified_log.name=石化原木
+tile.honkit26113:petrified_wood.name=石化木块
+tile.honkit26113:petrified_planks.name=石化木材
+tile.honkit26113:petrified_slab.name=石化木板
+tile.honkit26113:petrified_stairs.name=石化木阶梯
+tile.honkit26113:petrified_trapdoor.name=石化木地板门
+tile.honkit26113:petrified_door.name=石化木门
+tile.honkit26113:petrified_fence.name=石化木栅栏
+tile.honkit26113:petrified_fence_gate.name=石化木栅栏门
+tile.honkit26113:petrified_bush.name=石化灌木
 
 
 
@@ -256,7 +319,7 @@ honkit26113.beyond_underground.tips.18=浮冰可以用来制作浮冰砖！
 honkit26113.beyond_underground.tips.19=把一颗绿宝石用在行李箱上来生成一位迷失探险家！
 honkit26113.beyond_underground.tips.20=石灰岩洞是唯一一个不会于深板岩层生成的洞穴！
 honkit26113.beyond_underground.tips.21=把奇异蘑菇喂给发光哞菇，来获得奇异的炖汤！
-honkit26113.beyond_underground.tips.22=奇异的炖汤有百分之 33.3 机会会给你两种药水效果！
+honkit26113.beyond_underground.tips.22=奇异的炖汤有百分之 33 的机会给你两种药水效果！
 honkit26113.beyond_underground.tips.23=在史莱姆洞穴探险时，要当心史莱姆尖刺！
 honkit26113.beyond_underground.tips.24=你可以利用切石机合成各种碎石！
 honkit26113.beyond_underground.tips.25=你可以用粘液石头和粘液深板岩制造史莱姆砖！
@@ -277,8 +340,14 @@ honkit26113.beyond_underground.tips.38=在洞穴探险时看到一些裸露的�
 
 
 ## Item Groups
+honkit26113:itemGroup.crooked_planks=彎曲木材 §6[Beyond The Underground]§r
+honkit26113:itemGroup.rainbow_gum_planks=彩虹桉木材 §6[Beyond The Underground]§r
+honkit26113:itemGroup.petrified_planks=石化木材 §6[Beyond The Underground]§r
 honkit26113:itemGroup.slimy_stone_bricks=史莱姆石砖 §6[Beyond The Underground]§r
 honkit26113:itemGroup.limestone_bricks=石灰岩砖 §6[Beyond The Underground]§r
+honkit26113:itemGroup.packed_ice_bricks=浮冰砖 §6[Beyond The Underground]§r
+honkit26113:itemGroup.frostslate_bricks=冰板岩磚 §6[Beyond The Underground]§r
+honkit26113:itemGroup.soul_bricks=灵魂磚 §6[Beyond The Underground]§r
 honkit26113:itemGroup.lava_tank=熔岩箱 §6[Beyond The Underground]§r
 honkit26113:itemGroup.pebbles=碎石 §6[Beyond The Underground]§r
 honkit26113:itemGroup.luminous_caverns=夜光洞穴 §6[Beyond The Underground]§r
@@ -287,6 +356,8 @@ honkit26113:itemGroup.limestone_caves=石灰岩洞 §6[Beyond The Underground]§
 honkit26113:itemGroup.ice_caves=冰雪洞穴 §6[Beyond The Underground]§r
 honkit26113:itemGroup.crooked_caverns=扭曲洞穴 §6[Beyond The Underground]§r
 honkit26113:itemGroup.undergrowth=林荫洞穴 §6[Beyond The Underground]§r
+honkit26113:itemGroup.crystal_caves=水晶洞穴 §6[Beyond The Underground]§r
+honkit26113:itemGroup.arid_caves=乾旱洞穴 §6[Beyond The Underground]§r
 
 
 
@@ -317,13 +388,20 @@ lava_tank.message.emptied= 岩浆箱已经清空！
 soul_healer.message.activated= §b灵魂治疗器§r 已启动！
 
 arena.message.wait= 有另一场竞技场战斗正在进行，或者一场战斗刚结束。
+
+combustion_amulet.message.countdown=§6火焰之触§r 已激活 -
+combustion_amulet.message.ended=§6火焰之触§r 已结束！
+combustion_amulet.message.broken= 哎呀！这个护身符已损坏。请在经验槽中修复它！
+combustion_amulet.message.already_using= 目前已有另一个燃烧护身符处于激活状态。
+
+arena.message.wait= 另一场竞技场战斗正在进行中，或者刚刚结束。
 arena.message.confirmation=开始竞技场战斗？再按一次来继续。
 arena.message.cancel= 已取消。
 arena.message.starting_in= 准备！战斗即将开始
-arena.message.battle_start=祝你好运！
+arena.message.battle_start=开战！
 arena.message.check_difficulty= 请确定你的难度至少设定为 简单。如果您的难度是和平，你将不会获得任何奖励！
 arena.message.difficulty_error= 战斗无法在和平模式中开始。
-arena.message.exit_world_canceled=§6[Arena]§r  由于你在战斗结束前离开世界，因此你将不会获得任何奖励。
+arena.message.exit_world_canceled=§6【竞技场】§r  由于你在战斗结束前离开世界，因此你将不会获得任何奖励。
 arena.message.pillar_used= 这个竞技场启动器已被使用。
 arena.message.victory=胜利
 arena.message.defeat=失败

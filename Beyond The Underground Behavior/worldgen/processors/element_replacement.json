@@ -62,9 +62,11 @@
                         },
                         "input_predicate": {
                             "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:chest",
-                            "states": {
-                                "minecraft:cardinal_direction": "north"
+                            "block_state": {
+                                "name": "minecraft:chest",
+                                "states": {
+                                    "minecraft:cardinal_direction": "north"
+                                }
                             }
                         },
                         "output_state": {
@@ -81,9 +83,11 @@
                         },
                         "input_predicate": {
                             "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:chest",
-                            "states": {
-                                "minecraft:cardinal_direction": "south"
+                            "block_state": {
+                                "name": "minecraft:chest",
+                                "states": {
+                                    "minecraft:cardinal_direction": "south"
+                                }
                             }
                         },
                         "output_state": {
@@ -100,9 +104,11 @@
                         },
                         "input_predicate": {
                             "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:chest",
-                            "states": {
-                                "minecraft:cardinal_direction": "east"
+                            "block_state": {
+                                "name": "minecraft:chest",
+                                "states": {
+                                    "minecraft:cardinal_direction": "east"
+                                }
                             }
                         },
                         "output_state": {
@@ -119,9 +125,11 @@
                         },
                         "input_predicate": {
                             "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:chest",
-                            "states": {
-                                "minecraft:cardinal_direction": "west"
+                            "block_state": {
+                                "name": "minecraft:chest",
+                                "states": {
+                                    "minecraft:cardinal_direction": "west"
+                                }
                             }
                         },
                         "output_state": {
@@ -145,76 +153,17 @@
                         },
                         "input_predicate": {
                             "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "north"
-                            },
-                            "probability": 0.5
-                        },
-                        "output_state": {
-                            "name": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "north"
+                            "block_state": {
+                                "name": "minecraft:barrel",
+                                "states": {
+                                    "facing_direction": 1
+                                }
                             }
-                        }
-                    },
-                    {
-                        "block_entity_modifier": {
-                            "type": "minecraft:append_loot",
-                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
-                        },
-                        "input_predicate": {
-                            "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "south"
-                            },
-                            "probability": 0.5
                         },
                         "output_state": {
                             "name": "minecraft:barrel",
                             "states": {
-                                "minecraft:cardinal_direction": "south"
-                            }
-                        }
-                    },
-                    {
-                        "block_entity_modifier": {
-                            "type": "minecraft:append_loot",
-                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
-                        },
-                        "input_predicate": {
-                            "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "east"
-                            },
-                            "probability": 0.5
-                        },
-                        "output_state": {
-                            "name": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "east"
-                            }
-                        }
-                    },
-                    {
-                        "block_entity_modifier": {
-                            "type": "minecraft:append_loot",
-                            "loot_table": "loot_tables/chests/ice_fort_storage_room.json"
-                        },
-                        "input_predicate": {
-                            "predicate_type": "minecraft:blockstate_match",
-                            "block": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "west"
-                            },
-                            "probability": 0.5
-                        },
-                        "output_state": {
-                            "name": "minecraft:barrel",
-                            "states": {
-                                "minecraft:cardinal_direction": "west"
+                                "facing_direction": 1
                             }
                         }
                     }

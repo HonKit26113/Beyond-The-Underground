@@ -1,5 +1,5 @@
 Beyond The Underground
-Version 1.6 (released March 6, 2025)
+Version 1.7 (released May 23, 2026)
 Made by HonKit26113. All rights reserved. Do not distribute without permission.
 
 This add-on is only available on honkit26113.com and MCPEDL / CurseForge.
@@ -52,6 +52,7 @@ Arena System Rework:
  - When interacting with an Arena Trigger in Peaceful difficulty, an error message now shows and no battle is triggered.
  - The battle countdown is now visible to all players within a 32 block radius of the Arena Pillar.
  - You can now start another Arena Battle immediately after one ends.
+ - A sound effect plays on losing.
 
 Lost Explorer Rework:
  - Their camps are now found in all parts of the Overworld between y=-50 and 20, except in Crystal Caves and the Deep Dark. (It doesn't make sense for them to only get lost in Ice Caves!) 
@@ -63,7 +64,7 @@ Lost Explorer Rework:
 
 New Blocks:
  - Experience Tank. Deposit XP and get XP back every Minecraft day. The more you deposit, the more you get!
- - Petrified Wood (Log, Wood, Planks, Slab, Stairs, Fence, Fence Gate, Door, Trapdoor)
+ - Petrified Wood (Log, Wood, Planks, Slab, Stairs, Fence, Fence Gate, Door, Trapdoor). Best tool to break is a Pickaxe instead of an Axe.
  - Petrified Bush
  - Block of Gypsum
  - Gypsum Cluster
@@ -111,10 +112,11 @@ Other Changes:
  - The Slime Dagger's special ability has been renamed as "Slimy Curse".
  - Frosted Deepslate has been renamed as Frostslate.
  - Ice Dungeons no longer generate on their own.
- - Instead of anvil sounds, interacting with Lava Tanks that are locked or on cooldown now play the "block.false_permissions" sound.
+ - Instead of anvil sounds, interacting with Lava Tanks that are locked or on cooldown now plays the "block.false_permissions" sound.
  - Entities can no longer jump over Beyond The Underground fences.
  - Crooked Planks and Rainbow Gum Planks can now be used to craft Wooden Spears.
  - Twilight Spores now generate particles less frequently to reduce lag.
+ - New background panorama featuring the Crystal Caves.
  - Added some debug commands. These aren't meant for general use. Use them at your own risk.
  - This add-on now requires Minecraft 26.20 or above to function.
 

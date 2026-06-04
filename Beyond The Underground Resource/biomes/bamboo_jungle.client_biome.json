@@ -1,0 +1,13 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "bamboo_jungle"
+    },
+    "components": {
+      "minecraft:biome_music": {
+        "music_definition": "undergrowth"
+      }
+    }
+  }
+}
